@@ -1,0 +1,44 @@
+/* .container {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.start {
+  border-top: 10px solid transparent;
+  border-right: 10px solid black;
+  border-bottom: 10px solid transparent;
+  left: 50px;
+  top: 50px;
+}
+
+.end {
+  border-bottom: 8px dashed black;
+  border-right: 2px dashed black;
+  border-bottom-right-radius: 100% 100%;
+  border-bottom-left-radius: 0% 0%;
+  left: 200px;
+  top: 100px;
+  width: 20%;
+  height: 100px;
+} */
+
+.container {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 20;
+}
+
+.start {
+  left: 50px;
+  top: 50px;
+}
