@@ -44,12 +44,15 @@
         }
     }
     .rating{
-        height: 20px;
+        max-height: 20px;
+       
         display: flex;
-        align-items: center;
+        align-items: start;
         justify-content:center;
         img{
             height:100%;
+            width: fit-content !important;
+            margin-inline: 2px;
         }
     }
     .body{
@@ -93,7 +96,8 @@
             }
         }
         .rating{
-            height: 25px;
+            max-height: 25px;
+            // max-width: 25px;
             display: flex;
             align-items: center;
             justify-content:center;
@@ -144,7 +148,8 @@
         height: 320px;
 
         .rating{
-            height: 25px;
+            max-height: 25px;
+            // max-width: 25px;
             img{
                 height:100%;
             }
@@ -179,7 +184,8 @@
         height: 340px;
 
         .rating{
-            height: 30px;
+            max-height: 30px;
+            // max-width: 30px;
             img{
                 height:100%;
             }

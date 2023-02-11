@@ -1,5 +1,5 @@
 
-
+ 
 .portfolio{
     padding: 50px 20px;
     position: relative;
@@ -29,26 +29,78 @@
     }
     .portfolio_card{
         margin-top: 60px;
+        width: 100%;
+        overflow: hidden;
     }
 
-    .mySwiper{
-        img{
-            width: 400px;
-            height: 350px;
-        }
+    // .mySwiper{
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     .swiper-slide{
+    //         width: fit-content !important;
+    //         border-radius: 10px;
+    //         display: flex;
+    //         justify-content: center;
+    //         transform: scale(0.9);
+    //     }
+    //     .swiper-slide.swiper-slide-active{
+    //         transform: scale(1.2);
+    //         z-index: 3;
+            
+
+    //     }
+    //     .swiper-slide.swiper-slide-next{
+    //         transform: scale(0.9);
+            
+    //     }
+    //     .swiper-slide.swiper-slide-prev{
+    //         transform: scale(0.9);
+            
+    //     }
+    //     img{
+    //         // width: fit-content;
+    //         width: 400px;
+    //         height: 350px;
+    //         border-radius: 10px;
+    //     }
+    // }
+    .swiper {
+        width: 100%;
+        height: 100%;
+      }
+      
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+      
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0.9);
+        background: transparent;
+      }
+      
+      .swiper-slide img {
+        display: block;
+        max-width: 100%;
+        max-height: 385px;
+        object-fit: cover;
+      }
+      .swiper-slide.swiper-slide-active{
+        transform: scale(1.2);
+        z-index: 3;
+     
     }
+    
+      .swiper {
+        margin-left: auto;
+        margin-right: auto;
+      }
 }
 
-@media only screen and (max-width:1200px){
-    .portfolio{
-        .mySwiper{
-            img{
-                width: 340px;
-                height: 290px;
-            }
-        }
-    }
-}
+
 
 @media only screen and (min-width:1500px){
     .portfolio{
@@ -60,15 +112,7 @@
                 height: 62px;
             }
         }
-        .portfolio_card{
-            margin-top: 80px;
-        }
-        .mySwiper{
-            img{
-                width: 440px;
-                height: 390px;
-            }
-        }
+       
     }
 }
 
@@ -82,14 +126,6 @@
                 height: 72px;
             }
         }
-        .portfolio_card{
-            margin-top: 100px;
-        }
-        .mySwiper{
-            img{
-                width: 500px;
-                height: 450px;
-            }
-        }
+        
     }
 }
