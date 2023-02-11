@@ -16,6 +16,7 @@ import RequestFreeConsulting from '../../components/RequestFreeConsulting/Reques
 
 //** import logo */
 import logo from '../../assets/images/mernan_white.png';
+import image from '../../assets/images/brand.png';
 
 const WhoMernan = () => {
 
@@ -46,7 +47,7 @@ const WhoMernan = () => {
         <OurPartners color1={"#596773"} color2={"#FDFDFE"}/>
 
         {/*Previous Clients*/}
-        <PreviousClients/>
+        <PreviousClients image={image}/>
 
         {/*Our Locations*/}
         <OurLocations/>
