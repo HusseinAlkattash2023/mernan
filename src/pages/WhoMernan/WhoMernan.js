@@ -15,7 +15,6 @@ import OurLocations from "../../components/OurLocations/OurLocations";
 import RequestFreeConsulting from "../../components/RequestFreeConsulting/RequestFreeConsulting";
 
 //** import logo */
-import logo from "../../assets/images/mernan_white.png";
 
 import "./Arrows/arrow.css";
 
