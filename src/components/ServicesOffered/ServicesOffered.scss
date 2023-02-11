@@ -35,3 +35,48 @@
         justify-content: center;
     }
 }
+
+@media only screen and (max-width:1200px){
+    .services_offered{
+        h2{
+            font-size: 30px;
+            
+            &::after{
+                content: "";
+                width: 42px;
+                height: 42px;
+            }
+    }
+}
+}
+
+@media only screen and (min-width:1500px){
+    .services_offered{
+        h2{
+            font-size: 49px;
+            
+            &::after{
+                content: "";
+                width: 62px;
+                height: 62px;
+            }
+    }
+}
+}
+
+@media only screen and (min-width:1900px){
+    .services_offered{
+        h2{
+            font-size: 59px;
+            
+            &::after{
+                content: "";
+                width: 72px;
+                height: 72px;
+            }
+    }
+    .cards{
+        margin-top: 100px;
+    }
+}
+}

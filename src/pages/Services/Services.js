@@ -3,6 +3,7 @@ import React from "react";
 //** import images */
 import image from "../../assets/images/heading3.png";
 import logo from "../../assets/images/mernan.png";
+import image2 from '../../assets/images/brand_.png';
 
 //** import components */
 import Header from "../../components/Header/Header";
@@ -27,12 +28,13 @@ const Services = () => {
         title_={"to_implement_it"}
         text={"you_have_reached"}
         button={"our_services_"}
+        state={true}
       />
       <ServicesOffered/>
       <Portfolio/>
       <StartWorking/>
       <RequestFreeConsulting/>
-      <PreviousClients/>
+      <PreviousClients color1={"#596773"} color2={"#FDFDFE"} image={image2}/>
       <Footer image={logo} color1={"#EDE4E0"} color2={"#312E3A"} />
     </div>
   );

@@ -7,7 +7,6 @@ import { StateContext } from "../StateProvider";
 
 import { useTranslation } from "react-i18next";
 
-import image from '../../assets/images/brand.png';
 
 //** import swiper for slider */
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -19,15 +18,24 @@ import "swiper/css/pagination";
 import Card from './Card/Card';
 
 
-const PreviousClients = () => {
+const PreviousClients = ({color1 , color2 , image}) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
   const { t } = useTranslation();
 
+  const styles={
+    style1:{
+      background:`${color1}`
+    },
+    style2:{
+      color:`${color2}`
+    }
+  }
+
   return (
-    <div className="previous_clients" dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}>
-      <h2>{t("previous_clients")}</h2>
+    <div style={styles.style1} className="previous_clients" dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}>
+      <h2 style={styles.style2}>{t("previous_clients")}</h2>
       <div className="mt-5">
       <Swiper
         slidesPerView={7}

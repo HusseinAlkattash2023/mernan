@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext} from "react";
 
 import "./WhoUs.scss";
 
@@ -14,7 +14,7 @@ import { BsArrowLeft } from "react-icons/bs";
 //**import useNavigate from react-router-don */
 import { useNavigate } from "react-router-dom";
 
-const WhoUs = ({ image_en, image_ar, title, title_, text, button }) => {
+const WhoUs = ({ image_en, image_ar, title, title_, text, button , state}) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
@@ -88,7 +88,7 @@ const WhoUs = ({ image_en, image_ar, title, title_, text, button }) => {
         className={`${changeSide === "ar" ? "image_ar" : "image_en"} image_`}
       >
         {changeSide === "ar" ? (
-          <img src={`${image_ar}`} alt="" />
+          <img className={`${state && "active_image"}`} src={`${image_ar}`} alt="" />
         ) : (
           <img src={`${image_en}`} alt="" />
         )}

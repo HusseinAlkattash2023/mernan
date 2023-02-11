@@ -3,7 +3,7 @@
     width: 100%;
     background-color: var(--color6);
     position: relative;
-    padding: 50px 20px;
+    padding: 50px 20px 0px 20px;
 
     h2{
         font-family: 'Almarai';
@@ -34,15 +34,42 @@
         align-items: center;
         justify-content: space-between;
         margin-top:80px;
+        position: relative;
         .image{
-            width: 50%;
+            width: 60%;
             img{
                 width: 100%;
             }
         }
+        .image_ar{
+            position: relative;
+            right:40%;
+        }
+
         .list{
-            .text_{
-                
+            .text_1{
+                position:absolute;
+                left:55%;
+                top:40px;
+                transform: translate(-50%);
+            }
+            .text_2{
+                position:absolute;
+                left:25%;
+                top:30%;
+                transform: translate(-50%);
+                display: flex;
+                flex-direction: column;
+                align-items:flex-end;
+            }
+            .text_3{
+                position:absolute;
+                left:55%;
+                bottom:100px;
+                transform: translate(-50%);
+                display: flex;
+                flex-direction: column;
+                align-items:flex-end;
             }
             div{
                 display: flex;
@@ -75,6 +102,123 @@
                     line-height: 140%;
                     color:var(--color5);
                     margin-top: 10px;
+                }
+            }
+        }
+        .list_ar{
+            .text_1{
+                position:absolute;
+                right:-40%;
+                top:60px;
+                transform: translate(-50%);
+            }
+            .text_2{
+                position:absolute;
+                left:35%;
+                top:40%;
+                transform: translate(-50%);
+                display: flex;
+                flex-direction: column;
+                align-items:flex-start;
+            }
+            .text_3{
+                position:absolute;
+                right:-40%;
+                bottom:100px;
+                transform: translate(-50%);
+                display: flex;
+                flex-direction: column;
+                align-items:flex-start;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:1200px){
+    .start_working{
+        h2{
+            font-size: 30px;
+            
+            &::after{
+                content: "";
+                width: 42px;
+                height: 42px;
+            }
+        }
+        .part2{
+            .list{
+                div{
+    
+                    .number{
+                        width: 49px;
+                        height: 49px;
+                        font-size: 20px;
+                    }
+                    .text{
+                        font-size: 23px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1500px){
+    .start_working{
+        h2{
+            font-size: 49px;
+            
+            &::after{
+                content: "";
+                width: 62px;
+                height: 62px;
+            }
+        }
+        .part2{
+            .list{
+                div{
+    
+                    .number{
+                        width: 69px;
+                        height: 69px;
+                        font-size: 30px;
+                    }
+                    .text{
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1900px){
+    .start_working{
+        .part2{
+            margin-top: 100px;
+        }
+        h2{
+            font-size: 59px;
+            
+            &::after{
+                content: "";
+                width: 72px;
+                height: 72px;
+            }
+        }
+        .part2{
+            .list{
+                div{
+    
+                    .number{
+                        width: 79px;
+                        height: 79px;
+                        font-size: 40px;
+                    }
+                    .text{
+                        font-size: 40px;
+                    }
                 }
             }
         }
