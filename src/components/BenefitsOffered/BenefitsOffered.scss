@@ -61,3 +61,47 @@
         }
     }
 }
+
+
+@media only screen and (max-width:1200px){
+    .benefits_offered{
+        h2{
+            font-size: 30px;
+            
+            &::after{
+                content: "";
+                width: 42px;
+                height: 42px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width:1500px){
+    .benefits_offered{
+        h2{
+            font-size: 49px;
+            
+            &::after{
+                content: "";
+                width: 52px;
+                height: 52px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1900px){
+    .benefits_offered{
+        h2{
+            font-size: 59px;
+            
+            &::after{
+                content: "";
+                width: 72px;
+                height: 72px;
+            }
+        }
+    }
+}

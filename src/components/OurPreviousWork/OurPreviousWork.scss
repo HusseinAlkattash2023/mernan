@@ -36,8 +36,8 @@
         img{
             border-radius: 10px;
             margin:20px 0px ;
-            max-width: 676.5px;
-            max-height: 379px;
+            width: 676.5px;
+            height: 379px;
         }
     }
 
@@ -47,19 +47,44 @@
     .previous-work{
         .row{
             img{
-                max-width: 6360.5px;
+                max-width: 636.5px;
                 max-height: 339px;
             }
         }
     }
 }
 
-@media only screen and (max-width:1240px){
+@media only screen and (max-width:1300px){
     .previous-work{
         .row{
             img{
-                max-width: 6060.5px;
-                max-height: 309px;
+                width: 606.5px;
+                height: 329px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1200px){
+    .previous-work{
+        h2{
+            font-size: 30px;
+            
+            &::after{
+                content: "";
+                width: 42px;
+                height: 42px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1250px){
+    .previous-work{
+        .row{
+            img{
+                width: 546.5px;
+                height: 269px;
             }
         }
     }
@@ -69,19 +94,72 @@
     .previous-work{
         .row{
             img{
-                max-width: 5760.5px;
-                max-height: 279px;
+                width: 506.5px;
+                height: 229px;
+            }
+        }
+    }
+}
+@media only screen and (max-width:1030px){
+    .previous-work{
+        .row{
+            img{
+                width: 456.5px;
+                height: 209px;
             }
         }
     }
 }
 
-@media only screen and (max-width:1030px){
+@media only screen and (min-width:1500px){
+    .previous-work{
+        h2{
+            font-size: 49px;
+            &::after{
+                content: "";
+                width: 62px;
+                height: 62px;
+            }
+        }
+        .row{
+            img{
+                width: 726.5px;
+                height: 429px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1650px){
     .previous-work{
         .row{
             img{
-                max-width: 5560.5px;
-                max-height: 259px;
+                width: 786.5px;
+                height: 529px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1800px){
+    .previous-work{
+        .row{
+            img{
+                width: 856.5px;
+                height: 579px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1900px){
+    .previous-work{
+        h2{
+            font-size: 59px;
+            &::after{
+                content: "";
+                width: 72px;
+                height: 72px;
             }
         }
     }
