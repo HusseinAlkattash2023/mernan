@@ -1,0 +1,88 @@
+
+
+.previous-work{
+    padding:50px 20px;
+    width: 100%;
+    position: relative;
+
+    h2{
+        font-family: 'Almarai';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 140%;
+        color: var(--color2);
+        position: absolute;
+        top:30px;
+        z-index: 10;
+        
+        &::after{
+            content: "";
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background-color: var(--color7);
+            display: block;
+            position: absolute;
+            top:0px;
+            z-index:-1;
+        }
+    }
+
+    .row{
+        margin-top: 60px;
+        text-align: center;
+
+        img{
+            border-radius: 10px;
+            margin:20px 0px ;
+            max-width: 676.5px;
+            max-height: 379px;
+        }
+    }
+
+}
+
+@media only screen and (max-width:1400px){
+    .previous-work{
+        .row{
+            img{
+                max-width: 6360.5px;
+                max-height: 339px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1240px){
+    .previous-work{
+        .row{
+            img{
+                max-width: 6060.5px;
+                max-height: 309px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1130px){
+    .previous-work{
+        .row{
+            img{
+                max-width: 5760.5px;
+                max-height: 279px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1030px){
+    .previous-work{
+        .row{
+            img{
+                max-width: 5560.5px;
+                max-height: 259px;
+            }
+        }
+    }
+}

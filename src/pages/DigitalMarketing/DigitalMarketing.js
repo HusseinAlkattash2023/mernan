@@ -9,6 +9,8 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Home from "../../components/Home/Home.js";
 import BenefitsOffered from '../../components/BenefitsOffered/BenefitsOffered';
+import OurPreviousWork from '../../components/OurPreviousWork/OurPreviousWork';
+
 
 const DigitalMarketing = () => {
   return (
@@ -24,6 +26,7 @@ const DigitalMarketing = () => {
         color3={"#FFCA3D"}
       />
       <BenefitsOffered/>
+      <OurPreviousWork/>
       <Footer image={logo} color1={"#EDE4E0"} color2={"#312E3A"} />
     </div>
   );

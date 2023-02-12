@@ -33,14 +33,14 @@ const BenefitsOffered = () => {
           <p>{t("by_subscribing")}</p>
         </div>
         <div className="cards">
-          <div className="section1">
+          <div className={`${changeSide === "ar" ? "section1_ar" : "section1"}`}>
             <Card
               color1={"--color7"}
               color2={"--color5"}
               icon={icon1}
               title={"financial"}
               text={"financial_success"}
-              height={"364px"}
+              height = {`${changeSide === "ar" ? "261px": "364px"}`}
             />
             <Card
               color1={"--color3"}
@@ -48,7 +48,7 @@ const BenefitsOffered = () => {
               icon={icon4}
               title={"strategy"}
               text={"there_is_no_fixed"}
-              height={"407px"}
+              height = {`${changeSide === "ar" ? "364px": "407px"}`}
             />
           </div>
           <div className="section2">
@@ -58,7 +58,7 @@ const BenefitsOffered = () => {
               icon={icon2}
               title={"greater_reach"}
               text={"by_increasing"}
-              height={"364px"}
+              height = {`${changeSide === "ar" ? "356px": "364px"}`}
             />
             <Card
               color1={"--color7"}
@@ -66,7 +66,7 @@ const BenefitsOffered = () => {
               icon={icon3}
               title={"bonus"}
               text={"with_so_many"}
-              height={"407px"}
+              height = {`${changeSide === "ar" ? "364px": "407px"}`}
             />
           </div>
         </div>

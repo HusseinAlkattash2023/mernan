@@ -11,15 +11,20 @@
     border-radius: 10px 0px;
     width: 350px;
     margin-bottom: 30px;
+    position: relative;
 
     .part1{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 0px;
+        padding: 0px 20px;
+        width: 100%;
+        position: absolute;
+        top:20px;
         
         h3{
+            width: 75%;
             font-family: 'Almarai';
             font-style: normal;
             font-weight: 700;
@@ -29,6 +34,11 @@
         }
     }
     .part2{
+        padding: 0px 20px;
+        width: 100%;
+        position: absolute;
+        bottom:10px;
+
         p{
             font-family: 'Almarai';
             font-style: normal;
