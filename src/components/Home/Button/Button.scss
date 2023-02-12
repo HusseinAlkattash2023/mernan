@@ -40,3 +40,43 @@
         }
     }
 }
+
+@media only screen and (max-width:1399px){
+    .button_{
+        button{
+            height: 61px;
+            span{
+                font-size: 25px;
+                line-height: 140%;
+                font-weight: 700;
+                font-family: 'Almarai';
+                font-style: normal;
+                color:var(--color2);
+                flex: none;
+                flex-grow: 0;
+                display: grid;
+                place-items: center;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1249px){
+    .button_{
+        button{
+            height: 51px;
+            span{
+                font-size: 20px;
+                line-height: 140%;
+                font-weight: 700;
+                font-family: 'Almarai';
+                font-style: normal;
+                color:var(--color2);
+                flex: none;
+                flex-grow: 0;
+                display: grid;
+                place-items: center;
+            }
+        }
+    }
+}
