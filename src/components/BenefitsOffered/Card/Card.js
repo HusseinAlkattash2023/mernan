@@ -2,17 +2,27 @@ import React from 'react'
 
 import './Card.scss';
 
-//**import icons */
-import icon1 from '../../../assets/images/icon1.png';
-import icon2 from '../../../assets/images/icon2.png';
-import icon3 from '../../../assets/images/icon3.png';
-import icon4 from '../../../assets/images/icon4.png';
+import { useTranslation } from "react-i18next";
 
-const Card = () => {
+const Card = ({icon , title , text , color1 , color2 , height}) => {
+
+  const { t } = useTranslation();
+
+  const styles = {
+    background:`var(${color1})`,
+    color:`var(${color2})`,
+    height:`${height}`
+
+  }
+
   return (
-    <div className="card_">
-        <div>
-            <span></span>
+    <div className="card_benefits" style={styles}>
+        <div className="part1">
+            <h3>{t(`${title}`)}</h3>
+            <img src={icon} alt=""/>
+        </div>
+        <div className="part2">
+          <p>{t(`${text}`)}</p>
         </div>
         <div>
 

@@ -15,16 +15,12 @@ import OurLocations from "../../components/OurLocations/OurLocations";
 import RequestFreeConsulting from "../../components/RequestFreeConsulting/RequestFreeConsulting";
 
 //** import logo */
-<<<<<<< HEAD
-import logo from '../../assets/images/mernan_white.png';
-import image from '../../assets/images/brand.png';
-=======
->>>>>>> f46c239dab28c1bd33b04c04e1d2de21237407b9
 
 import "./Arrows/arrow.css";
 
-//** import logo */
+//** import images */
 import logo from "../../assets/images/mernan_white.png";
+import image from "../../assets/images/brand.png";
 import rightArrow from "../../assets/images/arrow-vector-right.svg";
 import leftArrow from "../../assets/images/arrow-vector-left.svg";
 
@@ -106,13 +102,8 @@ const WhoMernan = () => {
       {/* Our Partners */}
       <OurPartners color1={"#596773"} color2={"#FDFDFE"} />
 
-<<<<<<< HEAD
         {/*Previous Clients*/}
         <PreviousClients image={image}/>
-=======
-      {/*Previous Clients*/}
-      <PreviousClients />
->>>>>>> f46c239dab28c1bd33b04c04e1d2de21237407b9
 
       {/*Our Locations*/}
       <OurLocations />

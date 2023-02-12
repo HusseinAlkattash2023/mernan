@@ -27,4 +27,33 @@
             z-index:-1;
         }
     }
+    .body{
+        margin-top: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .text{
+            width: 35%;
+            p{
+                font-family: 'Almarai';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 31px;
+                line-height: 140%;
+                color:var(--color2);
+                width: 100%;
+            }
+        }
+
+        .cards{
+            display: flex;
+            align-items: center;
+
+            .section1{
+                margin-right: 30px;
+                margin-top: 200px;
+            }
+        }
+    }
 }
