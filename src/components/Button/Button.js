@@ -12,7 +12,7 @@ import { StateContext } from "../StateProvider";
 import { useTranslation } from "react-i18next";
 
 
-const Button = ({name , color1 , color2}) => {
+const Button = ({name , color1 , color2 , fontSize , height}) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
@@ -21,9 +21,11 @@ const Button = ({name , color1 , color2}) => {
   const styles={
     style1:{
       background:`${color1}`,
+      height:`${height}`
     },
     style2:{
       color:`${color2}`,
+      fontSize:`${fontSize}`
     },
   }
 
@@ -33,9 +35,9 @@ const Button = ({name , color1 , color2}) => {
         <span style={styles.style2}>{t(`${name}`)}</span>
         <span style={styles.style2}>
           {changeSide === "ar" ? (
-            <BsArrowLeft className="arrow" />
+            <BsArrowLeft/>
           ) : (
-            <BsArrowRight className="arrow" />
+            <BsArrowRight/>
           )}
         </span>
       </button>

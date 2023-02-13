@@ -12,11 +12,28 @@
     padding: 20px;
 
     .head{
-        img{
+        .image{
             top:0px;
             position: absolute;
             left:0px;
             border-radius: 10px 0px 0px 0px;
+        }
+        .image_ar{
+            top:0px;
+            position: absolute;
+            right:-1px;
+            border-radius: 10px 0px 0px 0px;
+            transform: rotateY(3.142rad);
+        }
+        .free{
+            top:20px;
+            position: absolute;
+            right:0px;
+        }
+        .free_ar{
+            top:20px;
+            position: absolute;
+            left:0px;
         }
     }
     .body{

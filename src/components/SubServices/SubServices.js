@@ -17,7 +17,7 @@ import image3 from "../../assets/images/marketing_strategy.png";
 import image4 from "../../assets/images/content_marketing.png";
 import image5 from "../../assets/images/search_engine.png";
 import image6 from "../../assets/images/sms_marketing.png";
-import image7 from "../../assets/images/content_marketing.png";
+import image7 from "../../assets/images/marketing_consulting.png";
 
 const SubServices = () => {
   //** this is state to change side rtl and ltr */
@@ -73,6 +73,7 @@ const SubServices = () => {
           title={"marketing_consulting"}
           text={"marketing_consulting_"}
           height={`${changeSide === "ar" ? "461px" : "525px"}`}
+          state={true}
         />
       </div>
     </div>

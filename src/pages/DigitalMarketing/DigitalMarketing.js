@@ -3,6 +3,7 @@ import React from "react";
 import logo from "../../assets/images/mernan.png";
 import image1 from "../../assets/images/digital marketing(1).png";
 import image2 from "../../assets/images/digital marketing(2).png";
+import image3 from '../../assets/images/brand_.png';
 
 //**import components */
 import Header from "../../components/Header/Header";
@@ -11,6 +12,10 @@ import Home from "../../components/Home/Home.js";
 import BenefitsOffered from '../../components/BenefitsOffered/BenefitsOffered';
 import OurPreviousWork from '../../components/OurPreviousWork/OurPreviousWork';
 import SubServices from '../../components/SubServices/SubServices';
+import StartWorking from '../../components/StartWorking/StartWorking';
+import RequestFreeConsulting from '../../components/RequestFreeConsulting/RequestFreeConsulting';
+import FrequentlyAskedQuestions from '../../components/FrequentlyAskedQuestions/FrequentlyAskedQuestions';
+import PreviousClients from '../../components/PreviousClients/PreviousClients';
 
 
 const DigitalMarketing = () => {
@@ -29,6 +34,10 @@ const DigitalMarketing = () => {
       <BenefitsOffered/>
       <SubServices/>
       <OurPreviousWork/>
+      <StartWorking/>
+      <RequestFreeConsulting/>
+      <FrequentlyAskedQuestions/>
+      <PreviousClients color1={"#596773"} color2={"#FDFDFE"} image={image3}/>
       <Footer image={logo} color1={"#EDE4E0"} color2={"#312E3A"} />
     </div>
   );

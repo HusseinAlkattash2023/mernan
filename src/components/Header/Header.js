@@ -73,7 +73,7 @@ const Header = () => {
                   <span>{t("work_with_us")}</span>
                   <span>
                     {
-                      changeSide === "ar" ? <BsArrowLeft className="arrow"/> : <BsArrowRight className="arrow"/>
+                      changeSide === "ar" ? <BsArrowLeft/> : <BsArrowRight/>
                     }
                   </span>
                 </button>

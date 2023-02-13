@@ -27,12 +27,12 @@ const Subscribe = () => {
         <div className="image">
           <img src={image} alt="" />
         </div>
-        <div class="container">
-          <div class="row height-100">
-            <div class="col-md-8">
-              <div class="search position-relative">
-                <input class="form-control" placeholder={t("your_email")} />
-                <button class="btn btn-primary position-absolute">
+        <div className="container">
+          <div className="row height-100">
+            <div className="col-md-8">
+              <div className="search position-relative">
+                <input className="form-control" placeholder={t("your_email")} />
+                <button className="btn btn-primary position-absolute">
                     {t("subscribe_now")}
                 </button>
               </div>

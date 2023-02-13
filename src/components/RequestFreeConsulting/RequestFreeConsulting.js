@@ -32,7 +32,7 @@ const RequestFreeConsulting = () => {
           <form>
             <div className="div1 row">
               <div className="mb-3 col">
-                <label for="exampleFormControlInput1" class="form-label">
+                <label htmlFor="exampleFormControlInput1" className="form-label">
                   {t("first_name")}
                 </label>
                 <input
@@ -42,7 +42,7 @@ const RequestFreeConsulting = () => {
                 />
               </div>
               <div className="mb-3 col">
-                <label for="exampleFormControlInput1" class="form-label">
+                <label htmlFor="exampleFormControlInput1" className="form-label">
                   {t("last_name")}
                 </label>
                 <input
@@ -53,8 +53,8 @@ const RequestFreeConsulting = () => {
               </div>
             </div>
             <div className="div1 mt-2 row">
-              <div class="mb-3 col">
-                <label for="exampleFormControlInput1" class="form-label">
+              <div className="mb-3 col">
+                <label htmlFor="exampleFormControlInput1" className="form-label">
                   {t("mobile_number")}
                 </label>
                 <div dir="ltr" style={{ textAlign: "left" }}>
@@ -67,8 +67,8 @@ const RequestFreeConsulting = () => {
                   />
                 </div>
               </div>
-              <div class="mb-3 col">
-                <label for="exampleFormControlInput1" class="form-label">
+              <div className="mb-3 col">
+                <label htmlFor="exampleFormControlInput1" className="form-label">
                   {t("email")}
                 </label>
                 <input
@@ -79,36 +79,36 @@ const RequestFreeConsulting = () => {
               </div>
             </div>
             <div className="mt-2">
-              <label for="inputState" class="form-label">
+              <label htmlFor="inputState" className="form-label">
                 {t("field")}
               </label>
-              <select id="inputState" class="form-select">
+              <select id="inputState" className="form-select">
                 <option selected>{t("digital_marketing")}</option>
                 <option>...</option>
               </select>
             </div>
             <div className="mt-4">
-              <label for="inputAddress" class="form-label">
+              <label htmlFor="inputAddress" className="form-label">
                 {t("company_name")}
               </label>
-              <input type="text" class="form-control" id="inputAddress" />
+              <input type="text" className="form-control" id="inputAddress" />
             </div>
 
             <div className="mt-4">
-              <label for="inputState" class="form-label">
+              <label htmlFor="inputState" className="form-label">
                 {t("budget")}
               </label>
-              <select id="inputState" class="form-select">
+              <select id="inputState" className="form-select">
                 <option selected>{t("amount")}</option>
                 <option>...</option>
               </select>
             </div>
-            <div class="mt-4">
-              <label for="exampleFormControlTextarea1" class="form-label">
+            <div className="mt-4">
+              <label htmlFor="exampleFormControlTextarea1" className="form-label">
                 {t("message")}
               </label>
               <textarea
-                class="form-control"
+                className="form-control"
                 id="exampleFormControlTextarea1"
                 rows="3"
               ></textarea>

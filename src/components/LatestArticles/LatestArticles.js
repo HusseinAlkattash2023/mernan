@@ -41,6 +41,7 @@ const LatestArticles = () => {
           <div
             onClick={() => handleTagClick(i)}
             className={`${activeTag === i && "active"} tag`}
+            key={i}
           >
             <p>{t(`${item}`)}</p>
           </div>

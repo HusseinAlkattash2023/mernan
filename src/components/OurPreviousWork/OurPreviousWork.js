@@ -29,7 +29,7 @@ const OurPreviousWork = () => {
 
       <div className="row">
         {list.map((image) => (
-          <div className="col-xl-6 col-lg-6 col-xxl-6">
+          <div key={image} className="col-xl-6 col-lg-6 col-xxl-6">
             <img src={image} alt="" />
           </div>
         ))}

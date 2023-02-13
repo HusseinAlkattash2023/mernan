@@ -19,14 +19,14 @@ const Button = ({name}) => {
     const { t } = useTranslation();
 
   return (
-    <div className="button_">
+    <div className={`${changeSide === "ar" && "button_ar"} button_`}>
         <button>
           <span>{t(`${name}`)}</span>
-          <span className="arrow">
+          <span className="arrow_">
           {changeSide === "ar" ? (
-            <BsArrowLeft className="arrow" />
+            <BsArrowLeft/>
           ) : (
-            <BsArrowRight className="arrow" />
+            <BsArrowRight/>
           )}
         </span>
         </button>
