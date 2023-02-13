@@ -68,7 +68,7 @@ const Card = ({ title, option1, option2, option3, name }) => {
           </div>
         )}
       </div>
-      <div className="button_">
+      <div className="button__">
         <Button name={name}/>
       </div>
     </div>

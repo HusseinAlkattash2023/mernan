@@ -7,6 +7,9 @@ import { StateContext } from "../StateProvider";
 
 import { useTranslation } from "react-i18next";
 
+//**animated numbers */
+import {useSpring , animated} from 'react-spring';
+
 //**import icons from react-icons */
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
@@ -40,19 +43,21 @@ const WhoUs = ({ image_en, image_ar, title, title_, text, button , state}) => {
           } statistics`}
         >
           <div>
-            <h3>11</h3>
+            <h3><Number n={11}/></h3>
             <p>{t("customers_no")}</p>
           </div>
           <div>
-            <h3>10</h3>
+            <h3><Number n={10}/></h3>
             <p>{t("members_no")}</p>
           </div>
           <div>
-            <h3>500</h3>
+            <h3>
+              <Number n={500}/>
+            </h3>
             <p>{t("designs_no")}</p>
           </div>
           <div>
-            <h3>200+</h3>
+            <h3>+<Number n={200}/></h3>
             <p>{t("number_of_funded_campaigns")}</p>
           </div>
         </div>
@@ -74,11 +79,11 @@ const WhoUs = ({ image_en, image_ar, title, title_, text, button , state}) => {
             className={`${changeSide === "ar" && "portfolio_ar"} portfolio is-active`}
           >
             <span>{t("portfolio")}</span>
-            <span className="arrow">
+            <span className="arrow__">
               {changeSide === "ar" ? (
-                <BsArrowLeft className="arrow" />
+                <BsArrowLeft/>
               ) : (
-                <BsArrowRight className="arrow" />
+                <BsArrowRight/>
               )}
             </span>
           </button>
@@ -98,3 +103,14 @@ const WhoUs = ({ image_en, image_ar, title, title_, text, button , state}) => {
 };
 
 export default WhoUs;
+
+
+const Number = ({n})=>{
+  const {number} = useSpring({
+    from : {number : 0},
+    number : n,
+    delay:200,
+    config: {mass :1 , tension:10 , friction:10},
+  });
+  return <animated.div>{number.to((n)=> n.toFixed(0))}</animated.div>
+}

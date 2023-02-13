@@ -138,8 +138,11 @@
                 padding: 0px;
                 gap: 9px;
                 text-align:center;
+                position: relative;
 
                 h3{
+                    display: flex;
+                    justify-content: center;
                     text-align: center;
                     font-family: 'Almarai';
                     font-style: normal;
@@ -160,7 +163,9 @@
                     flex: none;
                     order: 1;
                     flex-grow: 0;
-                    width:100%
+                    width:100%;
+                    position:absolute;
+                    top:80px;
                 }
             }
         }
@@ -222,11 +227,11 @@
                     height: 79px;
                     cursor: pointer;
                 }
-                .arrow{
+                .arrow__{
                     display: none;
                 }
                 &:hover{
-                    .arrow{
+                    .arrow__{
                         display: flex;
                     }
                 }

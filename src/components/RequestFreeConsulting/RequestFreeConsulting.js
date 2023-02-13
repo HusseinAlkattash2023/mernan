@@ -10,19 +10,28 @@ import { StateContext } from "../StateProvider";
 
 import { useTranslation } from "react-i18next";
 
-import image1 from "../../assets/images/request.png";
-import image2 from "../../assets/images/request_ar.png";
-
 import Button from "../Button/Button";
 
-const RequestFreeConsulting = () => {
+const RequestFreeConsulting = ({color1 , color2 , color3 , color4 , image1 , image2}) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
   const { t } = useTranslation();
 
+  const styles={
+    style1:{
+      background:`var(${color1})`,
+      color:`var(${color2})`,
+    },
+    style2:{
+      border:`3px solid var(${color3})`,
+      color:`var(${color4})`,
+    }
+  }
+
   return (
     <div
+      style={styles.style1}
       className={`${changeSide === "ar" ? "request_ar" : "request_en"} request`}
       dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}
     >
@@ -36,6 +45,7 @@ const RequestFreeConsulting = () => {
                   {t("first_name")}
                 </label>
                 <input
+                  style={styles.style2}
                   type="text"
                   className="form-control"
                   id="exampleFormControlInput1"
@@ -46,6 +56,7 @@ const RequestFreeConsulting = () => {
                   {t("last_name")}
                 </label>
                 <input
+                  style={styles.style2}
                   type="text"
                   className="form-control"
                   id="exampleFormControlInput1"
@@ -57,10 +68,12 @@ const RequestFreeConsulting = () => {
                 <label htmlFor="exampleFormControlInput1" className="form-label">
                   {t("mobile_number")}
                 </label>
-                <div dir="ltr" style={{ textAlign: "left" }}>
+                <div dir="ltr">
                   <PhoneInput
                     inputStyle={{
-                      width:"100%"
+                      width:"100%",
+                      color:`var(${color4})`,
+                      border:`3px solid var(${color4})`
                     }}
                     specialLabel={""}
                     country={"sa"}
@@ -72,6 +85,7 @@ const RequestFreeConsulting = () => {
                   {t("email")}
                 </label>
                 <input
+                style={styles.style2}
                   type="email"
                   class="form-control"
                   id="exampleFormControlInput1"
@@ -82,7 +96,7 @@ const RequestFreeConsulting = () => {
               <label htmlFor="inputState" className="form-label">
                 {t("field")}
               </label>
-              <select id="inputState" className="form-select">
+              <select style={styles.style2} id="inputState" className="form-select">
                 <option selected>{t("digital_marketing")}</option>
                 <option>...</option>
               </select>
@@ -91,14 +105,14 @@ const RequestFreeConsulting = () => {
               <label htmlFor="inputAddress" className="form-label">
                 {t("company_name")}
               </label>
-              <input type="text" className="form-control" id="inputAddress" />
+              <input style={styles.style2} type="text" className="form-control" id="inputAddress" />
             </div>
 
             <div className="mt-4">
               <label htmlFor="inputState" className="form-label">
                 {t("budget")}
               </label>
-              <select id="inputState" className="form-select">
+              <select style={styles.style2} id="inputState" className="form-select">
                 <option selected>{t("amount")}</option>
                 <option>...</option>
               </select>
@@ -108,6 +122,7 @@ const RequestFreeConsulting = () => {
                 {t("message")}
               </label>
               <textarea
+              style={styles.style2}
                 className="form-control"
                 id="exampleFormControlTextarea1"
                 rows="3"

@@ -14,7 +14,9 @@ import PreviousClients from "../../components/PreviousClients/PreviousClients";
 import OurLocations from "../../components/OurLocations/OurLocations";
 import RequestFreeConsulting from "../../components/RequestFreeConsulting/RequestFreeConsulting";
 
-//** import logo */
+//** import images */
+import image6 from "../../assets/images/request.png";
+import image7 from "../../assets/images/request_ar.png";
 
 import "./Arrows/arrow.css";
 
@@ -108,7 +110,14 @@ const WhoMernan = () => {
       {/*Our Locations*/}
       <OurLocations />
 
-      <RequestFreeConsulting />
+      <RequestFreeConsulting
+        color1={"--color1"}
+        color2={"--color2"}
+        color3={"--color2"}
+        color4={"--color2"}
+        image1={image6}
+        image2={image7}
+      />
 
       {/* Footer */}
       <Footer color1={"#39858E"} color2={"#FDFDFE"} image={logo} />

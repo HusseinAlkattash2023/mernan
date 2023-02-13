@@ -19,6 +19,8 @@ import LatestArticles from "../../components/LatestArticles/LatestArticles";
 import logo from "../../assets/images/mernan.png";
 import image_en from "../../assets/images/hero.svg";
 import image_ar from "../../assets/images/hero_ar.svg";
+import image6 from "../../assets/images/request.png";
+import image7 from "../../assets/images/request_ar.png";
 
 const LandingPage = () => {
   return (
@@ -52,7 +54,14 @@ const LandingPage = () => {
       <OurWayOfWork />
 
       {/*Request free consulting*/}
-      <RequestFreeConsulting />
+      <RequestFreeConsulting
+        color1={"--color1"}
+        color2={"--color2"}
+        color3={"--color2"}
+        color4={"--color2"}
+        image1={image6}
+        image2={image7}
+      />
 
       {/* LatestArticles */}
       <LatestArticles />
