@@ -10,6 +10,8 @@ import { useTranslation } from "react-i18next";
 //**import components */
 import EmailMarketing from "./EmailMarketing/EmailMarketing";
 import MarketingStrategy from "./MarketingStrategy/MarketingStrategy";
+import ContentMarketing from "./ContentMarketing/ContentMarketing";
+import MarketingConsulting from './MarketingConsulting/MarketingConsulting';
 
 const Pricing = () => {
   //** this is state to change side rtl and ltr */
@@ -39,6 +41,10 @@ const Pricing = () => {
       return <EmailMarketing />;
     } else if (i === 2) {
       return <MarketingStrategy />;
+    } else if (i === 3) {
+      return <ContentMarketing />;
+    } else if (i === 6) {
+      return <MarketingConsulting />;
     }
   };
 
@@ -64,7 +70,11 @@ const Pricing = () => {
           </div>
         ))}
       </div>
-      <div className="prices">{ServicePrices(0)}</div>
+      <div className="prices">
+        {
+          ServicePrices(activeTag)
+        }
+      </div>
     </div>
   );
 };

@@ -4,25 +4,25 @@ import React, { useContext } from "react";
 import Card from "../Card/Card";
 
 //**import images */
-import image1 from "../../../assets/images/image1.svg";
+import image2 from "../../../assets/images/image2.svg";
 
 //** state management */
 import { StateContext } from "../../StateProvider";
 
-const MarketingStrategy = () => {
+const ContentMarketing = () => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
   return (
     <div dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}>
       <Card
-        image={image1}
-        text={"do_you_want"}
-        title={"marketing_strategy"}
-        benefit1={"target_group_analysis"}
-        benefit2={"create_buyer_personas"}
-        benefit3={"conduct_competitor_research"}
-        benefit4={"creative_idea"}
+        image={image2}
+        text={"want_to_market"}
+        title={"content_marketing"}
+        benefit1={"help_increase"}
+        benefit2={"improve_the_quality"}
+        benefit3={"differentiate"}
+        benefit4={"refine_your_brand_voice"}
         state={true}
         name={"request_price_offer"}
       />
@@ -30,4 +30,4 @@ const MarketingStrategy = () => {
   );
 };
 
-export default MarketingStrategy;
+export default ContentMarketing;

@@ -1,0 +1,134 @@
+.card_component{
+    width: 369px;
+    height: 806px;
+    background:var(--color5);
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    .image{
+        position: absolute;
+        top:0px;
+        left:0px;
+        img{
+            border-radius: 10px 0px 0px 0px;
+        }
+    }
+
+    .image-ar{
+        position: absolute;
+        top:0px;
+        right:0px;
+        transform: rotateY(3.142rad);
+        img{
+            border-radius: 10px 0px 0px 0px;
+        }
+    }
+
+    .free{
+        position: absolute;
+        top:50px;
+        right:0px;
+    }
+
+    .free-ar{
+        position: absolute;
+        top:50px;
+        left:0px;
+    }
+
+    .title{
+        h3{
+            font-family: 'Almarai';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 31px;
+            line-height: 140%;
+            color:var(--color2);
+        }
+        img{
+            position: relative;
+            bottom: 10px;
+        }
+    }
+    .text{
+        text-align: center;
+        width: 80%;
+        p{
+            font-family: 'Almarai';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 140%;
+            color:var(--color2);
+        }
+    }
+    .section2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        width: 90%;
+        p{
+            text-align: center;
+            font-family: 'Almarai';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 140%;
+            color: var(--color2);
+        }
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+
+        h4{
+            font-family: 'Almarai';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 23px;
+            line-height: 140%;
+            color: var(--color2);
+        }
+
+        .benefits{
+            .benefit{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                &.benefit-ar{
+                    p{
+                        margin-right: 10px;
+                    }
+                }
+
+                img{
+                    width: 20px;
+                }
+                p{
+                    position: relative;
+                    top:8px;
+                    margin-left: 10px;
+                    font-family: 'Almarai';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 140%;
+                    color: var(--color2);
+                }
+            }
+        }
+    }
+    .button{
+        position: absolute;
+        bottom: 30px;
+    }
+}
