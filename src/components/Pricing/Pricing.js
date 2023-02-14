@@ -8,7 +8,8 @@ import { StateContext } from "../StateProvider";
 import { useTranslation } from "react-i18next";
 
 //**import components */
-import EmailMarketing from './EmailMarketing/EmailMarketing';
+import EmailMarketing from "./EmailMarketing/EmailMarketing";
+import MarketingStrategy from "./MarketingStrategy/MarketingStrategy";
 
 const Pricing = () => {
   //** this is state to change side rtl and ltr */
@@ -32,8 +33,20 @@ const Pricing = () => {
     setActiveTag(index);
   };
 
+  //**it is function for services type pricing */
+  const ServicePrices = (i) => {
+    if (i === 0) {
+      return <EmailMarketing />;
+    } else if (i === 2) {
+      return <MarketingStrategy />;
+    }
+  };
+
   return (
-    <div className={`${changeSide === "ar" && "pricing-ar"} pricing`} dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}>
+    <div
+      className={`${changeSide === "ar" && "pricing-ar"} pricing`}
+      dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}
+    >
       <h2>{t("pricing")}</h2>
       <div className="row">
         {list.map((item, i) => (
@@ -51,9 +64,7 @@ const Pricing = () => {
           </div>
         ))}
       </div>
-      <div className="prices">
-        <EmailMarketing/>
-      </div>
+      <div className="prices">{ServicePrices(0)}</div>
     </div>
   );
 };

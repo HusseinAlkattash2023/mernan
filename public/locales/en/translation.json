@@ -179,5 +179,9 @@
   "perform": "Perform A/X tests",
   "email_campaigns": "Email campaigns",
   "monthly_reports": "Monthly reports",
-  "managing_responses": "Managing responses"
+  "managing_responses": "Managing responses",
+  "choose_package": "Choose package",
+  "not_sure": "Not sure which package is right for you?",
+  "you_can_book":"You can book a free consultation with us to help you analyze your project and choose the right package for your business",
+  "ask_for_free":"Ask for a free consultation"
 }

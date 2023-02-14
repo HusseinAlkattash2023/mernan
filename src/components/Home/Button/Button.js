@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 import { StateContext } from "../../StateProvider";
 
 
-const Button = ({name}) => {
+const Button = ({name , state}) => {
     //** this is state to change side rtl and ltr */
     const { changeSide } = useContext(StateContext);
 
@@ -23,11 +23,11 @@ const Button = ({name}) => {
         <button>
           <span>{t(`${name}`)}</span>
           <span className="arrow_">
-          {changeSide === "ar" ? (
+          { !state && (changeSide === "ar" ? (
             <BsArrowLeft/>
           ) : (
             <BsArrowRight/>
-          )}
+          ))}
         </span>
         </button>
     </div>
