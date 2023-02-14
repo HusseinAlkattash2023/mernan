@@ -7,6 +7,9 @@ import { StateContext } from "../StateProvider";
 
 import { useTranslation } from "react-i18next";
 
+//**import components */
+import EmailMarketing from './EmailMarketing/EmailMarketing';
+
 const Pricing = () => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
@@ -30,7 +33,7 @@ const Pricing = () => {
   };
 
   return (
-    <div className="pricing" dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}>
+    <div className={`${changeSide === "ar" && "pricing-ar"} pricing`} dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}>
       <h2>{t("pricing")}</h2>
       <div className="row">
         {list.map((item, i) => (
@@ -47,6 +50,9 @@ const Pricing = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="prices">
+        <EmailMarketing/>
       </div>
     </div>
   );

@@ -66,4 +66,26 @@
             }
         }
     }
+    &.pricing-ar{
+        .row{
+            .price{
+                &.border1{
+                    border-radius: 0px 10px 10px 0px;
+                }
+                &.border2{
+                    border-radius: 10px 0px 0px 10px;
+                }
+                p{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
+    .prices{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
 }
