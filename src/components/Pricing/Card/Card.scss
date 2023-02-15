@@ -49,6 +49,7 @@
             font-size: 31px;
             line-height: 140%;
             color:var(--color2);
+            text-align: center;
         }
         img{
             position: relative;
@@ -108,6 +109,9 @@
                     p{
                         margin-right: 10px;
                     }
+                }
+                &.active{
+                    display: none;
                 }
 
                 img{

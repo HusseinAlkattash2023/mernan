@@ -26,6 +26,8 @@ const Rectangular = ({
   state1,
   state2,
   state3,
+  number,
+  num
 }) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
@@ -48,9 +50,9 @@ const Rectangular = ({
         {state1 &&
           (() => {
             let td = [];
-            for (let i = 1; i <= 7; i++) {
+            for (let i = 1; i <= number; i++) {
               td.push(
-                i === 5 || i === 6 || i === 7 ? (
+                i > number - num ? (
                   <div>
                     <img src={image1} alt="" />
                   </div>
@@ -66,7 +68,7 @@ const Rectangular = ({
         {state2 &&
           (() => {
             let td = [];
-            for (let i = 1; i <= 7; i++) {
+            for (let i = 1; i <= number; i++) {
               td.push(
                 <div>
                   <img src={image2} alt="" />

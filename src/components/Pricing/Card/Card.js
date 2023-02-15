@@ -9,8 +9,8 @@ import { useTranslation } from "react-i18next";
 
 import image1 from "../../../assets/images/Vector(4).png";
 import image2 from "../../../assets/images/check-mark.png";
-import image3 from '../../../assets/images/free.png';
-import image4 from '../../../assets/images/free_ar.png';
+import image3 from "../../../assets/images/free.png";
+import image4 from "../../../assets/images/free_ar.png";
 
 import Button from "../../Button/Button";
 
@@ -24,6 +24,7 @@ const Card = ({
   benefit2,
   benefit3,
   benefit4,
+  num,
 }) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
@@ -38,11 +39,12 @@ const Card = ({
         <img src={image} alt="" />
       </div>
       <div className={`${changeSide === "ar" ? "free-ar" : "free"}`}>
-        {
-          !state && (
-            changeSide === "ar" ? <img src={image4} alt=""/> : <img src={image3} alt=""/>
-          )
-        }
+        {!state &&
+          (changeSide === "ar" ? (
+            <img src={image4} alt="" />
+          ) : (
+            <img src={image3} alt="" />
+          ))}
       </div>
       <div className="title">
         <h3>{t(`${title}`)}</h3>
@@ -55,12 +57,17 @@ const Card = ({
         <div className="list">
           <h4>{t("offered_benefits")}</h4>
           <div className="benefits">
-            {benefits.map((item) => (
-              <div className={`${changeSide === "ar" && "benefit-ar"} benefit`}>
-                <img src={image2} alt="" />
-                <p>{t(`${item}`)}</p>
-              </div>
-            ))}
+            {benefits &&
+              benefits.map((item, i) => (
+                <div
+                  className={`${changeSide === "ar" && "benefit-ar"} , ${
+                    num === 3 && i === 3 ? "active" : ""
+                  } benefit`}
+                >
+                  <img src={image2} alt="" />
+                  <p>{t(`${item}`)}</p>
+                </div>
+              ))}
           </div>
         </div>
       ) : (
@@ -69,7 +76,7 @@ const Card = ({
         </div>
       )}
       <div className="button">
-        <Button name={`${name}`} fontSize={"25px"}/>
+        <Button name={`${name}`} fontSize={"25px"} />
       </div>
     </div>
   );
