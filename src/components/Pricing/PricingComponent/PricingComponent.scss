@@ -1,0 +1,180 @@
+
+
+.pricing_component{
+    width: 100%;
+
+    .section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    }
+    .part1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        order:2;
+        z-index: 1;
+    }
+
+    table{
+        border-collapse: separate;
+        border-spacing: 0 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        justify-content: center;
+        position: absolute;
+        left:0px;
+        z-index: 11;
+        margin-top: 100px;
+
+
+        thead{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            tr{
+                th{
+                    width:100%;
+                    h3{
+                        font-family: 'Almarai';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 39px;
+                        line-height: 140%;
+                        color:var(--color5)
+                    }
+                }
+            }
+        }
+
+        tbody{
+            width: 100%;
+            tr{
+                th{
+                        font-family: 'Almarai';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 25px;
+                        line-height: 140%;
+                        color:var(--color5);
+                        width: 270px;
+                        position: relative;
+                        padding: 20px 0px;
+                        display: flex;
+                        align-items: center;
+                        margin:auto;
+                        border-bottom: 2px solid var(--color5);
+                    
+                }
+                td{
+                    width: 400px;
+                    text-align: center;
+                    padding-left:20px ;
+                    padding-top: 20px;
+                    border-bottom: 2px solid var(--color6);
+
+                    &.icon{
+                        padding-left: 100px;
+                    }
+                    &.icon_ar{
+                        padding-left: 25px;
+                    }
+                    &.group{
+                        padding-left: 150px;
+                    }
+                }
+            }
+        }
+       
+        .active{
+            display: none;
+        }
+    }
+    .footer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin: 30px auto 0px auto;
+        width: 70%;
+        h3{
+            font-family: 'Almarai';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 39px;
+            line-height: 140%;
+            color: var(--color5);
+        }
+        p{
+            font-family: 'Almarai';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 31px;
+            line-height: 140%;
+            color:var(--color5);
+            text-align: center;
+            margin-top: 20px;
+        }
+        div{
+            margin-top: 30px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1550px){
+    .pricing_component{
+        table{
+            tbody{
+                tr{
+                    td{
+                        width: 420px;
+                        padding-left:80px ;
+                        &.icon{
+                            padding-left: 190px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1600px){
+    .pricing_component{
+        table{
+            tbody{
+                tr{
+                    td{
+                        width: 430px;
+                        padding-left:80px ;
+                        &.icon{
+                            padding-left: 240px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1650px){
+    .pricing_component{
+        table{
+            tbody{
+                tr{
+                    td{
+                        width: 440px;
+                        padding-left:80px ;
+                        &.icon{
+                            padding-left: 280px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

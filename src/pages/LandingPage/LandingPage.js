@@ -21,6 +21,7 @@ import image_en from "../../assets/images/hero.svg";
 import image_ar from "../../assets/images/hero_ar.svg";
 import image6 from "../../assets/images/request.png";
 import image7 from "../../assets/images/request_ar.png";
+import image2 from '../../assets/images/brand.png';
 
 const LandingPage = () => {
   return (
@@ -48,7 +49,7 @@ const LandingPage = () => {
       <WhatMakesDifference />
 
       {/* Previous Clients */}
-      <PreviousClients />
+      <PreviousClients image={image2}/>
 
       {/* our we of work */}
       <OurWayOfWork />

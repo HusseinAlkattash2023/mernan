@@ -26,8 +26,6 @@ const Rectangular = ({
   state1,
   state2,
   state3,
-  number,
-  num
 }) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
@@ -46,38 +44,6 @@ const Rectangular = ({
       <span>{t(`${text}`)}</span>
       {changeSide === "ar" ? <p>{price} ر.س</p> : <p>{price} SAR</p>}
       <img src={image} alt="" />
-      <div className="icons">
-        {state1 &&
-          (() => {
-            let td = [];
-            for (let i = 1; i <= number; i++) {
-              td.push(
-                i > number - num ? (
-                  <div>
-                    <img src={image1} alt="" />
-                  </div>
-                ) : (
-                  <div>
-                    <img src={image2} alt="" />
-                  </div>
-                )
-              );
-            }
-            return td;
-          })()}
-        {state2 &&
-          (() => {
-            let td = [];
-            for (let i = 1; i <= number; i++) {
-              td.push(
-                <div>
-                  <img src={image2} alt="" />
-                </div>
-              );
-            }
-            return td;
-          })()}
-      </div>
       <div className="choose_package">
         {
           state3 ? (

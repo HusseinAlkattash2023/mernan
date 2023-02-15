@@ -14,6 +14,7 @@ import ContentMarketing from "./ContentMarketing/ContentMarketing";
 import MarketingConsulting from "./MarketingConsulting/MarketingConsulting";
 import SMSMarketing from "./SMSMarketing/SMSMarketing";
 import GoogleAds from "./GoogleAds/GoogleAds";
+import SearchEngine from "./SearchEngine/SearchEngine";
 
 const Pricing = () => {
   //** this is state to change side rtl and ltr */
@@ -40,36 +41,9 @@ const Pricing = () => {
   //**it is function for services type pricing */
   const ServicePrices = (i) => {
     if (i === 0) {
-      return (
-        <EmailMarketing
-          height={"1160px"}
-          price1={"5625"}
-          price2={"9375"}
-          number={7}
-          num={3}
-          value1={"design_mail"}
-          value2={"create_automatically"}
-          value3={"segmentation"}
-          value4={"perform"}
-          value5={"email_campaigns"}
-          value6={"monthly_reports"}
-          value7={"managing_responses"}
-        />
-      );
+      return <EmailMarketing />;
     } else if (i === 1) {
-      return (
-        <EmailMarketing
-          height={"1025px"}
-          price1={"3750"}
-          price2={"7500"}
-          number={4}
-          num={2}
-          value1={"design_mail"}
-          value2={"create_automatically"}
-          value3={"segmentation"}
-          value4={"perform"}
-        />
-      );
+      return <GoogleAds />;
     } else if (i === 2) {
       return <MarketingStrategy />;
     } else if (i === 3) {
@@ -78,6 +52,8 @@ const Pricing = () => {
       return <MarketingConsulting />;
     } else if (i === 6) {
       return <SMSMarketing />;
+    } else {
+      return <SearchEngine />;
     }
   };
 
