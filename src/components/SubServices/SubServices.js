@@ -19,7 +19,7 @@ import image5 from "../../assets/images/search_engine.png";
 import image6 from "../../assets/images/sms_marketing.png";
 import image7 from "../../assets/images/marketing_consulting.png";
 
-const SubServices = () => {
+const SubServices = ({ list }) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
@@ -32,7 +32,26 @@ const SubServices = () => {
     >
       <h2>{t("sub_services")}</h2>
       <div className="cards row">
-        <Card
+        { list && list.map((item) => (
+          <div className="col-lg-3 my-3 item" key={item.id}>
+            <Card
+              image={item.image}
+              title={item.title}
+              text={item.text}
+              state={item.state}
+              height={`${changeSide === "ar" ? "461px" : "525px"}`}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default SubServices;
+
+/*
+ <Card
           image={image1}
           title={"email_marketing"}
           text={"through_email"}
@@ -73,11 +92,6 @@ const SubServices = () => {
           title={"marketing_consulting"}
           text={"marketing_consulting_"}
           height={`${changeSide === "ar" ? "461px" : "525px"}`}
-          state={true}
+          
         />
-      </div>
-    </div>
-  );
-};
-
-export default SubServices;
+*/

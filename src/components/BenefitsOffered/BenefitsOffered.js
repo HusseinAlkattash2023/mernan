@@ -10,7 +10,6 @@ import { useTranslation } from "react-i18next";
 //**import components */
 import Card from "./Card/Card";
 
-
 const BenefitsOffered = ({
   title1,
   text1,
@@ -23,7 +22,13 @@ const BenefitsOffered = ({
   icon1,
   icon2,
   icon3,
-  icon4
+  icon4,
+  height1,
+  height2,
+  height3,
+  height4,
+  height5,
+  height6,
 }) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
@@ -50,7 +55,6 @@ const BenefitsOffered = ({
               icon={icon1}
               title={title1}
               text={text1}
-              height={`${changeSide === "ar" ? "261px" : "364px"}`}
             />
             <Card
               color1={"--color3"}
@@ -58,7 +62,6 @@ const BenefitsOffered = ({
               icon={icon4}
               title={title2}
               text={text2}
-              height={`${changeSide === "ar" ? "364px" : "407px"}`}
             />
           </div>
           <div className="section2">
@@ -68,7 +71,6 @@ const BenefitsOffered = ({
               icon={icon2}
               title={title3}
               text={text3}
-              height={`${changeSide === "ar" ? "356px" : "364px"}`}
             />
             <Card
               color1={"--color7"}
@@ -76,7 +78,6 @@ const BenefitsOffered = ({
               icon={icon3}
               title={title4}
               text={text4}
-              height={`${changeSide === "ar" ? "364px" : "407px"}`}
             />
           </div>
         </div>

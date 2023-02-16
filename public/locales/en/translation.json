@@ -83,7 +83,7 @@
   "development": "Development",
   "make_the_website": "Make the website run smoothly",
   "unique_graphic_design": "Unique graphic design and attractive content",
-  "focus": "Focus on the ease and responsiveness of the site",
+  "focus": "Focus on the ease and responsive of the site",
   "branding": "Branding",
   "build_a_distinctive": "Build a distinctive identity for your brand",
   "brand_connection": "Brand connection to your business personality values",
@@ -217,5 +217,11 @@
   "strategic_link":"Strategic link building",
   "long-tailed":"Long-tailed locator",
   "report":"Report",
-  "help_your_customer":"Help your customers get Integrated services!"
+  "help_your_customer":"Help your customers get Integrated services!",
+  "graphic_design":"Graphic design Unique and content Attractive",
+  "website_maintenance":"Website maintenance and immediate support",
+  "ensuring_the_safety":"Ensuring the safety and ease of use of the website and its rapid response to customer requests, while using the latest website building technologies.",
+  "ensuring_the_speed":"Ensuring the speed of the site's response because it is an important factor in leaving a positive impact on the user's experience and returning them to visit the site.",
+  "work_on_developing" : "Work on developing a website with attractive design and content to distinguish it from other websites, especially those with a similar idea.",
+  "our_services_do":"Our services do not stop at the completion of the development of the site, but we provide immediate support when you encounter any problem."
 }

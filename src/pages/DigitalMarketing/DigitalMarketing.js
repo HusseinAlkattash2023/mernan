@@ -10,6 +10,15 @@ import image5 from "../../assets/images/start-work2-ar.png";
 import image6 from "../../assets/images/request2.png";
 import image7 from "../../assets/images/request2-ar.png";
 
+//**import images */
+import image8 from "../../assets/images/email_marketing.png";
+import image9 from "../../assets/images/google_ads.png";
+import image10 from "../../assets/images/marketing_strategy.png";
+import image11 from "../../assets/images/content_marketing.png";
+import image12 from "../../assets/images/search_engine.png";
+import image13 from "../../assets/images/sms_marketing.png";
+import image14 from "../../assets/images/marketing_consulting.png";
+
 //**import icons */
 import icon1 from "../../assets/images/icon1.png";
 import icon2 from "../../assets/images/icon2.png";
@@ -17,7 +26,6 @@ import icon3 from "../../assets/images/icon3.png";
 import icon4 from "../../assets/images/icon4.png";
 
 //**import components */
-import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Home from "../../components/Home/Home.js";
 import BenefitsOffered from "../../components/BenefitsOffered/BenefitsOffered";
@@ -28,6 +36,52 @@ import RequestFreeConsulting from "../../components/RequestFreeConsulting/Reques
 import FrequentlyAskedQuestions from "../../components/FrequentlyAskedQuestions/FrequentlyAskedQuestions";
 import PreviousClients from "../../components/PreviousClients/PreviousClients";
 import Pricing from "../../components/Pricing/Pricing";
+
+const list =[
+  {
+    id:1,
+    image :image8,
+    title:"email_marketing",
+    text:"through_email"
+  },
+  {
+    id:2,
+    image :image9,
+    title:"google_ads",
+    text:"through_google"
+  },
+  {
+    id:3,
+    image :image10,
+    title:"marketing_strategy",
+    text:"while_building"
+  },
+  {
+    id:4,
+    image :image11,
+    title:"content_marketing",
+    text:"the_importance"
+  },
+  {
+    id:5,
+    image :image12,
+    title:"search_engine",
+    text:"through_this_service"
+  },
+  {
+    id:6,
+    image :image13,
+    title:"sms_marketing",
+    text:"sms_marketing_"
+  },
+  {
+    id:7,
+    image :image14,
+    title:"marketing_consulting",
+    text:"marketing_consulting_",
+    state:true
+  },
+]
 
 const DigitalMarketing = () => {
   return (
@@ -63,7 +117,7 @@ const DigitalMarketing = () => {
         icon3={icon3}
         icon4={icon4}
       />
-      <SubServices />
+      <SubServices list = {list}/>
       <OurPreviousWork />
       <Pricing />
       <StartWorking

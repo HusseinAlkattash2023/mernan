@@ -25,7 +25,7 @@ const Card = ({ image, title, text, height, state }) => {
   };
 
   return (
-    <div className="card_sub_service col-lg-3 mx-3 my-3" style={styles}>
+    <div className="card_sub_service" style={styles}>
       <div className="head">
         <img className={`${changeSide === "ar" ? "image_ar" : "image"}`} src={image} alt="" />
         {state &&

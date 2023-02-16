@@ -13,6 +13,8 @@ import icon4 from "../../assets/images/dev_icon4.svg";
 //**import components */
 import Home from '../../components/Home/Home';
 import BenefitsOffered from '../../components/BenefitsOffered/BenefitsOffered';
+import OurPreviousWork from '../../components/OurPreviousWork/OurPreviousWork';
+
 
 const Development = () => {
   return (
@@ -35,19 +37,20 @@ const Development = () => {
         average3_ar={"99.59%"}
       />
       <BenefitsOffered
-        title1={"financial"}
-        text1={"financial_success"}
-        title2={"strategy"}
-        text2={"there_is_no_fixed"}
-        title3={"greater_reach"}
-        text3={"by_increasing"}
-        title4={"bonus"}
-        text4={"with_so_many"}
+        title1={"make_the_website"}
+        text1={"ensuring_the_safety"}
+        title2={"focus"}
+        text2={"ensuring_the_speed"}
+        title3={"graphic_design"}
+        text3={"work_on_developing"}
+        title4={"website_maintenance"}
+        text4={"our_services_do"}
         icon1={icon1}
         icon2={icon2}
         icon3={icon3}
         icon4={icon4}
       />
+      <OurPreviousWork/>
     </div>
   )
 }
