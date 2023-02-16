@@ -23,7 +23,6 @@ import PreviousClients from "../../components/PreviousClients/PreviousClients";
 const Services = () => {
   return (
     <div>
-      <Header />
       <WhoUs
         image_en={image}
         image_ar={image}

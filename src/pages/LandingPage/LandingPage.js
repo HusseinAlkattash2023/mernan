@@ -26,9 +26,6 @@ import image2 from '../../assets/images/brand.png';
 const LandingPage = () => {
   return (
     <div>
-      {/* Header */}
-      <Header />
-
       {/* Who us */}
       <WhoUs
         title={"we_transfer_your_work"}

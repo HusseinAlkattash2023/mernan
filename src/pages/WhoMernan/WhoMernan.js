@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 //** import components */
-import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Welcome from "../../components/Welcome/Welcome";
 import WhatServices from "../../components/WhatServices/WhatServices";
@@ -77,9 +76,6 @@ const WhoMernan = () => {
   const [classes, setClasses] = useState("arrow start");
   return (
     <div>
-      {/* Header */}
-      <Header />
-
       {/* Welcome */}
       <ArrowLeft start={start} classes={classes} />
       <Welcome />

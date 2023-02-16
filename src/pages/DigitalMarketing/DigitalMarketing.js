@@ -1,5 +1,6 @@
 import React from "react";
 
+//**import icons */
 import logo from "../../assets/images/mernan.png";
 import image1 from "../../assets/images/digital marketing(1).png";
 import image2 from "../../assets/images/digital marketing(2).png";
@@ -8,6 +9,12 @@ import image4 from "../../assets/images/start-work2.png";
 import image5 from "../../assets/images/start-work2-ar.png";
 import image6 from "../../assets/images/request2.png";
 import image7 from "../../assets/images/request2-ar.png";
+
+//**import icons */
+import icon1 from "../../assets/images/icon1.png";
+import icon2 from "../../assets/images/icon2.png";
+import icon3 from "../../assets/images/icon3.png";
+import icon4 from "../../assets/images/icon4.png";
 
 //**import components */
 import Header from "../../components/Header/Header";
@@ -25,7 +32,6 @@ import Pricing from "../../components/Pricing/Pricing";
 const DigitalMarketing = () => {
   return (
     <div>
-      <Header />
       <Home
         title={"ready_to_grow"}
         text={"a_way_to_promote"}
@@ -34,8 +40,29 @@ const DigitalMarketing = () => {
         color1={"#FFF2D8"}
         color2={"#FFD261"}
         color3={"#FFCA3D"}
+        degree={"272.79deg"}
+        degree_ar={"89.52deg"}
+        average={"3.8%"}
+        average2={"42.32%"}
+        average3={"97.86%"}
+        average_ar={"2.46%"}
+        average2_ar={"42.24%"}
+        average3_ar={"99.59%"}
       />
-      <BenefitsOffered />
+      <BenefitsOffered
+        title1={"financial"}
+        text1={"financial_success"}
+        title2={"strategy"}
+        text2={"there_is_no_fixed"}
+        title3={"greater_reach"}
+        text3={"by_increasing"}
+        title4={"bonus"}
+        text4={"with_so_many"}
+        icon1={icon1}
+        icon2={icon2}
+        icon3={icon3}
+        icon4={icon4}
+      />
       <SubServices />
       <OurPreviousWork />
       <Pricing />

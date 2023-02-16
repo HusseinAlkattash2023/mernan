@@ -10,13 +10,21 @@ import { useTranslation } from "react-i18next";
 //**import components */
 import Card from "./Card/Card";
 
-//**import icons */
-import icon1 from "../../assets/images/icon1.png";
-import icon2 from "../../assets/images/icon2.png";
-import icon3 from "../../assets/images/icon3.png";
-import icon4 from "../../assets/images/icon4.png";
 
-const BenefitsOffered = () => {
+const BenefitsOffered = ({
+  title1,
+  text1,
+  title2,
+  text2,
+  title3,
+  text3,
+  title4,
+  text4,
+  icon1,
+  icon2,
+  icon3,
+  icon4
+}) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
@@ -33,40 +41,42 @@ const BenefitsOffered = () => {
           <p>{t("by_subscribing")}</p>
         </div>
         <div className="cards">
-          <div className={`${changeSide === "ar" ? "section1_ar" : "section1"}`}>
+          <div
+            className={`${changeSide === "ar" ? "section1_ar" : "section1"}`}
+          >
             <Card
               color1={"--color7"}
               color2={"--color5"}
               icon={icon1}
-              title={"financial"}
-              text={"financial_success"}
-              height = {`${changeSide === "ar" ? "261px": "364px"}`}
+              title={title1}
+              text={text1}
+              height={`${changeSide === "ar" ? "261px" : "364px"}`}
             />
             <Card
               color1={"--color3"}
               color2={"--color2"}
               icon={icon4}
-              title={"strategy"}
-              text={"there_is_no_fixed"}
-              height = {`${changeSide === "ar" ? "364px": "407px"}`}
+              title={title2}
+              text={text2}
+              height={`${changeSide === "ar" ? "364px" : "407px"}`}
             />
           </div>
           <div className="section2">
-          <Card
+            <Card
               color1={"--color3"}
               color2={"--color2"}
               icon={icon2}
-              title={"greater_reach"}
-              text={"by_increasing"}
-              height = {`${changeSide === "ar" ? "356px": "364px"}`}
+              title={title3}
+              text={text3}
+              height={`${changeSide === "ar" ? "356px" : "364px"}`}
             />
             <Card
               color1={"--color7"}
               color2={"--color5"}
               icon={icon3}
-              title={"bonus"}
-              text={"with_so_many"}
-              height = {`${changeSide === "ar" ? "364px": "407px"}`}
+              title={title4}
+              text={text4}
+              height={`${changeSide === "ar" ? "364px" : "407px"}`}
             />
           </div>
         </div>
