@@ -1,6 +1,6 @@
 import React from "react";
 
-//**import icons */
+
 import logo from "../../assets/images/mernan.png";
 import image1 from "../../assets/images/digital marketing(1).png";
 import image2 from "../../assets/images/digital marketing(2).png";

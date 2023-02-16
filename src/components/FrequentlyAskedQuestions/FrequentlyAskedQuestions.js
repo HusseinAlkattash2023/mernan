@@ -11,11 +11,19 @@ import { useTranslation } from "react-i18next";
 import { BsPlusCircle } from "react-icons/bs";
 import { BsDashCircle } from "react-icons/bs";
 
-const FrequentlyAskedQuestions = () => {
+const FrequentlyAskedQuestions = ({ questions }) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
   const { t } = useTranslation();
+
+  const [showQuestion, setShowQuestion] = useState(false);
+
+
+  const ShowQuestion = () => {
+    setShowQuestion(!showQuestion);
+    }
+
 
   return (
     <div
@@ -24,65 +32,28 @@ const FrequentlyAskedQuestions = () => {
     >
       <h2>{t("frequently_asked_questions")}</h2>
       <div className="questions">
-        <Question />
-        <Question />
-        <Question />
-        <Question />
+        {questions &&
+          questions.map((item) => (
+            <div className={`${showQuestion && "active"} question mt-5`}>
+              <div className="question_">
+                <div onClick={ShowQuestion}>
+                  {showQuestion ? (
+                    <BsDashCircle className="icon" />
+                  ) : (
+                    <BsPlusCircle className="icon" />
+                  )}
+                </div>
+                <div className="item">
+                  <p>{t("question")} #1</p>
+                  <p key={item.id}>{t(item.question)}</p>
+                </div>
+              </div>
+              <div className="answer">{showQuestion && <p></p>}</div>
+            </div>
+          ))}
       </div>
     </div>
   );
 };
 
 export default FrequentlyAskedQuestions;
-
-const Question = () => {
-  const [showQuestion, setShowQuestion] = useState(false);
-
-  const { t } = useTranslation();
-
-  const ShowQuestion = () => {
-    setShowQuestion(!showQuestion);
-  };
-
-  return (
-    <div className={`${showQuestion && "active"} question mt-5`}>
-      <div className="question_">
-        <div onClick={ShowQuestion}>
-          {showQuestion ? (
-            <BsDashCircle className="icon" />
-          ) : (
-            <BsPlusCircle className="icon" />
-          )}
-        </div>
-        <div>
-          <p>
-            {t("question")}
-            {t("question")}
-            {t("question")}
-            {t("question")}
-            {t("question")}
-            {t("question")}
-            {t("question")}
-            {t("question")}
-            {t("question")}
-          </p>
-        </div>
-      </div>
-      <div className="answer">
-        {showQuestion && (
-          <p>
-            {t("question")}
-            {t("question")}
-            {t("question")}
-            {t("question")}
-            {t("question")}
-            {t("question")}
-            {t("question")}
-            {t("question")}
-            {t("question")}
-          </p>
-        )}
-      </div>
-    </div>
-  );
-};
