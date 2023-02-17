@@ -8,7 +8,6 @@
     align-items: center;
     position: relative;
     .text{
-
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -20,134 +19,80 @@
             font-family: 'Almarai';
             font-style: normal;
             font-weight: 800;
-            font-size: 71px;
+            font-size: 51px;
             line-height: 140%;
             text-transform:capitalize;
-            height: 297px;
+            width: 75%;
             position: relative;
+            margin-top: 30px;
 
             span{
                 color:var(--color3)
             }
             &.active{
-                font-size:81px;
-                width:90%;
-                padding-top:50px;
+                font-size:61px;
+                width: 70%;
             }
-            .line1{
+            .radiation_ar{
                 position: absolute;
-                top:100px;
-                right: 26%;
-                background:var(--color3);
-                transform: matrix(-1, 0, 0, 1, 0, 0);
-                width: 5.91px;
-                height: 25.06px;
-                border-radius: 4px;
+                top:-20px;
+                left:50px;
+                height:60px;
             }
-            .line2{
+            .radiation_en{
                 position: absolute;
-                top:100px;
-                right: 21%;
-                background:var(--color3);
-                transform: matrix(-1, 0, 0, 1, 0, 0);
-                width: 5.91px;
-                height: 46.06px;
-                border-radius: 5px;
-                transform: rotate(45deg);
-            }
-            .line3{
-                position: absolute;
-                top:150px;
-                right: 20%;
-                background:var(--color3);
-                transform: matrix(-1, 0, 0, 1, 0, 0);
-                width: 5.91px;
-                height: 25.06px;
-                border-radius: 4px;
-                transform: rotate(85deg);
-            }
-            .line4{
-                position: absolute;
-                top:100px;
-                left: 15%;
-                top:20px;
-                background:var(--color3);
-                transform: matrix(-1, 0, 0, 1, 0, 0);
-                width: 5.91px;
-                height: 25.06px;
-                border-radius: 4px;
-            }
-            .line5{
-                position: absolute;
-                top:100px;
-                left: 10%;
-                top:27px;
-                background:var(--color3);
-                transform: matrix(-1, 0, 0, 1, 0, 0);
-                width: 5.91px;
-                height: 46.06px;
-                border-radius: 5px;
-                transform: rotate(-45deg);
-            }
-            .line6{
-                position: absolute;
-                top:100px;
-                left: 9%;
-                top:80px;
-                background:var(--color3);
-                transform: matrix(-1, 0, 0, 1, 0, 0);
-                width: 5.91px;
-                height: 26.06px;
-                border-radius: 5px;
-                transform: rotate(-90deg);
+                top:50px;
+                right:20%;
+                height:60px;
             }
         }
+
         .mernan{
             width: 83%;
             font-family: 'Almarai';
             font-style: normal;
             font-weight: 400;
-            font-size: 25px;
+            font-size: 20px;
             line-height: 170%;
             color:var(--color5);
-            margin: 20px 0px;
+            margin: 0px;
         }
 
         .statistics{
             display: flex;
             align-items: center;
-            justify-content:flex-start;
+            justify-content:space-between;
             width:90%;
-            margin:10px 0px;
+
             &.active_ar{
-                position:relative;
-                left:40px;
+                position: relative;
+                left:20px;
             }
 
             &.active_en{
-                position:relative;
+                position: relative;
                 right:20px;
             }
 
             div{
-                width: 188px;
-                height: 129px;
+                width:25%;
+                height: 109px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
                 padding: 0px;
                 gap: 9px;
                 text-align:center;
                 position: relative;
-
                 h3{
                     display: flex;
                     justify-content: center;
                     text-align: center;
                     font-family: 'Almarai';
                     font-style: normal;
-                    font-weight: 700;
-                    font-size: 61px;
+                    font-weight: 900;
+                    font-size: 35px;
                     line-height: 140%;
                     color:var(--color5);
                     width:100%
@@ -157,7 +102,7 @@
                     font-family: 'Almarai';
                     font-style: normal;
                     font-weight: 700;
-                    font-size: 21px;
+                    font-size: 18px;
                     line-height: 140%;
                     color:var(--color5);
                     flex: none;
@@ -175,38 +120,10 @@
             align-items: center;
             justify-content: flex-start;
             padding: 10px 0px;
-            margin: 20px 0px 50px 0px;
-            .who_mernan{
-                background-color:var(--color3); 
-                        border: none;
-                        box-shadow: 0px 123px 49px rgba(0, 0, 0, 0.01), 0px 69px 41px rgba(0, 0, 0, 0.05), 0px 31px 31px rgba(0, 0, 0, 0.09), 0px 8px 17px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-                        height: 79px;
-                        padding: 18px 20px;
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 10px;
-                        border-radius: 10px 0px;
-                        cursor: pointer;
-                        font-family: 'Almarai';
+            margin: 30px 0px 0px 0px;
 
-                    
-                        span{
-                            font-family: 'Almarai';
-                            font-style: normal;
-                            font-weight: 700;
-                            font-size: 31px;
-                            line-height: 140%;
-                            color:var(--color2);
-                            flex: none;
-                            flex-grow: 0;
-                            display: grid;
-                            place-items: center;
-                        }
-            }
             .portfolio{
-                height: 71px;
+                height: 69px;
                 margin: 0px 40px;
                 display: flex;
                 flex-direction: row;
@@ -217,16 +134,12 @@
                 font-family: 'Almarai';
                 font-style: normal;
                 font-weight: 700;
-                font-size: 31px;
+                font-size: 22px;
                 line-height: 140%;
                 border: 3px solid var(--color5);
                 background: none;
                 color:var(--color5);
 
-                &.portfolio_ar{
-                    height: 79px;
-                    cursor: pointer;
-                }
                 .arrow__{
                     display: none;
                 }
@@ -247,8 +160,8 @@
         left: 0px;
     }
     .image_ img{
-        width:680.05px;
-        height: 586.01px;
+        width:580.05px;
+        height: 486.01px;
     }
 }
 
@@ -257,186 +170,307 @@
 
 //** Media Query for responsive */
 
-@media only screen and (min-width: 1550px){
-    .who_us{
-        .text{
-            width: 55%;
-        }
-    }
-}
 
-
-@media only screen and (min-width: 1650px){
+@media only screen and (min-width: 1500px){
     .who_us{
         .text{
             h2{
-                font-size:75px ;
-
+                font-size: 55px;
                 &.active{
-                    font-size:85px;
-                    width:90%;
-                    padding-top:50px;
+                    width: 65%;
+                    font-size: 65px;
                 }
-            }
-        }
-
-        .image_ img{
-            width:780.05px;
-            height: 686.01px;
-        }
-    }
-}
-
-
-@media only screen and (min-width: 1700px){
-    .who_us{
-        padding: 100px 30px;
-        .text{
-            width: 52%;
-            h2{
-                font-size:75px ;
-                &.active{
-                    font-size:85px;
-                    width:90%;
-                    padding-top:50px;
+                .radiation_ar{
+                    position: absolute;
+                    top:-20px;
+                    left:0px;
+                    height:60px;
+                }
+                .radiation_en{
+                    position: absolute;
+                    top:60px;
+                    right:20%;
+                    height:60px;
                 }
             }
             .mernan{
-                width: 90%;
-                font-size: 26px;
-                margin: 40px 0px;
+                font-size: 23px;
+                margin: 10px 0px;
             }
             .statistics{
-                margin:10px 0px 30px 0px;
                 div{
-                    width: 200px;
                     h3{
-                        font-size: 70px;
+                        font-size: 40px;
                     }
                     p{
-                        font-size: 22px;
-                        font-weight: bold;
+                        font-size: 20px;
                     }
                 }
             }
         }
-
         .image_ img{
-            width:880.05px;
-            height: 786.01px;
+            width:630.05px;
+            height: 536.01px;
         }
     }
 }
 
-@media only screen and (min-width: 1850px){
+@media only screen and (min-width: 1630px){
     .who_us{
-        padding: 100px 30px;
         .text{
-            width: 50%;
             h2{
-                font-size:80px ;
+                margin-top: 50px;
+                width:70%;
+                font-size: 58px;
                 &.active{
-                    font-size:95px;
-                    width:90%;
-                    padding-top:50px;
+                    width: 65%;
+                    font-size: 68px;
+                }
+                .radiation_ar{
+                    position: absolute;
+                    top:-20px;
+                    left:30px;
+                    height:60px;
+                }
+                .radiation_en{
+                    position: absolute;
+                    top:70px;
+                    right:18%;
+                    height:60px;
+                }
+            }
+
+        }
+    }
+}
+
+@media only screen and (min-width: 1750px){
+    .who_us{
+        .text{
+            h2{
+                margin-top: 60px;
+                width:75%;
+                font-size: 65px;
+                &.active{
+                    width: 65%;
+                    font-size: 72px;
+                }
+                .radiation_ar{
+                    position: absolute;
+                    top:-20px;
+                    left:50px;
+                    height:60px;
+                }
+                .radiation_en{
+                    position: absolute;
+                    top:70px;
+                    right:20%;
+                    height:60px;
                 }
             }
             .mernan{
-                width: 90%;
-                font-size: 30px;
-                margin: 40px 0px;
+                font-size: 28px;
+                margin: 10px 0px;
             }
+            .statistics{
+                margin-bottom: 20px;
+                div{
+
+                    h3{
+                        font-size: 48px;
+                    }
+                    p{
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+        .image_ img{
+            width:680.05px;
+            height: 586.01px;
         }
     }
 }
 
-
-@media only screen and (max-width: 1370px){
+@media only screen and (max-width: 1400px){
     .who_us{
         .text{
-            width: 55%;
-        h2{
-            font-size: 60px;
-            position: relative;
-            padding-top: 30px;
-            &.active{
-                font-size:71px;
-                width:90%;
-                padding-top:80px;
-            }
-            .line4 , .line5{
-                position: absolute;
-                top:50px;
-            }
-            .line6{
-                position: absolute;
-                top:100px;
-            }
-        }
-
-        .mernan{
-            width: 84%;
-            font-family: 'Almarai';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 170%;
-            color:var(--color5);
-            margin: 20px 0px;
-        }
-
-        .statistics{
-            display: flex;
-            align-items: center;
-            justify-content:flex-start;
-            width:90%;
-            margin:10px 0px;
-
-            div{
-                width: 160px;
-
-                h3{
-                    font-size: 52px;
+            h2{
+                .radiation_ar{
+                    position: absolute;
+                    top:-20px;
+                    left:20px;
+                    height:60px;
                 }
-                p{
-                    font-size: 18px;
+                .radiation_en{
+                    position: absolute;
+                    top:50px;
+                    right:17%;
+                    height:60px;
                 }
             }
-
-            &.active_ar{
-                position:relative;
-                left:40px;
-            }
-
-            &.active_en{
-                position:relative;
-                right:20px;
-            }
-    }
-    .buttons{
-
-        .who_mernan{
-            height: 69px;
-            span{
-                font-size: 25px;
-            }
-        }
-        .portfolio{
-            height: 69px;
-            font-size: 25px;
-
-            &.portfolio_ar{
-                height: 69px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+            .buttons{
+                .portfolio{
+                    height: 61px;
+                }
             }
         }
     }
-    }
-    .image_ img{
-        width:580.05px;
-        height: 486.01px;
+}
+
+
+@media only screen and (max-width: 1350px){
+    .who_us{
+        .text{
+            h2{
+                width: 80%;
+                .radiation_ar{
+                    position: absolute;
+                    top:-20px;
+                    left:0px;
+                    height:50px;
+                }
+                .radiation_en{
+                    position: absolute;
+                    top:60px;
+                    right:17%;
+                    height:60px;
+                }
+            }
+        }
     }
 }
+
+@media only screen and (max-width: 1270px){
+    .who_us{
+        .text{
+            h2{
+                width: 75%;
+                font-size: 45px;
+
+                &.active{
+                    font-size:55px;
+                    width: 70%;
+                }
+
+                .radiation_ar{
+                    position: absolute;
+                    top:-20px;
+                    left:10px;
+                    height:60px;
+                }
+                .radiation_en{
+                    position: absolute;
+                    top:50px;
+                    right:17%;
+                    height:50px;
+                }
+            }
+        }
+        .image_ img{
+            width:480.05px;
+            height: 386.01px;
+        }
+    }
 }
+@media only screen and (max-width: 1250px){
+    .who_us{
+        .text{
+            .buttons{
+                .portfolio{
+                    height: 51px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1200px){
+    .who_us{
+        .text{
+            h2{
+                width: 75%;
+                font-size: 40px;
+
+                &.active{
+                    font-size:45px;
+                    width: 65%;
+                }
+
+                .radiation_ar{
+                    position: absolute;
+                    top:-20px;
+                    left:30px;
+                    height:50px;
+                }
+                .radiation_en{
+                    position: absolute;
+                    top:50px;
+                    right:17%;
+                    height:50px;
+                }
+            }
+            .mernan{
+                font-size: 18px;
+            }
+            .statistics{
+                width: 95%;
+                div{
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .who_us{
+        .text{
+            h2{
+                width: 77%;
+                font-size: 38px;
+
+                &.active{
+                    font-size:40px;
+                    width: 60%;
+                }
+
+                .radiation_ar{
+                    position: absolute;
+                    top:-20px;
+                    left:0px;
+                    height:40px;
+                }
+                .radiation_en{
+                    position: absolute;
+                    top:50px;
+                    right:17%;
+                    height:40px;
+                }
+            }
+            .mernan{
+                font-size: 16px;
+                margin-top: 10px;
+            }
+            .statistics{
+                width: 100%;
+                div{
+                    h3{
+                        font-size: 30px;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .image_ img{
+            width:400.05px;
+            height: 306.01px;
+        }
+    }
+    
+}
+

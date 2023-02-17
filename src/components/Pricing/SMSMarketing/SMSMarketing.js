@@ -13,16 +13,28 @@ const SMSMarketing = () => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
+  const benefits = [
+    {
+      id:1,
+      benefit:"reach_a_larger"
+    },
+    {
+      id:2,
+      benefit:"higher_open_rate"
+    },
+    {
+      id:3,
+      benefit:"keep_users"
+    }
+  ];
+
   return (
     <div dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}>
       <Card
         image={image4}
         text={"want_to_market"}
         title={"sms_marketing"}
-        benefit1={"reach_a_larger"}
-        benefit2={"higher_open_rate"}
-        benefit3={"keep_users"}
-        num={3}
+        benefits={benefits}
         state={true}
         name={"request_price_offer"}
       />

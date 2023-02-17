@@ -29,6 +29,7 @@ import StartWorking from "../../components/StartWorking/StartWorking";
 import RequestFreeConsulting from "../../components/RequestFreeConsulting/RequestFreeConsulting";
 import FrequentlyAskedQuestions from '../../components/FrequentlyAskedQuestions/FrequentlyAskedQuestions';
 import PreviousClients from "../../components/PreviousClients/PreviousClients";
+import PricingDevelopment from '../../components/PricingDevelopment/PricingDevelopment';
 import Footer from "../../components/Footer/Footer";
 
 const list = [
@@ -119,6 +120,7 @@ const Development = () => {
       />
       <SubServices list={list} />
       <OurPreviousWork />
+      <PricingDevelopment/>
       <StartWorking
         color1={"--color1"}
         color2={"--color2"}

@@ -20,6 +20,8 @@ import { BsArrowLeft } from "react-icons/bs";
 
 import {Link} from 'react-router-dom';
 
+import Button from '../../components/Button/Button';
+
 
 
 const Header = () => {
@@ -69,14 +71,7 @@ const Header = () => {
               </li>
               <li><SwitchLanguage EnglishLanguage={EnglishLanguage} ArabicLanguage={ArabicLanguage}/></li>
               <li>
-                <button className="work_with">
-                  <span>{t("work_with_us")}</span>
-                  <span>
-                    {
-                      changeSide === "ar" ? <BsArrowLeft/> : <BsArrowRight/>
-                    }
-                  </span>
-                </button>
+                <Button name={"work_with_us"} fontSize={"22px"}/>
               </li>
             </ul>
           </div>

@@ -1,0 +1,89 @@
+.pricing_development{
+    width: 100%;
+    padding:50px 20px 30px 20px;
+    background-color:var(--color6);
+    position: relative;
+
+    h2{
+        font-family: 'Almarai';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 140%;
+        color: var(--color5);
+        position: absolute;
+        top:30px;
+        z-index: 10;
+        
+        &::after{
+            content: "";
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background-color: var(--color3);
+            display: block;
+            position: absolute;
+            top:0px;
+            z-index:-1;
+        }
+    }
+    .row{
+        width: 100%;
+        margin: 0px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 60px;
+
+        .price{
+            margin: 20px 0px;
+            background-color: var(--color5);
+            border: 3px solid var(--color2);
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+
+            &.active{
+                background-color: var(--color9);
+            }
+            &.border1{
+                border-radius: 10px 0px 0px 10px;
+            }
+            &.border2{
+                border-radius: 0px 10px 10px 0px;
+            }
+
+            p{
+                margin: 10px auto;
+                font-family: 'Almarai';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 27px;
+                line-height: 140%;
+                color:var(--color2)
+            }
+        }
+    }
+    &.pricing_development-ar{
+        .row{
+            .price{
+                &.border1{
+                    border-radius: 0px 10px 10px 0px;
+                }
+                &.border2{
+                    border-radius: 10px 0px 0px 10px;
+                }
+                p{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
+    .prices{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
+}

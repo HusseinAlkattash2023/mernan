@@ -20,18 +20,14 @@ const Card = ({
   text,
   title,
   name,
-  benefit1,
-  benefit2,
-  benefit3,
-  benefit4,
-  num,
+  benefits,
+  color
 }) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
   const { t } = useTranslation();
 
-  const benefits = [benefit1, benefit2, benefit3, benefit4];
 
   return (
     <div className="card_component">
@@ -58,14 +54,13 @@ const Card = ({
           <h4>{t("offered_benefits")}</h4>
           <div className="benefits">
             {benefits &&
-              benefits.map((item, i) => (
+              benefits.map((item) => (
                 <div
-                  className={`${changeSide === "ar" && "benefit-ar"} , ${
-                    num === 3 && i === 3 ? "active" : ""
-                  } benefit`}
+                key={item.id}
+                  className={`${changeSide === "ar" && "benefit-ar"} benefit`}
                 >
                   <img src={image2} alt="" />
-                  <p>{t(`${item}`)}</p>
+                  <p>{t(`${item.benefit}`)}</p>
                 </div>
               ))}
           </div>
@@ -76,7 +71,7 @@ const Card = ({
         </div>
       )}
       <div className="button">
-        <Button name={`${name}`} fontSize={"25px"} />
+        <Button name={`${name}`} fontSize={"25px"} color1={color}/>
       </div>
     </div>
   );

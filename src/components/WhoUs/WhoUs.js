@@ -14,8 +14,10 @@ import {useSpring , animated} from 'react-spring';
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
-//**import useNavigate from react-router-don */
-import { useNavigate } from "react-router-dom";
+import image1 from '../../assets/images/Highlight_07.png';
+import image2 from '../../assets/images/Highlight_06.png';
+
+import Button from '../../components/Button/Button';
 
 const WhoUs = ({ image_en, image_ar, title, title_, text, button , state}) => {
   //** this is state to change side rtl and ltr */
@@ -23,18 +25,14 @@ const WhoUs = ({ image_en, image_ar, title, title_, text, button , state}) => {
 
   const { t } = useTranslation();
 
-  const navigate = useNavigate();
 
-
-  const ChangeRoute = () => {
-    navigate("/mernan");
-  };
 
   return (
     <div className="who_us" dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}>
       <div className="text">
         <h2 className={`${changeSide === "ar" && "active"}`}>
           {t(`${title}`)} <span>{t(`${title_}`)}</span>
+          {changeSide === "ar" ? <img className="radiation_ar" src={image1} alt=""/> : <img className="radiation_en" src={image2} alt=""/>}
         </h2>
         <p className="mernan">{t(`${text}`)}</p>
         <div
@@ -57,26 +55,14 @@ const WhoUs = ({ image_en, image_ar, title, title_, text, button , state}) => {
             <p>{t("designs_no")}</p>
           </div>
           <div>
-            <h3>+<Number n={200}/></h3>
+            <h3 className="d-flex align-items-center"><span className="mx-2">+</span><Number n={200}/></h3>
             <p>{t("number_of_funded_campaigns")}</p>
           </div>
         </div>
         <div className="buttons">
+          <Button name={button} fontSize={"22px"}/>
           <button
-            onClick={ChangeRoute}
-            className={`${changeSide === "ar" && "who_ar"} who_mernan`}
-          >
-            <span>{t(`${button}`)}</span>
-            <span>
-              {changeSide === "ar" ? (
-                <BsArrowLeft className="arrow" />
-              ) : (
-                <BsArrowRight className="arrow" />
-              )}
-            </span>
-          </button>
-          <button
-            className={`${changeSide === "ar" && "portfolio_ar"} portfolio is-active`}
+            className="portfolio is-active"
           >
             <span>{t("portfolio")}</span>
             <span className="arrow__">
