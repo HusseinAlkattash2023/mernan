@@ -60,7 +60,7 @@ const WhoUs = ({ image_en, image_ar, title, title_, text, button , state}) => {
           </div>
         </div>
         <div className="buttons">
-          <Button name={button} fontSize={22}/>
+          <Button name={button} fontSize={22} route={"mernan"}/>
           <button
             className="portfolio is-active"
           >

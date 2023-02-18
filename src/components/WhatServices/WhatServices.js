@@ -44,7 +44,7 @@ const WhatServices = () => {
           )}
         </h2>
         <p>{t("our_services_in_mernan")}</p>
-        <Button name={"browse_services"} />
+        <Button name={"browse_services"} fontSize={22}/>
       </div>
     </div>
   );

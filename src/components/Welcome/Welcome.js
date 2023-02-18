@@ -32,7 +32,7 @@ const Welcome = () => {
           {changeSide === "ar" ? <img className="radiation_ar" src={image3} alt=""/> : <img className="radiation_en" src={image2} alt=""/>}
         </h2>
         <p>{t("your_access")}</p>
-        <Button name={"know_more"}/>
+        <Button name={"know_more"} fontSize={22}/>
         </div>
         <div className="image">
           <img src={image1} alt=""/>

@@ -26,6 +26,7 @@
             font-weight: 700;
             font-size: 35px;
             line-height: 140%;  
+            margin: 0px 10px;
             &::after{
                 content: "";
                 width: 52px;
@@ -161,4 +162,117 @@
             }
         }
     }
+}
+
+@media only screen and (max-width: 1250px){
+    .subscribe{
+    .part1{
+        p{
+            font-size: 30px;
+        }
+        span{
+            font-size: 30px;
+            margin: 0px 10px;
+        }
+    }
+    .part2{
+
+        &.part2_en{
+            .form-control{
+                left:25%;
+            }
+            .search button{
+                right:-120px;
+            }
+        }
+        &.part2_ar{
+            .form-control{
+                right:25%;
+            }
+            .search button{
+                left:-140px;
+            }
+        }
+        .image{
+            position:absolute;
+            left:20px;
+            bottom:20px;
+
+            img{
+                width: 183.59px;
+                height: 241.04px;
+            }
+        }
+        .form-control{
+            width: 702px;
+            height: 79px;
+        }
+        .search button{
+            width: 219px;
+            height: 59px;
+            font-size: 20px;
+        }
+    }
+}
+}
+
+@media only screen and (max-width: 1200px){
+    .subscribe{
+    .part2{
+        .form-control{
+            width: 622px;
+            height: 79px;
+        }
+        .search button{
+            width: 219px;
+            height: 59px;
+            font-size: 20px;
+        }
+    }
+}
+}
+
+@media only screen and (max-width: 1050px){
+    .subscribe{
+        .part1{
+            p{
+                font-size: 25px;
+            }
+            span{
+                font-size: 25px;
+                margin: 0px 8px;
+                &:after{
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+        }
+    .part2{
+        .form-control{
+            width: 582px;
+            height: 69px;
+        }
+        .search button{
+            width: 190px;
+            height: 49px;
+            font-size: 18px;
+        }
+        &.part2_en{
+            .form-control{
+                left:30%;
+            }
+            .search button{
+                right:-140px;
+            }
+        }
+        &.part2_ar{
+            .form-control{
+                right:26%;
+            }
+            .search button{
+                left:-120px;
+            }
+        }
+    }
+}
 }
