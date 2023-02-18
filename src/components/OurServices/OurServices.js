@@ -25,6 +25,7 @@ const OurServices = () => {
 
   const cards = [
     {
+      id:1,
       image: image3,
       title: "digital_marketing_",
       item1: "achieve_financial_success",
@@ -33,6 +34,7 @@ const OurServices = () => {
       color: "#fcd833"
     },
     {
+      id:2,
       image: image2,
       title: "development",
       item1: "make_the_website",
@@ -41,6 +43,7 @@ const OurServices = () => {
       color: "#ec92c4",
     },
     {
+      id:3,
       image: image1,
       title: "branding",
       item1: "build_a_distinctive",
@@ -49,6 +52,7 @@ const OurServices = () => {
       color: "#16a8a3"
     },
     {
+      id:4,
       image: image5,
       title: "design",
       item1: "effective_communication",
@@ -57,6 +61,7 @@ const OurServices = () => {
       color: "#7a00ca",
     },
     {
+      id:5,
       image: image4,
       title: "social_media_marketing",
       item1: "strengthening",
@@ -77,7 +82,7 @@ const OurServices = () => {
         <div className="row">
           {
             cards && cards.map((card)=>(
-              <div className="col-lg-4 my-3">
+              <div className="col-lg-4 my-3" key={card.id}>
                 <Card
                 image={card.image}
                 title={card.title}

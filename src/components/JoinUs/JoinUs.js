@@ -38,7 +38,7 @@ const JoinUs = () => {
           )}
         </h2>
         <p>{t("moment")}</p>
-        <Button name={"join_the_team"}/>
+        <Button name={"join_the_team"} fontSize={22}/>
       </div>
     </div>
   )

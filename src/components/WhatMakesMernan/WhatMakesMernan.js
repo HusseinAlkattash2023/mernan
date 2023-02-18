@@ -24,7 +24,7 @@ const WhatMakesMernan = () => {
 
   return (
     <div className="what_make" dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}>
-      <div className="explaining">
+      <div className={`${changeSide !== "ar" && "explaining_en"} explaining`}>
         <h2>
           {t("what_makes")} <span>{t("us_special")}</span>
           {changeSide === "ar" ? (
@@ -34,7 +34,7 @@ const WhatMakesMernan = () => {
           )}
         </h2>
         <p>{t("we_gathered_for")}</p>
-        <Button name={"pricing_services"} />
+        <Button name={"pricing_services"} fontSize={22}/>
       </div>
       <div className="image">
         {changeSide === "ar" ? (
