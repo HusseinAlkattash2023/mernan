@@ -284,6 +284,11 @@
                     }
                 }
             }
+            .buttons{
+                .portfolio{
+                    font-size:28px;
+                }
+            }
         }
         .image_ img{
             width:680.05px;
@@ -291,6 +296,60 @@
         }
     }
 }
+
+@media only screen and (min-width: 1900px){
+    .who_us{
+        .text{
+            h2{
+                margin-top: 80px;
+                width:75%;
+                font-size: 70px;
+                &.active{
+                    width: 65%;
+                    font-size: 78px;
+                }
+                .radiation_ar{
+                    position: absolute;
+                    top:-20px;
+                    left:50px;
+                    height:70px;
+                }
+                .radiation_en{
+                    position: absolute;
+                    top:80px;
+                    right:20%;
+                    height:70px;
+                }
+            }
+            .mernan{
+                font-size: 30px;
+                margin: 10px 0px;
+            }
+            .statistics{
+                margin-bottom: 20px;
+                div{
+
+                    h3{
+                        font-size: 50px;
+                    }
+                    p{
+                        font-size: 28px;
+                    }
+                }
+            }
+            .buttons{
+                .portfolio{
+                    height:81px;
+                }
+            }
+        }
+        .image_ img{
+            width:700.05px;
+            height: 606.01px;
+        }
+    }
+}
+
 
 @media only screen and (max-width: 1400px){
     .who_us{
@@ -463,6 +522,11 @@
                     p{
                         font-size: 16px;
                     }
+                }
+            }
+            .buttons{
+                .portfolio{
+                    font-size:18px;
                 }
             }
         }

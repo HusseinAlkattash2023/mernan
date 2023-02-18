@@ -71,7 +71,7 @@ const Header = () => {
               </li>
               <li><SwitchLanguage EnglishLanguage={EnglishLanguage} ArabicLanguage={ArabicLanguage}/></li>
               <li>
-                <Button name={"work_with_us"} fontSize={"22px"}/>
+                <Button name={"work_with_us"} fontSize={22}/>
               </li>
             </ul>
           </div>

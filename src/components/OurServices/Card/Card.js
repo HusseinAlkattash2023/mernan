@@ -34,7 +34,7 @@ const Card = ({ image, title, item1, item2, item3 , color }) => {
 
   return (
     <div
-      className="card_service col-lg-3 mx-3 my-3"
+      className="card_service"
       style={{
         backgroundColor: hover ? `${color}` : '#FDFDFE',
         color: hover ? "#FDFDFE" : "#312E3A"

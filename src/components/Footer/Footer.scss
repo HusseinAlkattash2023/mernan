@@ -1,61 +1,29 @@
-:root{
-    --color1:#EDE4E0;
-    --color2:#312E3A;
-    --color3:#FFC84D;
-    --color4:#fff;
-}
+
 
 .footer{
     margin-top: auto;
     width: 100%;
-    padding: 40px 20px;
+    padding: 20px;
 
     .head{
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-
-        .work_with{
-            background-color:var(--color3); 
-                    border: none;
-                    box-shadow: 0px 123px 49px rgba(0, 0, 0, 0.01), 0px 69px 41px rgba(0, 0, 0, 0.05), 0px 31px 31px rgba(0, 0, 0, 0.09), 0px 8px 17px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-                    width: 239px;
-                    height: 71px;
-                    padding: 18px 20px;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 10px;
-                    border-radius: 10px 0px;
-                    cursor: pointer;
-                    font-family: 'Almarai';
-                
-                    span{
-                        font-size: 25px;
-                        line-height: 140%;
-                        font-weight: 700;
-                        font-style: normal;
-                        flex: none;
-                        flex-grow: 0;
-                        display: grid;
-                        place-items: center;
-                    }
-        }
     }
+
     .body{
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         width:60%;
-        margin-top: 40px;
+        margin-top: 20px;
 
         h3{
             font-family: 'Almarai';
             font-style: normal;
-            font-weight: 700;
-            font-size: 25px;
+            font-weight: 900;
+            font-size: 20px;
             line-height: 140%;
             margin-bottom: 10px;
         }
@@ -75,7 +43,7 @@
             a{
                 font-style: normal;
                 font-weight: 400;
-                font-size: 22px;
+                font-size: 16px;
                 line-height: 140%;
                 opacity: 0.8;
                 text-decoration: none;
@@ -95,16 +63,16 @@
             width: 40%;
 
             a{
-                font-size: 36px;
+                font-size: 30px;
             }
         }
         .copy_right{
-            margin-top: 30px;
+            margin-top: 10px;
             span{
                 font-family: 'Almarai';
                 font-style: normal;
                 font-weight: 400;
-                font-size: 25px;
+                font-size: 20px;
                 line-height: 140%;
             }
         }
@@ -115,29 +83,11 @@
 //** Media Query for responsive */
 @media only screen and (min-width: 1700px){
     .footer{
-        padding: 0px 30px;
-    }
-}
+        padding: 20px;
 
-
-@media only screen and (max-width: 1370px){
-    .footer{
-        .logo img{
-            width: 150px;
-        }
-        .head{
-            .work_with{
-                width: 200px;
-                height: 61px;
-                padding: 15px 17px;
-                span{
-                    font-size: 20px;
-                }
-            }
-        }
         .body{
             h3{
-                font-size: 22px;
+                font-size: 25px;
             }
             ul{
                 li{
@@ -150,12 +100,45 @@
         .social{
             .media{
                 a{
-                    font-size: 30px;
+                    font-size: 36px;
                 }
             }
             .copy_right{
                 span{
-                    font-size: 20px;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1370px){
+    .footer{
+        .logo img{
+            width: 150px;
+        }
+        .body{
+            h3{
+                font-size: 18px;
+            }
+            ul{
+                li{
+                    a{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .social{
+            .media{
+                a{
+                    font-size: 25px;
+                }
+            }
+            .copy_right{
+                span{
+                    font-size: 18px;
                 }
             }
         }

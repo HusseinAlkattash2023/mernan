@@ -12,8 +12,6 @@ import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 
 //**import icons from react-icons */
-import { BsArrowRight } from "react-icons/bs";
-import { BsArrowLeft } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSnapchatGhost } from "react-icons/fa";
@@ -22,6 +20,8 @@ import { FaYoutube } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaBehance } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+
+import Button from '../Button/Button';
 
 
 const Footer = ({color1 , color2 , image}) => {
@@ -62,14 +62,7 @@ const Footer = ({color1 , color2 , image}) => {
                 <img src={image} alt=""/>
             </div>
             <div>
-            <button className="work_with">
-                <span>{t("work_with_us")}</span>
-                <span>
-                    {
-                        changeSide === "ar" ? <BsArrowLeft/> : <BsArrowRight/>
-                    }
-                </span>
-            </button>
+            <Button name={"work_with_us"} fontSize={22}/>
             </div>
         </div>
         <div className="body">

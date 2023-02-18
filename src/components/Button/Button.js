@@ -48,7 +48,7 @@ const Button = ({ name, color1, color2, fontSize, height, state }) => {
     },
     style2: {
       color: `${color2}`,
-      fontSize: `${FontSizeButton(fontSize)}`,
+      fontSize: `${FontSizeButton(fontSize)}px`,
     },
   };
 
