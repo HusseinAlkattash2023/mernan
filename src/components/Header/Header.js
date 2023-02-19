@@ -15,8 +15,7 @@ import logo from '../../assets/images/mernan.png';
 
 //**import icons from react-icons */
 import { MdTranslate } from "react-icons/md";
-import { BsArrowRight } from "react-icons/bs";
-import { BsArrowLeft } from "react-icons/bs";
+
 
 import {Link} from 'react-router-dom';
 
@@ -42,6 +41,7 @@ const Header = () => {
     i18next.changeLanguage('ar')
     setChangeSide("ar");
   }
+
 
 
 
@@ -86,28 +86,22 @@ export default Header;
 
 //** this is function for translation */
 const SwitchLanguage = ({ArabicLanguage , EnglishLanguage})=>{
+  const [isTranslate , setIsTranslate] = useState(false)
 
-  //**this is state to show translation */
-  const [showTranslate , setShowTranslate] = useState(false);
-
-  //** function toggle to show list of translation */
-  const ShowTranslation = ()=>{
-    setShowTranslate(!showTranslate )
+  function IsTranslate(){
+    setIsTranslate(!isTranslate)
+    if(isTranslate){
+      ArabicLanguage();
+    }else{
+      EnglishLanguage();
+    }
   }
-
 
   return(
     <div>
-        <div onClick={ShowTranslation}>
+        <div onClick={IsTranslate}>
           <span><MdTranslate className="translate"/></span>
         </div>
-        {
-          showTranslate &&
-          <div className="en_ar">
-            <button onClick={EnglishLanguage}>English</button>
-            <button onClick={ArabicLanguage}>Arabic</button>
-          </div>
-        }
     </div>
   )
 }

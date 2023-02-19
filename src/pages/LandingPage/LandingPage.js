@@ -1,7 +1,6 @@
 import React from "react";
 
 //**import components*/
-import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import WhoUs from "../../components/WhoUs/WhoUs";
 import Portfolio from "../../components/Portfolio/Portfolio";
@@ -34,6 +33,7 @@ const LandingPage = () => {
         image_ar={image_ar}
         text={"mernan_is_a_world"}
         button={"who_is_mernan"}
+        state_={true}
       />
 
       {/* Portfolio */}

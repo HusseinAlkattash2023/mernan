@@ -10,7 +10,6 @@ import image6 from "../../assets/images/request.png";
 import image7 from "../../assets/images/request_ar.png";
 
 //** import components */
-import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import WhoUs from "../../components/WhoUs/WhoUs";
 import ServicesOffered from '../../components/ServicesOffered/ServicesOffered';
@@ -31,6 +30,7 @@ const Services = () => {
         text={"you_have_reached"}
         button={"our_services_"}
         state={true}
+        state_={false}
       />
       <ServicesOffered/>
       <Portfolio/>

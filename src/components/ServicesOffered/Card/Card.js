@@ -30,7 +30,7 @@ const Card = ({ image , color1 , color2 , color3 , title , text}) => {
         <p>{t(`${text}`)}</p>
       </div>
       <div className="button">
-        <Button name={"browse_service"} color1={"#312E3A"} color2={"#FDFDFE"} />
+        <Button name={"browse_service"} color1={"#312E3A"} color2={"#FDFDFE"} fontSize={20}/>
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ import image2 from '../../assets/images/Highlight_06.png';
 
 import Button from '../../components/Button/Button';
 
-const WhoUs = ({ image_en, image_ar, title, title_, text, button , state}) => {
+const WhoUs = ({ image_en, image_ar, title, title_, text, button , state , state_}) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
@@ -32,7 +32,7 @@ const WhoUs = ({ image_en, image_ar, title, title_, text, button , state}) => {
       <div className="text">
         <h2 className={`${changeSide === "ar" && "active"}`}>
           {t(`${title}`)} <span>{t(`${title_}`)}</span>
-          {changeSide === "ar" ? <img className="radiation_ar" src={image1} alt=""/> : <img className="radiation_en" src={image2} alt=""/>}
+          {state_ && (changeSide === "ar" ? <img className="radiation_ar" src={image1} alt=""/> : <img className="radiation_en" src={image2} alt=""/>)}
         </h2>
         <p className="mernan">{t(`${text}`)}</p>
         <div
