@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 import { StateContext } from "../../StateProvider";
 
 
-const Button = ({name , state}) => {
+const Button = ({name , state , fontSize}) => {
     //** this is state to change side rtl and ltr */
     const { changeSide } = useContext(StateContext);
 

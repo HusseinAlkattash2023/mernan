@@ -155,7 +155,62 @@
                     .text{
                         font-size: 23px;
                     }
+
                 }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1100px){
+    .start_working{
+        h2{
+            font-size: 30px;
+            
+            &::after{
+                content: "";
+                width: 42px;
+                height: 42px;
+            }
+        }
+        .part2{
+            .list{
+                div{
+    
+                    .number{
+                        width: 49px;
+                        height: 49px;
+                        font-size: 20px;
+                    }
+                    .text{
+                        font-size: 23px;
+                    }
+                }
+                .text_1{
+                    position:absolute;
+                    left:60%;
+                    top:40px;
+                    transform: translate(-50%);
+                }
+                .text_2{
+                    position:absolute;
+                    left:20%;
+                    top:30%;
+                    transform: translate(-50%);
+                    display: flex;
+                    flex-direction: column;
+                    align-items:flex-end;
+                }
+                .text_3{
+                    position:absolute;
+                    left:60%;
+                    bottom:100px;
+                    transform: translate(-50%);
+                    display: flex;
+                    flex-direction: column;
+                    align-items:flex-end;
+                }
+                
             }
         }
     }
@@ -183,6 +238,35 @@
                     }
                     .text{
                         font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1750px){
+    .start_working{
+        h2{
+            font-size: 49px;
+            
+            &::after{
+                content: "";
+                width: 62px;
+                height: 62px;
+            }
+        }
+        .part2{
+            .list{
+                div{
+    
+                    .number{
+                        width: 69px;
+                        height: 69px;
+                        font-size: 35px;
+                    }
+                    .text{
+                        font-size: 35px;
                     }
                 }
             }

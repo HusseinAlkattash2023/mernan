@@ -59,7 +59,12 @@ const Home = ({
         </div>
         <p>{t(`${text}`)}</p>
         <div className={`${changeSide === "ar" ? "buttons_ar" : "buttons"}`}>
-          <Button color1={"#39858E"} color2={"#FDFDFE"} name={"know_more"} />
+          <Button
+            color1={"#39858E"}
+            color2={"#FDFDFE"}
+            name={"know_more"}
+            fontSize={22}
+          />
           <Button2 name={"pricing_"} />
         </div>
       </div>

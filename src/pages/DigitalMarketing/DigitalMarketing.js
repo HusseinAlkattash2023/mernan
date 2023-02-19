@@ -83,6 +83,24 @@ const list =[
   },
 ]
 
+const questions = [
+  {
+    id:1,
+    question:"what_is_the_approximate",
+    answer:""
+  },
+  {
+    id:2,
+    question:"do_you_provide",
+    answer:""
+  },
+  {
+    id:3,
+    question:"is_it_possible",
+    answer:""
+  },
+]
+
 const DigitalMarketing = () => {
   return (
     <div>
@@ -136,7 +154,7 @@ const DigitalMarketing = () => {
         image1={image6}
         image2={image7}
       />
-      <FrequentlyAskedQuestions />
+      <FrequentlyAskedQuestions questions={questions}/>
       <PreviousClients color1={"#596773"} color2={"#FDFDFE"} image={image3} />
       <Footer image={logo} color1={"#EDE4E0"} color2={"#312E3A"} />
     </div>

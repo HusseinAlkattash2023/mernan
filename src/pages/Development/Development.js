@@ -69,17 +69,17 @@ const list = [
 const questions = [
   {
     id:1,
-    question:"what_is_the_approximate",
+    question:"possible_to_subscribe",
     answer:""
   },
   {
     id:2,
-    question:"do_you_provide",
+    question:"how_do_start",
     answer:""
   },
   {
     id:3,
-    question:"is_it_possible",
+    question:"how_can_digital",
     answer:""
   },
 ]
