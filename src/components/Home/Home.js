@@ -9,12 +9,14 @@ import { useTranslation } from "react-i18next";
 
 //**import images */
 import line from "../../assets/images/line.png";
+import lineWhite from "../../assets/images/Vector.svg";
 
 //**import components */
 import Button from "../../components/Button/Button.js";
 import Button2 from "./Button/Button";
 
 const Home = ({
+  state,
   title,
   text,
   image1,
@@ -30,11 +32,21 @@ const Home = ({
   average2_ar,
   average3,
   average3_ar,
+  color_btn1,
+  color_btn2,
+  color_,
+  name
 }) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
   const { t } = useTranslation();
+
+  const styles = {
+    style1: {
+      color: `var(${color_})`,
+    },
+  };
 
   return (
     <div
@@ -50,22 +62,31 @@ const Home = ({
     >
       <div className="part1">
         <div className="title">
-          <h2>{t(`${title}`)}</h2>
-          <img
-            className={`${changeSide === "ar" && "part_img"}`}
-            src={line}
-            alt=""
-          />
+          <h2 style={styles.style1}>{t(`${title}`)}</h2>
+
+          {state ? (
+            <img
+              className={`${changeSide === "ar" && "part_img"}`}
+              src={line}
+              alt=""
+            />
+          ) : (
+            <img
+              className={`${changeSide === "ar" && "part_img_"} line`}
+              src={lineWhite}
+              alt=""
+            />
+          )}
         </div>
-        <p>{t(`${text}`)}</p>
+        <p style={styles.style1}>{t(`${text}`)}</p>
         <div className={`${changeSide === "ar" ? "buttons_ar" : "buttons"}`}>
           <Button
-            color1={"#39858E"}
-            color2={"#FDFDFE"}
-            name={"know_more"}
+            color1={color_btn1}
+            color2={color_btn2}
+            name={name}
             fontSize={22}
           />
-          <Button2 name={"pricing_"} />
+          {state && <Button2 name={"pricing_"} />}
         </div>
       </div>
       <div className={`${changeSide === "ar" ? "part2_ar" : "part2"}`}>

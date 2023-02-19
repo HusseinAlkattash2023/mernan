@@ -43,7 +43,7 @@ const Card = ({ image, title, text, height, state }) => {
         <p>{t(`${text}`)}</p>
       </div>
       <div className="footer_card">
-        <Button height={"68px"} fontSize={"20px"} name={state ? "request_free_consulting" : "know_more"} color1={"#2FA4A1"} color2={"#FDFDFE"} />
+        <Button height={"68px"} fontSize={20} name={state ? "request_free_consulting" : "know_more"} color1={"#2FA4A1"} color2={"#FDFDFE"} />
       </div>
     </div>
   );

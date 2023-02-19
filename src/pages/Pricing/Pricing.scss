@@ -1,0 +1,46 @@
+.pricing_page{
+    .home{
+        .part1{
+            .title{
+                .line{
+                    position: relative;
+                    left:0%;
+                    bottom: 10px;
+                    width: 50%;
+                }
+                .part_img_{
+                    position: relative;
+                    right:20%;
+                }
+            }
+        }
+        .part2{
+            width: 40%;
+            position: absolute;
+            right:30px;
+        }
+        .part2_ar{
+            position: absolute;
+            left:30px;
+            width: 40%;
+        }
+    }
+}
+
+
+@media only screen and (min-width:1100px){
+    .home{
+        .part2{
+            width:40%;
+            position: absolute;
+            right:20px;
+            height: 70%;
+        }
+        .part2_ar{
+            position: absolute;
+            left:20px;
+            width: 40%;
+            height: 76%;
+        }
+    }
+}

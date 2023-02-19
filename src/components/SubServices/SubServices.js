@@ -10,15 +10,8 @@ import { useTranslation } from "react-i18next";
 //**import components */
 import Card from "./Card/Card";
 
-//**import images */
-import image1 from "../../assets/images/email_marketing.png";
-import image2 from "../../assets/images/google_ads.png";
-import image3 from "../../assets/images/marketing_strategy.png";
-import image4 from "../../assets/images/content_marketing.png";
-import image5 from "../../assets/images/search_engine.png";
-import image6 from "../../assets/images/sms_marketing.png";
-import image7 from "../../assets/images/marketing_consulting.png";
 
+ 
 const SubServices = ({ list }) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);

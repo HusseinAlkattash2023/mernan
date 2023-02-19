@@ -35,7 +35,7 @@ import StartWorking from "../../components/StartWorking/StartWorking";
 import RequestFreeConsulting from "../../components/RequestFreeConsulting/RequestFreeConsulting";
 import FrequentlyAskedQuestions from "../../components/FrequentlyAskedQuestions/FrequentlyAskedQuestions";
 import PreviousClients from "../../components/PreviousClients/PreviousClients";
-import Pricing from "../../components/Pricing/Pricing";
+import PricingMarketing from "../../components/PricingMarketing/PricingMarketing";
 
 const list =[
   {
@@ -120,6 +120,10 @@ const DigitalMarketing = () => {
         average_ar={"2.46%"}
         average2_ar={"42.24%"}
         average3_ar={"99.59%"}
+        color_btn1={"#39858E"}
+        color_btn2={"#FDFDFE"}
+        state={true}
+        name={"know_more"}
       />
       <BenefitsOffered
         title1={"financial"}
@@ -137,7 +141,7 @@ const DigitalMarketing = () => {
       />
       <SubServices list = {list}/>
       <OurPreviousWork />
-      <Pricing />
+      <PricingMarketing/>
       <StartWorking
         color1={"--color1"}
         color2={"--color2"}
