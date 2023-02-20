@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Card from '../../Pricing/Card/Card';
+import Card from '../../PricingMarketing/Card/Card';
 
 import image from '../../../assets/images/develop_website.svg';
 

@@ -7,6 +7,9 @@ import { useTranslation } from "react-i18next";
 
 import "./Pricing.scss";
 
+import Services from './Services/Services';
+import Plans from './Plans/Plans';
+
 const Pricing = () => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
@@ -31,6 +34,11 @@ const Pricing = () => {
                     <span>{t(tag)}</span>
                 </div>
             ))
+        }
+      </div>
+      <div>
+        {
+          isActive === 0 ? <Plans/> : <Services/>
         }
       </div>
     </div>

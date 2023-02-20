@@ -1,0 +1,120 @@
+.section_service{
+    text-align: center;
+
+    .section1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h3{
+            font-family: 'Almarai';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 140%;
+            color: var(--color2);
+            margin: 10px 0px;
+        }
+        .fields{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--color5);
+            margin: 20px 0px;
+            width: 909px;
+            height: 69px;
+            border-radius: 10px;
+            div{
+                height:69px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                border: 2px solid var(--color2);
+                flex: 2;
+                cursor: pointer;
+
+                &.field1{
+                    flex: 4;
+                    border-radius: 0px 10px 10px 0px;
+                }
+                &.field2{
+                    flex: 3;
+                    border-radius: 10px 0px 0px 10px;
+                }
+                &.active{
+                    background-color:var(--color3);
+                }
+
+                span{
+                    font-family: 'Almarai';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 140%;
+                    color: var(--color2);
+                }
+            }
+        }
+    }
+    .section2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        h3{
+            font-family: 'Almarai';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 140%;
+            color: var(--color2);
+        }
+        .sub_services_part{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--color5);
+            margin: 20px 0px;
+            width: 949px;
+            height: 69px;
+            border-radius: 10px;
+            div{
+                height:69px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                border: 2px solid var(--color2);
+                flex: 2;
+                cursor: pointer;
+                flex: 2;
+
+                &.active{
+                    background-color:var(--color3);
+                }
+
+                &.service1{
+                    flex:3;
+                    border-radius: 10px 0px 0px 10px;
+                }
+
+                &.service2{
+                    flex:4;
+                    border-radius: 0px 10px 10px 0px;
+                }
+
+                span{
+                    font-family: 'Almarai';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 140%;
+                    color: var(--color2);
+                }
+            }
+        }
+    }
+}
