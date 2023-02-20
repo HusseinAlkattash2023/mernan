@@ -1,7 +1,7 @@
 import React from 'react';
 import PricingComponent from '../PricingComponent/PricingComponent';
 
-const EmailMarketing = () => {
+const EmailMarketing = ({color}) => {
   return (
     <div>
       <PricingComponent
@@ -17,6 +17,7 @@ const EmailMarketing = () => {
           value5={"email_campaigns"}
           value6={"monthly_reports"}
           value7={"managing_responses"}
+          color={color}
         />
     </div>
   )

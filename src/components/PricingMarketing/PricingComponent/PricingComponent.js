@@ -34,6 +34,7 @@ const PricingComponent = ({
   value11,
   value12,
   value13,
+  color
 }) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
@@ -56,6 +57,10 @@ const PricingComponent = ({
     value12,
     value13,
   ];
+
+  const styles = {
+    color:`var(${color})`
+  }
 
   return (
     <div
@@ -90,7 +95,7 @@ const PricingComponent = ({
           <thead>
             <tr>
               <th scope="col">
-                <h3>{t("features")}</h3>
+                <h3 style={styles}>{t("features")}</h3>
               </th>
               <th scope="col"></th>
               <th scope="col"></th>
@@ -99,7 +104,7 @@ const PricingComponent = ({
           <tbody>
             {features.map((feature, i) => (
               <tr className={`${number - i <= 0 ? "active" : ""}`}>
-                <th>{t(feature)}</th>
+                <th style={styles}>{t(feature)}</th>
                 <td className={`${changeSide === "ar" ? "icon_ar" : "icon"}`}>
                   {i >= number - num ? (
                     <img src={image1} alt="" />

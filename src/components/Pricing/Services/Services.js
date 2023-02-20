@@ -33,11 +33,11 @@ const Services = () => {
   //**function for display pricing */
   const DisplayPricing = ()=>{
     if(isActive2 === 0){
-        return <EmailMarketing/>
+        return <EmailMarketing color={"--color2"}/>
     }else if(isActive2 === 1){
-        return <GoogleAds/>
+        return <GoogleAds color={"--color2"}/>
     }else{
-        return <SearchEngine/>
+        return <SearchEngine color={"--color2"}/>
     }
   }
 
@@ -57,7 +57,7 @@ const Services = () => {
     >
       <div className="section1">
         <h3>{t("choose_field")}</h3>
-        <div className="fields">
+        <div className={`${changeSide === "ar" ? "fields-ar" : "fields"}`}>
           {fields &&
             fields.map((field, i) => (
               <div
@@ -74,7 +74,7 @@ const Services = () => {
       </div>
       <div className="section2">
         <h3>{t("choose_sub_service")}</h3>
-        <div className="sub_services_part">
+        <div className={`${changeSide === "ar" ? "sub_services_part_ar" : 'sub_services_part'}`}>
           {services &&
             services.map((service, i) => (
               <div

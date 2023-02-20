@@ -5,10 +5,21 @@ import './Pricing.scss'
 //**import images */
 import image1 from '../../assets/images/pricing.svg';
 import image2 from '../../assets/images/pricing_ar.svg';
+import image3 from '../../assets/images/brand.png';
+import image4 from "../../assets/images/start-work.png";
+import image5 from "../../assets/images/start-work-ar.png";
+import image6 from "../../assets/images/request.png";
+import image7 from "../../assets/images/request_ar.png";
+import logo from "../../assets/images/mernan_white.png";
 
 //**import components */
 import Home from '../../components/Home/Home';
 import PricingComponent from '../../components/Pricing/Pricing';
+import StartWorking from '../../components/StartWorking/StartWorking';
+import RequestFreeConsulting from '../../components/RequestFreeConsulting/RequestFreeConsulting';
+import Footer from "../../components/Footer/Footer";
+import PreviousClients from "../../components/PreviousClients/PreviousClients";
+
 
 const Pricing = () => {
   return (
@@ -35,6 +46,23 @@ const Pricing = () => {
         name={"pricing"}
       />
       <PricingComponent/>
+      <StartWorking
+        color1={"--color6"}
+        color2={"--color5"}
+        color3={"--color3"}
+        image1={image4}
+        image2={image5}
+      />
+       <RequestFreeConsulting
+        color1={"--color1"}
+        color2={"--color2"}
+        color3={"--color2"}
+        color4={"--color2"}
+        image1={image6}
+        image2={image7}
+      />
+       <PreviousClients image={image3}/>
+      <Footer color1={"#39858E"} color2={"#FDFDFE"} image={logo} />
     </div>
   )
 }
