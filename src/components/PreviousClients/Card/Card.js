@@ -16,7 +16,7 @@ const Card = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="card_client">
+    <div className="card_client" dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}>
       <div className="head">
         <div className="avatar"></div>
         <h3 className={`${changeSide === "ar" ? "name_ar" : "name_en"}`}>
