@@ -87,19 +87,23 @@ const questions = [
   {
     id:1,
     question:"what_is_the_approximate",
-    answer:""
+    answer:"",
+    number:"One"
   },
   {
     id:2,
     question:"do_you_provide",
-    answer:""
+    answer:"",
+    number:"Two"
   },
   {
     id:3,
     question:"is_it_possible",
-    answer:""
+    answer:"",
+    number:"Three"
   },
 ]
+
 
 const DigitalMarketing = () => {
   return (

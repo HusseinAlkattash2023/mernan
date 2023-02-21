@@ -1,0 +1,18 @@
+.plans{
+    width: 100%;
+    position: relative;
+    .pricing_component{
+        .section{
+            .part1{
+                position:relative;
+                left: 10%;
+            }
+        }
+        .section-ar{
+            .part1{
+                position:relative;
+                right: 10%;
+            }
+        }
+    }
+}

@@ -23,9 +23,6 @@ const Rectangular = ({
   price,
   color,
   state,
-  state1,
-  state2,
-  state3,
 }) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
@@ -46,7 +43,7 @@ const Rectangular = ({
       <img src={image} alt="" />
       <div className="choose_package">
         {
-          state3 ? (
+          state ? (
             <Button1
           name={"choose_package"}
           state={true}

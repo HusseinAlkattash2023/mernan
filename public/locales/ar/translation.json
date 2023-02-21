@@ -250,5 +250,19 @@
   "We_offer_to_graphic":"نقدم لك خيارات عديدة في مجالات متنوعة من التسويق الرقمي إلى التصميم الجرافيك بمزايا متنوعة تتناسب مع احتياجك وهدفك الذي تطمح لتحقيقه.",
   "plans":"الخطط",
   "choose_field":"اختر المجال",
-  "choose_sub_service":"اختر الخدمة الفرعية"
+  "choose_sub_service":"اختر الخدمة الفرعية",
+  "enterprise_plan":"خطة المشروع",
+  "suitable_for_companies":"مناسب للمؤسسات",
+  "create_an": "إنشاء استراتيجية تسويق مفهومة",
+  "platform_management": "إدارة منصات",
+  "content_writing": "كتابة المحتوى",
+  "design_and_publish": "تصميم الرسومات ونشرها",
+  "search_engine_optimization": "تحسين محركات البحث (SEO) وزيادة الترتيب",
+  "email_sms": "التسويق عبر البريد الإلكتروني و رسائل SMS",
+  "Competitive_research": "بحث تنافسي",
+  "create_and_share": "إنشاء ومشاركة شخصيةالعميل المثالية",
+  "prescribed_counseling": "الاستشارات المقررة",
+  "platforms":"منصات",
+  "all_platforms":"جميع المنصات",
+  "days":"أيام"
 }

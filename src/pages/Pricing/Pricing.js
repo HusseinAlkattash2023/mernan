@@ -19,7 +19,28 @@ import StartWorking from '../../components/StartWorking/StartWorking';
 import RequestFreeConsulting from '../../components/RequestFreeConsulting/RequestFreeConsulting';
 import Footer from "../../components/Footer/Footer";
 import PreviousClients from "../../components/PreviousClients/PreviousClients";
+import FrequentlyAskedQuestions from '../../components/FrequentlyAskedQuestions/FrequentlyAskedQuestions';
 
+const questions = [
+  {
+    id:1,
+    question:"what_is_the_approximate",
+    answer:"",
+    number:"One"
+  },
+  {
+    id:2,
+    question:"do_you_provide",
+    answer:"",
+    number:"Two"
+  },
+  {
+    id:3,
+    question:"is_it_possible",
+    answer:"",
+    number:"Three"
+  },
+]
 
 const Pricing = () => {
   return (
@@ -62,6 +83,7 @@ const Pricing = () => {
         image2={image7}
       />
        <PreviousClients image={image3}/>
+       <FrequentlyAskedQuestions questions={questions}/>
       <Footer color1={"#39858E"} color2={"#FDFDFE"} image={logo} />
     </div>
   )

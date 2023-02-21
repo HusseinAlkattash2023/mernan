@@ -22,6 +22,29 @@ import image6 from "../../assets/images/request.png";
 import image7 from "../../assets/images/request_ar.png";
 import image2 from '../../assets/images/brand.png';
 
+const questions = [
+  {
+    id:1,
+    question:"what_is_the_approximate",
+    answer:"",
+    number:"One"
+  },
+  {
+    id:2,
+    question:"do_you_provide",
+    answer:"",
+    number:"Two"
+  },
+  {
+    id:3,
+    question:"is_it_possible",
+    answer:"",
+    number:"Three"
+  },
+]
+
+
+
 const LandingPage = () => {
   return (
     <div>
@@ -65,7 +88,7 @@ const LandingPage = () => {
       <LatestArticles />
 
       {/* frequently asked questions */}
-      <FrequentlyAskedQuestions />
+      <FrequentlyAskedQuestions questions={questions}/>
 
       {/* our partners */}
       <OurPartners color1={"#EDE4E0"} color2={"#312E3A"} />

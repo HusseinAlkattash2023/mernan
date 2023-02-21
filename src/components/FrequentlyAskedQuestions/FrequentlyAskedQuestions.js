@@ -19,11 +19,9 @@ const FrequentlyAskedQuestions = ({ questions }) => {
 
   const [showQuestion, setShowQuestion] = useState(false);
 
-
   const ShowQuestion = () => {
     setShowQuestion(!showQuestion);
-    }
-
+  };
 
   return (
     <div
@@ -32,9 +30,33 @@ const FrequentlyAskedQuestions = ({ questions }) => {
     >
       <h2>{t("frequently_asked_questions")}</h2>
       <div className="questions">
-        {questions &&
-          questions.map((item) => (
-            <div className={`${showQuestion && "active"} question mt-5`}>
+        <div className="accordion" id="accordionExample">
+          {questions &&
+            questions.map((question) => (
+              <div className="accordion-item mb-4 question">
+              <h3 className="accordion-header" id={`heading${question.number}`}>
+                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#collapse${question.number}`} aria-expanded="false" aria-controls={`collapse${question.number}`}>
+                  {t("question")}{` #${question.id} `}{t(question.question)}
+                </button>
+              </h3>
+              <div id={`collapse${question.number}`} class="accordion-collapse collapse" aria-labelledby={`collapse${question.number}`} data-bs-parent="#accordionExample">
+                <div className="accordion-body">
+                  {t(question.answer)}
+                </div>
+              </div>
+            </div>
+          
+            ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default FrequentlyAskedQuestions;
+
+/**
+ * <div className={`${showQuestion && "active"} question mt-5`}>
               <div className="question_">
                 <div onClick={ShowQuestion}>
                   {showQuestion ? (
@@ -50,10 +72,4 @@ const FrequentlyAskedQuestions = ({ questions }) => {
               </div>
               <div className="answer">{showQuestion && <p></p>}</div>
             </div>
-          ))}
-      </div>
-    </div>
-  );
-};
-
-export default FrequentlyAskedQuestions;
+ */
