@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 
 //** import swiper for slider */
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Autoplay, Pagination, Navigation , Scrollbar, A11y, EffectCube } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -39,19 +39,25 @@ const PreviousClients = ({color1 , color2 , image}) => {
       dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}
     >
       <h2 style={styles.style2}>{t("previous_clients")}</h2>
-      <div className="mt-5">
+      <div className="mt-5" style={{marginTop:"1500px"}}>
         <Swiper
-          slidesPerView={7}
-          spaceBetween={30}
-          centeredSlides={true}
-          autoplay={{
-            delay: 1500,
-            disableOnInteraction: false,
-          }}
-          loop={true}
-          navigation={false}
-          modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper"
+           modules={[Navigation, Pagination , Autoplay]}
+           spaceBetween={50}
+           slidesPerView={7}
+           loop={true}
+          //  pagination={{ clickable: false }}
+           scrollbar={{ draggable: true }}
+          // autoplay={{
+          //   delay: 1500,
+          //   disableOnInteraction: false,
+          // }}
+           effect={"cube"}
+           cubeEffect={{
+             shadow: true,
+             slideShadows: true,
+             shadowOffset: 20,
+             shadowScale: 0.94,
+           }}
         >
           <SwiperSlide>
             <img src={image} alt="" />
@@ -126,12 +132,11 @@ const PreviousClients = ({color1 , color2 , image}) => {
             disableOnInteraction: false,
           }}
           loop={true}
-          // autoplay={false}
           pagination={{
             clickable: true,
             el: null,
           }}
-          navigation={true}
+          navigation={false}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
@@ -147,7 +152,7 @@ const PreviousClients = ({color1 , color2 , image}) => {
           <SwiperSlide>
             <Card />
           </SwiperSlide>
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <Card />
           </SwiperSlide>
           <SwiperSlide>
@@ -164,7 +169,7 @@ const PreviousClients = ({color1 , color2 , image}) => {
           </SwiperSlide>
           <SwiperSlide>
             <Card />
-          </SwiperSlide>
+          </SwiperSlide> */}
         </Swiper>
       </div>
     </div>
