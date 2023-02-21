@@ -52,6 +52,7 @@ const Rectangular = ({
           state={true}
           color1={"#39858E"}
           color2={"#FDFDFE"}
+          fontSize={22}
         />
           ):(
             <Button2 name={"choose_package"} state={true}/>

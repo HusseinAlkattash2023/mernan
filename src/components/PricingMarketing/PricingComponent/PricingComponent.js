@@ -120,11 +120,11 @@ const PricingComponent = ({
           </tbody>
         </table>
       </div>
-      <div className="footer">
+      <div className="footer" style={styles}>
         <h3>{t("not_sure")}</h3>
         <p>{t("you_can_book")}</p>
         <div>
-          <Button name={"ask_for_free"} />
+          <Button name={"ask_for_free"} fontSize={24}/>
         </div>
       </div>
     </div>

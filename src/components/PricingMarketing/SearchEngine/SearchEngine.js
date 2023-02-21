@@ -1,7 +1,7 @@
 import React from 'react';
 import PricingComponent from '../PricingComponent/PricingComponent';
 
-const SearchEngine = () => {
+const SearchEngine = ({color}) => {
   return (
     <div>
       <PricingComponent
@@ -23,6 +23,7 @@ const SearchEngine = () => {
           value11={"strategic_link"}
           value12={"Long-tailed locator"}
           value13={"Report"}
+          color={color}
         />
     </div>
   )

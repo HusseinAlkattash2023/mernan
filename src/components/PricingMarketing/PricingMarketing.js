@@ -53,7 +53,7 @@ const PricingMarketing = () => {
     } else if (i === 6) {
       return <SMSMarketing />;
     } else {
-      return <SearchEngine color={"--color2"}/>;
+      return <SearchEngine color={"--color5"}/>;
     }
   };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PricingComponent from '../PricingComponent/PricingComponent';
 
-const GoogleAds = () => {
+const GoogleAds = ({color}) => {
   return (
     <div>
       <PricingComponent
@@ -14,6 +14,7 @@ const GoogleAds = () => {
           value2={"setting_up_accounts"}
           value3={"set_up_tags"}
           value4={"monthly_reports_and"}
+          color={color}
         />
     </div>
   )

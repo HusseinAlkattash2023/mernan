@@ -71,7 +71,7 @@ const Card = ({
         </div>
       )}
       <div className="button">
-        <Button name={`${name}`} fontSize={"25px"} color1={color}/>
+        <Button name={`${name}`} fontSize={20} color1={color}/>
       </div>
     </div>
   );
