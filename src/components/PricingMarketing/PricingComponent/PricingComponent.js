@@ -53,14 +53,13 @@ const PricingComponent = ({ features, cards, color, state }) => {
               <th scope="col"></th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className={`${changeSide === "ar" ? "body_ar" : "body"}`}>
             {features.map((feature, i) => (
               <tr
                 key={feature.id}
-                className={`${features.number - i <= 0 ? "active" : ""}`}
               >
                 <th style={styles}>{t(feature.title)}</th>
-                <td style={styles}>
+                <td style={styles} className="first_data">
                   {feature.num === 1 ? (
                     <img src={feature.image1} alt="" />
                   ) : (
