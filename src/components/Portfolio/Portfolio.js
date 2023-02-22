@@ -28,8 +28,8 @@ const Portfolio = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="portfolio" dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}>
-      <h2>{t("portfolio")}</h2>
+    <div className="portfolio">
+      <h2 className={`${changeSide === "ar" && "head_ar"}`} dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}>{t("portfolio")}</h2>
       <div className="portfolio_card">
       <Swiper
         effect={'coverflow'}
@@ -37,9 +37,10 @@ const Portfolio = () => {
         centeredSlides={true}
         loop={true}
         slidesPerView={3}
+        spaceBetween={100}
         coverflowEffect={{
           rotate: 0,
-          stretch:0,
+          stretch: 0,
           depth: 100,
           modifier: 2.5,
         }}
@@ -56,6 +57,24 @@ const Portfolio = () => {
           <img src={image1} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
+          <img src={image2} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={image3} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={image1} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={image2} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={image3} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={image1} alt="slide_image" />
+        </SwiperSlide>
+       <SwiperSlide>
           <img src={image2} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
