@@ -1,6 +1,8 @@
 import React from 'react';
 import PricingComponent from '../PricingComponent/PricingComponent';
 
+import './GoogleAds.scss';
+
 import image1 from "../../../assets/images/close.png";
 import image2 from "../../../assets/images/check-circle.png";
 
@@ -8,20 +10,56 @@ const GoogleAds = ({color}) => {
   const cards = [
     {
       id:1,
-      height: "1025px",
+      height: "950px",
       color:"--color3",
       title:"start_plan",
       text:"suitable_for_individuals",
       price:"3750",
+      list:[
+        {
+          id:1,
+          image:image2
+        },
+        {
+          id:2,
+          image:image2
+        },
+        {
+          id:3,
+          image:image1
+        },
+        {
+          id:4,
+          image:image1
+        }
+      ]
     },
     {
       id:2,
-      height: "1025px",
+      height: "950px",
       color:"--color9",
       title:"professional_plan",
       text:"suitable_for_groups",
       price:"7500",
       state:true,
+      list:[
+        {
+          id:1,
+          image:image2
+        },
+        {
+          id:2,
+          image:image2
+        },
+        {
+          id:3,
+          image:image2
+        },
+        {
+          id:4,
+          image:image2
+        }
+      ]
     },
   ]
 
@@ -52,7 +90,7 @@ const GoogleAds = ({color}) => {
     }
   ]
   return (
-    <div>
+    <div className="google_ads">
       <PricingComponent
           cards={cards}
           features={features}

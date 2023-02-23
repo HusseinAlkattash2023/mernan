@@ -30,7 +30,7 @@ const Rectangular = ({
 
   const styles = {
     background: `var(${color})`,
-    border: `${state ? "5px solid #312E3A" : "none"}`,
+    outline: `${state ? "5px solid #312E3A" : "none"}`,
     height:`${height}`
   };
 

@@ -60,7 +60,7 @@
                 font-family: 'Almarai';
                 font-style: normal;
                 font-weight: 700;
-                font-size: 27px;
+                font-size: 18px;
                 line-height: 140%;
                 color:var(--color2)
             }
@@ -87,5 +87,64 @@
         align-items: center;
         justify-content: center;
         margin-top: 30px;
+    }
+}
+
+
+@media only screen and (min-width: 1270px){
+    .pricing{
+        .row{
+            .price{
+                p{
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1500px){
+    .pricing{
+        h2{
+            font-size: 49px;
+            &::after{
+                content: "";
+                width: 52px;
+                height: 52px;
+            }
+        }
+        .row{
+            .price{
+                p{
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1700px){
+    .pricing{
+        .row{
+            .price{
+                p{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1900px){
+    .pricing{
+        h2{
+            font-size: 59px;
+            &::after{
+                content: "";
+                width: 62px;
+                height: 62px;
+            }
+        }
     }
 }

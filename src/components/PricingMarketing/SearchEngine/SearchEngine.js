@@ -1,6 +1,8 @@
 import React from 'react';
 import PricingComponent from '../PricingComponent/PricingComponent';
 
+import './SearchEngine.scss';
+
 import image1 from "../../../assets/images/close.png";
 import image2 from "../../../assets/images/check-circle.png";
 
@@ -9,20 +11,120 @@ const SearchEngine = ({color}) => {
   const cards = [
     {
       id:1,
-      height: "1940px",
+      height: "1900px",
       color:"--color3",
       title:"start_plan",
       text:"suitable_for_individuals",
       price:"5625",
+      list:[
+        {
+          id:1,
+          image:image2
+        },
+        {
+          id:2,
+          image:image2
+        },
+        {
+          id:3,
+          image:image2
+        },
+        {
+          id:4,
+          image:image2
+        },
+        {
+          id:5,
+          image:image2
+        },
+        {
+          id:6,
+          image:image2
+        },
+        {
+          id:7,
+          image:image2
+        },
+        {
+          id:8,
+          image:image2
+        },
+        {
+          id:9,
+          image:image2
+        },
+        {
+          id:10,
+          image:image2
+        },
+        {
+          id:11,
+          image:image2
+        },
+        {
+          id:12,
+          image:image2
+        },
+      ]
     },
     {
       id:2,
-      height: "1940px",
+      height: "1900px",
       color:"--color9",
       title:"professional_plan",
       text:"suitable_for_groups",
       price:"7500",
       state:true,
+      list:[
+        {
+          id:1,
+          image:image2
+        },
+        {
+          id:2,
+          image:image2
+        },
+        {
+          id:3,
+          image:image2
+        },
+        {
+          id:4,
+          image:image2
+        },
+        {
+          id:5,
+          image:image2
+        },
+        {
+          id:6,
+          image:image2
+        },
+        {
+          id:7,
+          image:image2
+        },
+        {
+          id:8,
+          image:image2
+        },
+        {
+          id:9,
+          image:image2
+        },
+        {
+          id:10,
+          image:image2
+        },
+        {
+          id:11,
+          image:image2
+        },
+        {
+          id:12,
+          image:image2
+        },
+      ]
     },
   ]
 const features = [
@@ -100,7 +202,7 @@ const features = [
   }
 ]
   return (
-    <div>
+    <div className="search_engine">
       <PricingComponent
           features={features}
           cards={cards}

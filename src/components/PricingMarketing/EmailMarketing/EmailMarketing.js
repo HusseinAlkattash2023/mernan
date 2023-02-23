@@ -1,6 +1,8 @@
 import React from 'react';
 import PricingComponent from '../PricingComponent/PricingComponent';
 
+import './EmailMarketing.scss'
+
 import image1 from "../../../assets/images/close.png";
 import image2 from "../../../assets/images/check-circle.png";
 
@@ -8,20 +10,80 @@ const EmailMarketing = ({color}) => {
   const cards = [
     {
       id:1,
-      height: "1160px",
+      height: "1100px",
       color:"--color3",
       title:"start_plan",
       text:"suitable_for_individuals",
       price:"5625",
+      list:[
+        {
+          id:1,
+          image:image2
+        },
+        {
+          id:2,
+          image:image2
+        },
+        {
+          id:3,
+          image:image2
+        },
+        {
+          id:4,
+          image:image2
+        },
+        {
+          id:5,
+          image:image1
+        },
+        {
+          id:6,
+          image:image1
+        },
+        {
+          id:7,
+          image:image1
+        },
+      ]
     },
     {
       id:2,
-      height: "1160px",
+      height: "1100px",
       color:"--color9",
       title:"professional_plan",
       text:"suitable_for_groups",
       price:"9375",
       state:true,
+      list:[
+        {
+          id:1,
+          image:image2
+        },
+        {
+          id:2,
+          image:image2
+        },
+        {
+          id:3,
+          image:image2
+        },
+        {
+          id:4,
+          image:image2
+        },
+        {
+          id:5,
+          image:image2
+        },
+        {
+          id:6,
+          image:image2
+        },
+        {
+          id:7,
+          image:image2
+        },
+      ]
     },
   ]
   
@@ -71,7 +133,7 @@ const EmailMarketing = ({color}) => {
 
   ]
   return (
-    <div>
+    <div className="email_marketing">
       <PricingComponent
           cards={cards}
           color={color}

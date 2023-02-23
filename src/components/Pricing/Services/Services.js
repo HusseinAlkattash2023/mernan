@@ -89,7 +89,7 @@ const Services = () => {
             ))}
         </div>
       </div>
-      <div className="mt-5">{DisplayPricing()}</div>
+      <div className="mt-2">{DisplayPricing()}</div>
     </div>
   );
 };

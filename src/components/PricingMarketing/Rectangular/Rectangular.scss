@@ -1,6 +1,6 @@
 
 .rectangular{
-    width: 316px;
+    width: 260px;
     box-shadow: 0px 31px 31px rgba(0, 0, 0, 0.09), 0px 0px 0px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     display: flex;
@@ -11,7 +11,7 @@
         font-family: 'Almarai';
         font-style: normal;
         font-weight: 700;
-        font-size: 31px;
+        font-size: 24px;
         line-height: 140%;
         color: var(--color2);
         margin: 20px 0px 10px 0px;
@@ -20,7 +20,7 @@
         font-family: 'Almarai';
         font-style: normal;
         font-weight: 400;
-        font-size: 22px;
+        font-size: 16px;
         line-height: 140%;
         color: var(--color2);
         margin: 10px 0px;
@@ -29,14 +29,15 @@
         font-family: 'Almarai';
         font-style: normal;
         font-weight: 700;
-        font-size: 49px;
+        font-size: 30px;
         line-height: 140%;
         color: var(--color2);
         margin-top: 48px;
     }
-    img{
+    .line{
         position: relative;
         bottom: 10px;
+        width: 70%;
     }
     .icons{
         margin-top: 55px;
