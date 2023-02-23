@@ -9,8 +9,6 @@ import { useTranslation } from "react-i18next";
 
 //**import images */
 import image from "../../../assets/images/Vector(4).png";
-import image1 from "../../../assets/images/close.png";
-import image2 from "../../../assets/images/check-circle.png";
 
 //**import components */
 import Button1 from "../../Button/Button";
@@ -23,6 +21,7 @@ const Rectangular = ({
   price,
   color,
   state,
+  list
 }) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
@@ -40,7 +39,18 @@ const Rectangular = ({
       <h4>{t(`${title}`)}</h4>
       <span>{t(`${text}`)}</span>
       {changeSide === "ar" ? <p>{price} ر.س</p> : <p>{price} SAR</p>}
-      <img src={image} alt="" />
+      <img className="line" src={image} alt="" />
+
+      <div className="icons">
+        {
+          list && list.map((item)=>(
+            <div key={list.id} className={`icon${item.id}`}>
+              <img src={item.image} alt=""/>
+              <span>{item.number}{" "}{t(item.text)}</span>
+            </div>
+          ))
+        }
+      </div>
       <div className="choose_package">
         {
           state ? (
@@ -49,7 +59,7 @@ const Rectangular = ({
           state={true}
           color1={"#39858E"}
           color2={"#FDFDFE"}
-          fontSize={22}
+          fontSize={20}
         />
           ):(
             <Button2 name={"choose_package"} state={true}/>

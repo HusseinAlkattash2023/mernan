@@ -39,58 +39,24 @@ const PricingComponent = ({ features, cards, color, state }) => {
                   text={card.text}
                   price={card.price}
                   state={card.state}
+                  list={card.list}
                 />
               </div>
             ))}
         </div>
-        <table className="table table-borderless">
-          <thead>
-            <tr>
-              <th scope="col">
-                <h3 style={styles}>{t("features")}</h3>
-              </th>
-              <th scope="col"></th>
-              <th scope="col"></th>
-            </tr>
-          </thead>
-          <tbody className={`${changeSide === "ar" ? "body_ar" : "body"}`}>
+        <div className="features">
+            <h3 style={styles}>{t("features")}</h3>
+          <div>
             {features.map((feature, i) => (
-              <tr
+              <div
+              className="feature"
                 key={feature.id}
               >
-                <th style={styles}>{t(feature.title)}</th>
-                <td style={styles} className="first_data">
-                  {feature.num === 1 ? (
-                    <img src={feature.image1} alt="" />
-                  ) : (
-                    <img src={feature.image2} alt="" />
-                  )}
-                  <span>
-                    {feature.number1} {t(feature.text1)}
-                  </span>
-                </td>
-                <td style={styles}>
-                  {!feature.state ? (
-                    <img src={feature.image1} alt="" />
-                  ) : (
-                    <img src={feature.image2} alt="" />
-                  )}
-                  <span>
-                    {feature.number2} {t(feature.text2)}
-                  </span>
-                </td>
-                {state && (
-                  <td style={styles}>
-                    <img src={feature.image1} alt="" />
-                    <span>
-                      {feature.number3} {t(feature.text3)}
-                    </span>
-                  </td>
-                )}
-              </tr>
+                <p style={styles}>{t(feature.title)}</p>
+              </div>
             ))}
-          </tbody>
-        </table>
+          </div>
+        </div>
       </div>
       <div className="footer" style={styles}>
         <h3>{t("not_sure")}</h3>
