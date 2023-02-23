@@ -41,9 +41,9 @@ const PricingMarketing = () => {
   //**it is function for services type pricing */
   const ServicePrices = (i) => {
     if (i === 0) {
-      return <EmailMarketing color={"--color5"}/>;
+      return <EmailMarketing color={"--color5"} />;
     } else if (i === 1) {
-      return <GoogleAds color={"--color5"}/>;
+      return <GoogleAds color={"--color5"} />;
     } else if (i === 2) {
       return <MarketingStrategy />;
     } else if (i === 3) {
@@ -53,7 +53,7 @@ const PricingMarketing = () => {
     } else if (i === 6) {
       return <SMSMarketing />;
     } else {
-      return <SearchEngine color={"--color5"}/>;
+      return <SearchEngine color={"--color5"} />;
     }
   };
 
@@ -73,9 +73,10 @@ const PricingMarketing = () => {
             }  ${i === 0 || i === 4 ? "border1" : ""}
             ${i === 3 || i === 6 ? "border2" : ""} price`}
           >
-            <div className={``}>
-              <p>{t(item)}</p>
-            </div>
+            <p>{t(item)}</p>
+            {/* <div className={``}>
+              
+            </div> */}
           </div>
         ))}
       </div>

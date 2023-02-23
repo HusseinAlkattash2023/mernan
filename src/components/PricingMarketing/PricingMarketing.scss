@@ -44,6 +44,8 @@
             display: grid;
             place-items: center;
             cursor: pointer;
+            white-space: nowrap;
+            width: auto;
 
             &.active{
                 background-color: var(--color3);
