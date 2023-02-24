@@ -96,6 +96,7 @@
 @media only screen and (min-width: 1270px){
     .pricing{
         .row{
+            width: 80%;
             .price{
                 p{
                     font-size: 23px;
@@ -116,6 +117,7 @@
             }
         }
         .row{
+            width: 75%;
             .price{
                 p{
                     font-size: 26px;
@@ -125,14 +127,30 @@
     }
 }
 
+@media only screen and (min-width: 1630px){
+    .pricing{
+        .row{
+            width: 70%;
+        }
+    }
+}
 @media only screen and (min-width: 1700px){
     .pricing{
         .row{
+            width: 65%;
             .price{
                 p{
                     font-size: 30px;
                 }
             }
+        }
+    }
+}
+
+@media only screen and (min-width: 1830px){
+    .pricing{
+        .row{
+            width: 62%;
         }
     }
 }

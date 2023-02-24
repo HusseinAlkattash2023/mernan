@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext , useState , useEffect} from "react";
 
 import "./Card.scss";
 
@@ -20,8 +20,38 @@ const Card = ({ image, title, text, height, state }) => {
 
   const { t } = useTranslation();
 
+  //**state for know screen width */
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  });
+
+  //**it is function for change height card */
+  const HeightCard = (value) => {
+    if ( windowSize >= 1700) {
+      return Number(value) + 60;
+    }
+    else if ( windowSize >= 1500) {
+      return Number(value) + 40;
+    }
+    else if (windowSize <= 1100) {
+      return value - 70;
+    } 
+    else {
+      return value;
+    }
+  };
+
   const styles = {
-    height: `${height}`,
+    height: `${HeightCard(height)}px`,
   };
 
   return (
@@ -43,7 +73,7 @@ const Card = ({ image, title, text, height, state }) => {
         <p>{t(`${text}`)}</p>
       </div>
       <div className="footer_card">
-        <Button height={"68px"} fontSize={20} name={state ? "request_free_consulting" : "know_more"} color1={"#2FA4A1"} color2={"#FDFDFE"} />
+        <Button height={"50px"} fontSize={20} name={state ? "request_free_consulting" : "know_more"} color1={"#2FA4A1"} color2={"#FDFDFE"} />
       </div>
     </div>
   );

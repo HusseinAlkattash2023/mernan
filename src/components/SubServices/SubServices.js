@@ -32,7 +32,7 @@ const SubServices = ({ list }) => {
               title={item.title}
               text={item.text}
               state={item.state}
-              height={`${changeSide === "ar" ? "461px" : "525px"}`}
+              height={`${changeSide === "ar" ? 461 : 525}`}
             />
           </div>
         ))}
@@ -43,48 +43,4 @@ const SubServices = ({ list }) => {
 
 export default SubServices;
 
-/*
- <Card
-          image={image1}
-          title={"email_marketing"}
-          text={"through_email"}
-          height={`${changeSide === "ar" ? "461px" : "525px"}`}
-        />
-        <Card
-          image={image2}
-          title={"google_ads"}
-          text={"through_google"}
-          height={`${changeSide === "ar" ? "461px" : "525px"}`}
-        />
-        <Card
-          image={image3}
-          title={"marketing_strategy"}
-          text={"while_building"}
-          height={`${changeSide === "ar" ? "461px" : "525px"}`}
-        />
-        <Card
-          image={image4}
-          title={"content_marketing"}
-          text={"the_importance"}
-          height={`${changeSide === "ar" ? "461px" : "525px"}`}
-        />
-        <Card
-          image={image5}
-          title={"search_engine"}
-          text={"through_this_service"}
-          height={`${changeSide === "ar" ? "461px" : "525px"}`}
-        />
-        <Card
-          image={image6}
-          title={"sms_marketing"}
-          text={"sms_marketing_"}
-          height={`${changeSide === "ar" ? "461px" : "525px"}`}
-        />
-        <Card
-          image={image7}
-          title={"marketing_consulting"}
-          text={"marketing_consulting_"}
-          height={`${changeSide === "ar" ? "461px" : "525px"}`}
-          
-        />
-*/
+

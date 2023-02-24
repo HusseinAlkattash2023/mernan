@@ -68,15 +68,12 @@ const PricingMarketing = () => {
           <div
             onClick={() => handleTagClick(i)}
             key={item}
-            className={`${i === 5 ? "col-5" : "col-3"} ${
+            className={`${i === 1 ? "col-5" : "col-3"} ${
               activeTag === i && "active"
             }  ${i === 0 || i === 4 ? "border1" : ""}
             ${i === 3 || i === 6 ? "border2" : ""} price`}
           >
             <p>{t(item)}</p>
-            {/* <div className={``}>
-              
-            </div> */}
           </div>
         ))}
       </div>
