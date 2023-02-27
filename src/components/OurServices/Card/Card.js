@@ -14,7 +14,7 @@ import { StateContext } from "../../StateProvider";
 
 import { useTranslation } from "react-i18next";
 
-const Card = ({ image, title, item1, item2, item3 , color }) => {
+const Card = ({ image, nameAr , nameEn, item1, item2, item3 , color }) => {
   const list = [item1, item2, item3];
 
   //** this is state to change side rtl and ltr */
@@ -32,6 +32,7 @@ const Card = ({ image, title, item1, item2, item3 , color }) => {
     setHover(false);
   };
 
+
   return (
     <div
       className="card_service"
@@ -42,9 +43,11 @@ const Card = ({ image, title, item1, item2, item3 , color }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <img className="service" src={image} alt="" />
+      <div className="service" style={{backgroundColor:`${color}`}}>
+        <img src={image} alt="" />
+      </div>
       <div className="title">
-        <h3>{t(`${title}`)}</h3>
+        <h3>{changeSide === "ar" ? nameAr : nameEn}</h3>
         <img src={line} alt="" />
       </div>
       <div className="body">

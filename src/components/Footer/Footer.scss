@@ -63,7 +63,10 @@
             width: 40%;
 
             a{
-                font-size: 30px;
+                img{
+                    height: 30px;
+                    width: 30px;
+                }
             }
         }
         .copy_right{
@@ -100,7 +103,10 @@
         .social{
             .media{
                 a{
-                    font-size: 36px;
+                    img{
+                        height: 40px;
+                        width: 40px;
+                    }
                 }
             }
             .copy_right{
@@ -131,11 +137,6 @@
             }
         }
         .social{
-            .media{
-                a{
-                    font-size: 25px;
-                }
-            }
             .copy_right{
                 span{
                     font-size: 18px;
@@ -175,7 +176,10 @@
         .social{
             .media{
                 a{
-                    font-size: 26px;
+                    img{
+                        height: 25px;
+                        width: 25px;
+                    }
                 }
             }
             .copy_right{

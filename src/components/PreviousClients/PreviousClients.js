@@ -73,17 +73,11 @@ const PreviousClients = ({ color1, color2, image }) => {
         <Swiper
           slidesPerView={7}
           spaceBetween={100}
-          centeredSlides={true}
           autoplay={{
             delay: 1500,
             disableOnInteraction: false,
           }}
           loop={true}
-          pagination={{
-            clickable: true,
-            el: null,
-          }}
-          navigation={false}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
@@ -91,15 +85,15 @@ const PreviousClients = ({ color1, color2, image }) => {
             dataClient.map((item) => (
               <div key={item.id} className="brands">
                 <SwiperSlide>
-                <div className="dg-danger">
-                  <img src={`${BASE_API_URL}/${item.image}`} alt="" />
+                <div>
+                  <img className="client" src={`${BASE_API_URL}/${item.image}`} alt="" />
                 </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={`${BASE_API_URL}/${item.image}`} alt="" />
+                  <img className="client" src={`${BASE_API_URL}/${item.image}`} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={`${BASE_API_URL}/${item.image}`} alt="" />
+                  <img className="client" src={`${BASE_API_URL}/${item.image}`} alt="" />
                 </SwiperSlide>
               </div>
             ))}

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import "./OurServices.scss";
 
@@ -9,6 +9,11 @@ import { useTranslation } from "react-i18next";
 
 //** import components */
 import Card from "./Card/Card.js";
+
+//**import useSelector for base api */
+import { useSelector } from "react-redux";
+
+import axios from "axios";
 
 //** import images */
 import image1 from "../../assets/images/service1.png";
@@ -23,18 +28,28 @@ const OurServices = () => {
 
   const { t } = useTranslation();
 
+  const [data, setData] = useState([]);
+
+  const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
+
+  useEffect(() => {
+    axios.get(`${BASE_API_URL}/Services?page=0&pageSize=12`)
+      .then(response => setData(response.data.data))
+      .catch(error => console.log(error));
+  }, [BASE_API_URL]);
+
   const cards = [
     {
-      id:1,
+      id: 1,
       image: image3,
       title: "digital_marketing_",
       item1: "achieve_financial_success",
       item2: "good_targeting_of_customers",
       item3: "increase",
-      color: "#fcd833"
+      color: "#fcd833",
     },
     {
-      id:2,
+      id: 2,
       image: image2,
       title: "development",
       item1: "make_the_website",
@@ -43,16 +58,16 @@ const OurServices = () => {
       color: "#ec92c4",
     },
     {
-      id:3,
+      id: 3,
       image: image1,
       title: "branding",
       item1: "build_a_distinctive",
       item2: "brand_connection",
       item3: "recognize_your_brand",
-      color: "#16a8a3"
+      color: "#16a8a3",
     },
     {
-      id:4,
+      id: 4,
       image: image5,
       title: "design",
       item1: "effective_communication",
@@ -61,15 +76,15 @@ const OurServices = () => {
       color: "#7a00ca",
     },
     {
-      id:5,
+      id: 5,
       image: image4,
       title: "social_media_marketing",
       item1: "strengthening",
       item2: "gain_the_trust",
       item3: "increase_sales",
       color: "#f89600",
-    }
-  ]
+    },
+  ];
 
   return (
     <div
@@ -80,20 +95,17 @@ const OurServices = () => {
 
       <div className="cards">
         <div className="row">
-          {
-            cards && cards.map((card)=>(
+          {data &&
+            data.map((card) => (
               <div className="col-lg-4 my-3" key={card.id}>
                 <Card
-                image={card.image}
-                title={card.title}
-                item1={card.item1}
-                item2={card.item2}
-                item3={card.item3}
-                color={card.color}
+                  image={`${BASE_API_URL}/${card.icon}`}
+                  nameAr={card.nameAr}
+                  nameEn={card.nameEn}
+                  color={card.colorIcon}
                 />
               </div>
-            ))
-          }
+            ))}
         </div>
       </div>
     </div>

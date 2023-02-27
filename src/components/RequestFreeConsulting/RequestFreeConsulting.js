@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext , useEffect , useState} from "react";
 
 import "./RequestFreeConsulting.scss";
 
@@ -12,11 +12,25 @@ import { useTranslation } from "react-i18next";
 
 import Button from "../Button/Button";
 
+//**import useSelector for base api */
+import { useSelector } from "react-redux";
+
+import axios from 'axios';
+
 const RequestFreeConsulting = ({color1 , color2 , color3 , color4 , image1 , image2}) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
   const { t } = useTranslation();
+  
+  const [data , setData] = useState([])
+  const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
+
+  useEffect(() => {
+    axios.get(`${BASE_API_URL}/Budgets?page=0&pageSize=12`)
+      .then(response => setData(response.data.data))
+      .catch(error => console.log(error));
+  }, [BASE_API_URL]);
 
   const styles={
     style1:{
@@ -113,8 +127,11 @@ const RequestFreeConsulting = ({color1 , color2 , color3 , color4 , image1 , ima
                 {t("budget")}
               </label>
               <select style={styles.style2} id="inputState" className="form-select">
-                <option>{t("amount")}</option>
-                <option>...</option>
+                  {
+                    data && data.map(option =>(
+                        <option key={option.id}>{option.from}{"-"}{option.to}</option>
+                    ))
+                  }
               </select>
             </div>
             <div className="mt-4">
