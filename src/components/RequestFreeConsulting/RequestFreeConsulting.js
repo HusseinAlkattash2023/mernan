@@ -87,7 +87,7 @@ const RequestFreeConsulting = ({color1 , color2 , color3 , color4 , image1 , ima
                 <input
                 style={styles.style2}
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   id="exampleFormControlInput1"
                 />
               </div>
@@ -97,7 +97,7 @@ const RequestFreeConsulting = ({color1 , color2 , color3 , color4 , image1 , ima
                 {t("field")}
               </label>
               <select style={styles.style2} id="inputState" className="form-select">
-                <option selected>{t("digital_marketing")}</option>
+                <option>{t("digital_marketing")}</option>
                 <option>...</option>
               </select>
             </div>
@@ -113,7 +113,7 @@ const RequestFreeConsulting = ({color1 , color2 , color3 , color4 , image1 , ima
                 {t("budget")}
               </label>
               <select style={styles.style2} id="inputState" className="form-select">
-                <option selected>{t("amount")}</option>
+                <option>{t("amount")}</option>
                 <option>...</option>
               </select>
             </div>

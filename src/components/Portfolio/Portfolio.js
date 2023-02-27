@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import "./Portfolio.scss";
 
@@ -7,19 +7,20 @@ import { StateContext } from "../StateProvider";
 
 import { useTranslation } from "react-i18next";
 
-//** import images */
-import image1 from "../../assets/images/portfolio1.png";
-import image2 from "../../assets/images/portfolio2.png";
-import image3 from "../../assets/images/portfolio3.png";
 
 //** import swiper for slider */
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper';
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { EffectCoverflow, Pagination, Navigation } from "swiper";
+
+//**import useSelector for base api */
+import { useSelector } from "react-redux";
+
+import axios from "axios";
 
 const Portfolio = () => {
   //** this is state to change side rtl and ltr */
@@ -27,66 +28,113 @@ const Portfolio = () => {
 
   const { t } = useTranslation();
 
+  const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_API_URL}/OurJobs?page=0&pageSize=12`)
+      .then((response) => {
+        setData(response.data.data);
+      })
+      .catch((error) => console.log(error));
+  }, [BASE_API_URL]);
+
   return (
     <div className="portfolio">
-      <h2 className={`${changeSide === "ar" && "head_ar"}`} dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}>{t("portfolio")}</h2>
-      <div className="portfolio_card">
-      <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={3}
-        spaceBetween={100}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
-        }}
-        pagination={{ el: '.swiper-pagination', clickable: true }}
-        navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-          clickable: true,
-        }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="swiper_container"
+      <h2
+        className={`${changeSide === "ar" && "head_ar"}`}
+        dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}
       >
-        <SwiperSlide>
-          <img src={image1} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image2} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image3} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image1} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image2} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image3} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image1} alt="slide_image" />
-        </SwiperSlide>
-       <SwiperSlide>
-          <img src={image2} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={image3} alt="slide_image" />
-        </SwiperSlide>
-      </Swiper>
+        {t("portfolio")}
+      </h2>
+      <div className="portfolio_card">
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          slidesPerView={3}
+          spaceBetween={100}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+          }}
+          pagination={{ el: ".swiper-pagination", clickable: true }}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            clickable: true,
+          }}
+          modules={[EffectCoverflow, Pagination, Navigation]}
+          className="swiper_container"
+        >
+          {data &&
+            data.map((item) => (
+              <div key={item.id}>
+                <SwiperSlide>
+                  <img
+                    src={`${BASE_API_URL}/${item.image}`}
+                    alt="slide_image"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={`${BASE_API_URL}/${item.image}`}
+                    alt="slide_image"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={`${BASE_API_URL}/${item.image}`}
+                    alt="slide_image"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={`${BASE_API_URL}/${item.image}`}
+                    alt="slide_image"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={`${BASE_API_URL}/${item.image}`}
+                    alt="slide_image"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={`${BASE_API_URL}/${item.image}`}
+                    alt="slide_image"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={`${BASE_API_URL}/${item.image}`}
+                    alt="slide_image"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={`${BASE_API_URL}/${item.image}`}
+                    alt="slide_image"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src={`${BASE_API_URL}/${item.image}`}
+                    alt="slide_image"
+                  />
+                </SwiperSlide>
+              </div>
+            ))}
+        </Swiper>
       </div>
     </div>
   );
 };
 
 export default Portfolio;
-
-
- 

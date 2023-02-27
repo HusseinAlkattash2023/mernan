@@ -33,13 +33,13 @@ const FrequentlyAskedQuestions = ({ questions }) => {
         <div className="accordion" id="accordionExample">
           {questions &&
             questions.map((question) => (
-              <div className="accordion-item mb-4 question">
+              <div className="accordion-item mb-4 question" key={question.id}>
               <h3 className="accordion-header" id={`heading${question.number}`}>
                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#collapse${question.number}`} aria-expanded="false" aria-controls={`collapse${question.number}`}>
                   {t("question")}{` #${question.id} `}{t(question.question)}
                 </button>
               </h3>
-              <div id={`collapse${question.number}`} class="accordion-collapse collapse" aria-labelledby={`collapse${question.number}`} data-bs-parent="#accordionExample">
+              <div id={`collapse${question.number}`} className="accordion-collapse collapse" aria-labelledby={`collapse${question.number}`} data-bs-parent="#accordionExample">
                 <div className="accordion-body">
                   {t(question.answer)}
                 </div>

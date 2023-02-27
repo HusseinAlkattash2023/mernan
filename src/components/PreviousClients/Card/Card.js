@@ -10,7 +10,7 @@ import image from "../../../assets/images/one-star.svg";
 //** state management */
 import { StateContext } from "../../StateProvider";
 
-const Card = () => {
+const Card = ({nameAr , nameEn , imageAvatar , descriptionAr , descriptionEn}) => {
   const { changeSide } = useContext(StateContext);
 
   const { t } = useTranslation();
@@ -18,9 +18,9 @@ const Card = () => {
   return (
     <div className="card_client" dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}>
       <div className="head">
-        <div className="avatar"></div>
+        <img src={imageAvatar} alt=""/>
         <h3 className={`${changeSide === "ar" ? "name_ar" : "name_en"}`}>
-          {t("salim_saleh_company_name")}
+          {changeSide === "ar" ? nameAr : nameEn}
         </h3>
       </div>
       <div className="rating">
@@ -31,7 +31,7 @@ const Card = () => {
         <img src={image} alt="" />
       </div>
       <div className="body">
-        <p>{t("i_dealt_with")}</p>
+        <p>{changeSide === "ar" ? descriptionAr : descriptionEn}</p>
       </div>
     </div>
   );
