@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
 
 import logo from "../../assets/images/mernan.png";
 import image1 from "../../assets/images/digital marketing(1).png";
@@ -37,98 +36,122 @@ import FrequentlyAskedQuestions from "../../components/FrequentlyAskedQuestions/
 import PreviousClients from "../../components/PreviousClients/PreviousClients";
 import PricingMarketing from "../../components/PricingMarketing/PricingMarketing";
 
-const list =[
+//**import useSelector for base api */
+import { useSelector } from "react-redux";
+
+import axios from "axios";
+
+const list = [
   {
-    id:1,
-    image :image8,
-    title:"email_marketing",
-    text:"through_email"
+    id: 1,
+    image: image8,
+    title: "email_marketing",
+    text: "through_email",
   },
   {
-    id:2,
-    image :image9,
-    title:"google_ads",
-    text:"through_google"
+    id: 2,
+    image: image9,
+    title: "google_ads",
+    text: "through_google",
   },
   {
-    id:3,
-    image :image10,
-    title:"marketing_strategy",
-    text:"while_building"
+    id: 3,
+    image: image10,
+    title: "marketing_strategy",
+    text: "while_building",
   },
   {
-    id:4,
-    image :image11,
-    title:"content_marketing",
-    text:"the_importance"
+    id: 4,
+    image: image11,
+    title: "content_marketing",
+    text: "the_importance",
   },
   {
-    id:5,
-    image :image12,
-    title:"search_engine",
-    text:"through_this_service"
+    id: 5,
+    image: image12,
+    title: "search_engine",
+    text: "through_this_service",
   },
   {
-    id:6,
-    image :image13,
-    title:"sms_marketing",
-    text:"sms_marketing_"
+    id: 6,
+    image: image13,
+    title: "sms_marketing",
+    text: "sms_marketing_",
   },
   {
-    id:7,
-    image :image14,
-    title:"marketing_consulting",
-    text:"marketing_consulting_",
-    state:true
+    id: 7,
+    image: image14,
+    title: "marketing_consulting",
+    text: "marketing_consulting_",
+    state: true,
   },
-]
+];
 
 const questions = [
   {
-    id:1,
-    question:"what_is_the_approximate",
-    answer:"",
-    number:"One"
+    id: 1,
+    question: "what_is_the_approximate",
+    answer: "",
+    number: "One",
   },
   {
-    id:2,
-    question:"do_you_provide",
-    answer:"",
-    number:"Two"
+    id: 2,
+    question: "do_you_provide",
+    answer: "",
+    number: "Two",
   },
   {
-    id:3,
-    question:"is_it_possible",
-    answer:"",
-    number:"Three"
+    id: 3,
+    question: "is_it_possible",
+    answer: "",
+    number: "Three",
   },
-]
-
+];
 
 const DigitalMarketing = () => {
+  const [data, setData] = useState([]);
+
+  const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_API_URL}/Services?page=0&pageSize=12`)
+      .then((response) => setData(response.data.data))
+      .catch((error) => console.log(error));
+  }, [BASE_API_URL]);
+
   return (
     <div>
-      <Home
-        title={"ready_to_grow"}
-        text={"a_way_to_promote"}
-        image1={image2}
-        image2={image1}
-        color1={"#FFF2D8"}
-        color2={"#FFD261"}
-        color3={"#FFCA3D"}
-        degree={"272.79deg"}
-        degree_ar={"89.52deg"}
-        average={"3.8%"}
-        average2={"42.32%"}
-        average3={"97.86%"}
-        average_ar={"2.46%"}
-        average2_ar={"42.24%"}
-        average3_ar={"99.59%"}
-        color_btn1={"#39858E"}
-        color_btn2={"#FDFDFE"}
-        state={true}
-        name={"know_more"}
-      />
+      {data &&
+        data.map((item) => 
+        item.id === 2 && (
+          <div key={item.id}>
+          <Home
+            titleEn={item.pageHeaderEn}
+            titleAr={item.pageHeaderAr}
+            descriptionEn={item.descriptionEn}
+            descriptionAr={item.descriptionAr}
+            image1={`${BASE_API_URL}/${item.image}`}
+            image2={`${BASE_API_URL}/${item.image}`}
+            color1={item.color1}
+            color2={item.color2}
+            color3={item.color3}
+            degree={"272.79deg"}
+            degree_ar={"89.52deg"}
+            average={"3.8%"}
+            average2={"42.32%"}
+            average3={"97.86%"}
+            average_ar={"2.46%"}
+            average2_ar={"42.24%"}
+            average3_ar={"99.59%"}
+            color_btn1={"#39858E"}
+            color_btn2={"#FDFDFE"}
+            state={true}
+            name={"know_more"}
+          />
+        </div>
+        )
+        )}
       <BenefitsOffered
         title1={"financial"}
         text1={"financial_success"}
@@ -143,9 +166,9 @@ const DigitalMarketing = () => {
         icon3={icon3}
         icon4={icon4}
       />
-      <SubServices list = {list}/>
+      <SubServices list={list} />
       <OurPreviousWork />
-      <PricingMarketing/>
+      <PricingMarketing />
       <StartWorking
         color1={"--color1"}
         color2={"--color2"}
@@ -162,7 +185,7 @@ const DigitalMarketing = () => {
         image1={image6}
         image2={image7}
       />
-      <FrequentlyAskedQuestions questions={questions}/>
+      <FrequentlyAskedQuestions questions={questions} />
       <PreviousClients color1={"#596773"} color2={"#FDFDFE"} image={image3} />
       <Footer image={logo} color1={"#EDE4E0"} color2={"#312E3A"} />
     </div>

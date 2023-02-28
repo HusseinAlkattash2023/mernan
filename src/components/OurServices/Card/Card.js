@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 import "./Card.scss";
 
@@ -14,13 +14,11 @@ import { StateContext } from "../../StateProvider";
 
 import { useTranslation } from "react-i18next";
 
-const Card = ({ image, nameAr , nameEn, item1, item2, item3 , color }) => {
-  const list = [item1, item2, item3];
+
+const Card = ({ image, nameAr, nameEn, color , ServiceAchivments}) => {
 
   //** this is state to change side rtl and ltr */
-  const { changeSide } = useContext(StateContext);
-
-  const { t } = useTranslation();
+  const { changeSide } = useContext(StateContext)
 
   const [hover, setHover] = useState(false);
 
@@ -32,18 +30,17 @@ const Card = ({ image, nameAr , nameEn, item1, item2, item3 , color }) => {
     setHover(false);
   };
 
-
   return (
     <div
       className="card_service"
       style={{
-        backgroundColor: hover ? `${color}` : '#FDFDFE',
-        color: hover ? "#FDFDFE" : "#312E3A"
+        backgroundColor: hover ? `${color}` : "#FDFDFE",
+        color: hover ? "#FDFDFE" : "#312E3A",
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="service" style={{backgroundColor:`${color}`}}>
+      <div className="service" style={{ backgroundColor: `${color}` }}>
         <img src={image} alt="" />
       </div>
       <div className="title">
@@ -51,14 +48,21 @@ const Card = ({ image, nameAr , nameEn, item1, item2, item3 , color }) => {
         <img src={line} alt="" />
       </div>
       <div className="body">
-        {list.map((item) => (
-          <div key={item}>
-            <img src={check} alt="" width="20px" />
-            <p className={changeSide === "ar" ? "service_ar" : "service_en"}>
-              {t(`${item}`)}
-            </p>
-          </div>
-        ))}
+        {ServiceAchivments &&
+          ServiceAchivments.map((item) =>
+                  <div key={item.id}>
+                    <img src={check} alt="" width="20px" />
+                    <p
+                      className={
+                        changeSide === "ar" ? "service_ar" : "service_en"
+                      }
+                    >
+                      {changeSide === "ar"
+                        ? item.descriptionAr
+                        : item.descriptionEn}
+                    </p>
+                  </div>
+                )}
         <Button />
       </div>
     </div>

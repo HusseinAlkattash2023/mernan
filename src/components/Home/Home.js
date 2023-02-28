@@ -17,8 +17,10 @@ import Button2 from "./Button/Button";
 
 const Home = ({
   state,
-  title,
-  text,
+  titleAr,
+  titleEn,
+  descriptionAr,
+  descriptionEn,
   image1,
   image2,
   color1,
@@ -62,7 +64,7 @@ const Home = ({
     >
       <div className="part1">
         <div className="title">
-          <h2 style={styles.style1}>{t(`${title}`)}</h2>
+          <h2 style={styles.style1}>{changeSide === "ar" ? titleAr : titleEn}</h2>
 
           {state ? (
             <img
@@ -78,7 +80,7 @@ const Home = ({
             />
           )}
         </div>
-        <p style={styles.style1}>{t(`${text}`)}</p>
+        <p style={styles.style1}>{changeSide === "ar" ? descriptionAr : descriptionEn}</p>
         <div className={`${changeSide === "ar" ? "buttons_ar" : "buttons"}`}>
           <Button
             color1={color_btn1}

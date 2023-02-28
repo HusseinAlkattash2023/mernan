@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext , useEffect , useState } from "react";
 
 import "./ServicesOffered.scss";
 
@@ -16,11 +16,30 @@ import image3 from "../../assets/images/branding.png";
 import image4 from "../../assets/images/design.png";
 import image5 from "../../assets/images/social_media_marketing.png";
 
+//**import useSelector for base api */
+import { useSelector } from "react-redux";
+
+import axios from "axios";
+
+
 const ServicesOffered = () => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
   const { t } = useTranslation();
+
+  const [data, setData] = useState([]);
+
+  const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_API_URL}/Services?page=0&pageSize=12`)
+      .then((response) => {
+        setData(response.data.data);
+      })
+      .catch((error) => console.log(error));
+  }, [BASE_API_URL]);
 
   const services = [
     {
@@ -77,16 +96,18 @@ const ServicesOffered = () => {
     >
       <h2>{t("services_offered")}</h2>
       <div className="row cards">
-        {services &&
-          services.map((service) => (
+        {data &&
+          data.map((service) => (
             <div key={service.id} className="col-lg-6">
               <Card
-                image={service.image}
+                image={`${BASE_API_URL}/${service.image}`}
                 color1={service.color1}
                 color2={service.color2}
                 color3={service.color3}
-                title={service.title}
-                text={service.text}
+                nameEn={service.nameEn}
+                nameAr={service.nameAr}
+                descriptionEn={service.descriptionEn}
+                descriptionAr={service.descriptionAr}
               />
             </div>
           ))}
