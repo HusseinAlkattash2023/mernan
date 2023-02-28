@@ -7,8 +7,6 @@ import { StateContext } from "../StateProvider";
 
 import { useTranslation } from "react-i18next";
 
-import image1 from "../../assets/images/video.png";
-
 //**import useSelector for base api */
 import { useSelector } from "react-redux";
 

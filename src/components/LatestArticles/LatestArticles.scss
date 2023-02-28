@@ -63,10 +63,14 @@
     }
     .cards{
         margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
         .cards_articles{
             display: flex;
             align-items: center;
             justify-content:center;
+            flex-wrap: wrap;
         }
     }
     .blog{

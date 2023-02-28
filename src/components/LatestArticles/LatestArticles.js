@@ -1,10 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 import "./LatestArticles.scss";
 
 //**import components */
 import Card from "./Card/Card";
-import Button from '../Button/Button';
+import Button from "../Button/Button";
 
 //**import images */
 import image1 from "../../assets/images/marketing.svg";
@@ -16,11 +16,27 @@ import { StateContext } from "../StateProvider";
 
 import { useTranslation } from "react-i18next";
 
+//**import useSelector for base api */
+import { useSelector } from "react-redux";
+
+import axios from "axios";
+
 const LatestArticles = () => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
   const { t } = useTranslation();
+
+  const [data, setData] = useState([]);
+
+  const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_API_URL}/Blogs?page=0&pageSize=12`)
+      .then((response) => setData(response.data.data))
+      .catch((error) => console.log(error));
+  }, [BASE_API_URL]);
 
   const [activeTag, setActiveTag] = useState(0);
 
@@ -48,61 +64,82 @@ const LatestArticles = () => {
         ))}
       </div>
       <div className="cards">
-        {activeTag === 0 && (
-          <div className="cards_articles">
-            <Card
-              image={image1}
-              name={"digital_marketing"}
-              color={"#FFC84D"}
-              text={"seo"}
-            />
-            <Card
-              image={image2}
-              name={"web_development"}
-              color={"#E7A5C8"}
-              text={"how_to_optimize"}
-            />
-            <Card
-              image={image3}
-              name={"design"}
-              color={"#A59CDE"}
-              text={"how_creativity"}
-            />
-          </div>
-        )}
-        {activeTag === 1 && (
-          <div>
-            <Card
-              image={image1}
-              name={"digital_marketing"}
-              color={"#FFC84D"}
-              text={"seo"}
-            />
-          </div>
-        )}
-        {activeTag === 2 && (
-          <div>
-            <Card
-              image={image2}
-              name={"web_development"}
-              color={"#E7A5C8"}
-              text={"how_to_optimize"}
-            />
-          </div>
-        )}
-        {activeTag === 3 && (
-          <div>
-            <Card
-              image={image3}
-              name={"design"}
-              color={"#A59CDE"}
-              text={"how_creativity"}
-            />
-          </div>
-        )}
+        {activeTag === 0 &&
+          data &&
+          data.map((card) => (
+            <div className="cards_articles">
+              <Card
+                image={`${BASE_API_URL}/${card.image}`}
+                headerEn={card.headerEn}
+                headerAr={card.headerAr}
+                simpleDescriptionAr={card.simpleDescriptionAr}
+                simpleDescriptionEn={card.simpleDescriptionEn}
+                authorAr={card.authorAr}
+                authorEn={card.authorEn}
+                color={"#FFC84D"}
+              />
+            </div>
+          ))}
+        {activeTag === 1 &&
+          data &&
+          data.map(
+            (card) =>
+              card.id === 1 && (
+                <div className="cards_articles">
+                  <Card
+                    image={`${BASE_API_URL}/${card.image}`}
+                    headerEn={card.headerEn}
+                    headerAr={card.headerAr}
+                    simpleDescriptionAr={card.simpleDescriptionAr}
+                    simpleDescriptionEn={card.simpleDescriptionEn}
+                    authorAr={card.authorAr}
+                    authorEn={card.authorEn}
+                    color={"#FFC84D"}
+                  />
+                </div>
+              )
+          )}
+         {activeTag === 2 &&
+          data &&
+          data.map(
+            (card) =>
+              card.id === 2 && (
+                <div className="cards_articles">
+                  <Card
+                    image={`${BASE_API_URL}/${card.image}`}
+                    headerEn={card.headerEn}
+                    headerAr={card.headerAr}
+                    simpleDescriptionAr={card.simpleDescriptionAr}
+                    simpleDescriptionEn={card.simpleDescriptionEn}
+                    authorAr={card.authorAr}
+                    authorEn={card.authorEn}
+                    color={"#FFC84D"}
+                  />
+                </div>
+              )
+          )}
+         {activeTag === 3 &&
+          data &&
+          data.map(
+            (card) =>
+              card.id === 3 && (
+                <div className="cards_articles">
+                  <Card
+                    image={`${BASE_API_URL}/${card.image}`}
+                    headerEn={card.headerEn}
+                    headerAr={card.headerAr}
+                    simpleDescriptionAr={card.simpleDescriptionAr}
+                    simpleDescriptionEn={card.simpleDescriptionEn}
+                    authorAr={card.authorAr}
+                    authorEn={card.authorEn}
+                    color={"#FFC84D"}
+                  />
+                </div>
+              )
+          )}
       </div>
       <div className="blog">
-        <Button name={"view_blog"}/>
+        <Button name={"view_blog"} />
       </div>
     </div>
   );
