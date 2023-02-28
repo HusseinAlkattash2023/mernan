@@ -10,6 +10,8 @@ import { useTranslation } from "react-i18next";
 //**import components */
 import Card from "./Card/Card";
 
+//**import useSelector for base api */
+import { useSelector } from "react-redux";
 
  
 const SubServices = ({ list }) => {
@@ -17,6 +19,8 @@ const SubServices = ({ list }) => {
   const { changeSide } = useContext(StateContext);
 
   const { t } = useTranslation();
+
+  const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
   return (
     <div
@@ -28,9 +32,11 @@ const SubServices = ({ list }) => {
         { list && list.map((item) => (
           <div className="col-lg-3 my-3 item" key={item.id}>
             <Card
-              image={item.image}
-              title={item.title}
-              text={item.text}
+              image={`${BASE_API_URL}/${item.icon}`}
+              descriptionAr={item.descriptionAr}
+              descriptionEn = {item.descriptionEn}
+              headerAr={item.headerAr}
+              headerEn={item.headerEn}
               state={item.state}
               height={`${changeSide === "ar" ? 461 : 525}`}
             />

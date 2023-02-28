@@ -41,75 +41,10 @@ import { useSelector } from "react-redux";
 
 import axios from "axios";
 
-const list = [
-  {
-    id: 1,
-    image: image8,
-    title: "email_marketing",
-    text: "through_email",
-  },
-  {
-    id: 2,
-    image: image9,
-    title: "google_ads",
-    text: "through_google",
-  },
-  {
-    id: 3,
-    image: image10,
-    title: "marketing_strategy",
-    text: "while_building",
-  },
-  {
-    id: 4,
-    image: image11,
-    title: "content_marketing",
-    text: "the_importance",
-  },
-  {
-    id: 5,
-    image: image12,
-    title: "search_engine",
-    text: "through_this_service",
-  },
-  {
-    id: 6,
-    image: image13,
-    title: "sms_marketing",
-    text: "sms_marketing_",
-  },
-  {
-    id: 7,
-    image: image14,
-    title: "marketing_consulting",
-    text: "marketing_consulting_",
-    state: true,
-  },
-];
-
-const questions = [
-  {
-    id: 1,
-    question: "what_is_the_approximate",
-    answer: "",
-    number: "One",
-  },
-  {
-    id: 2,
-    question: "do_you_provide",
-    answer: "",
-    number: "Two",
-  },
-  {
-    id: 3,
-    question: "is_it_possible",
-    answer: "",
-    number: "Three",
-  },
-];
 
 const DigitalMarketing = () => {
   const [data, setData] = useState([]);
+  const [dataSubServices , setDataSubServices] = useState([])
 
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
@@ -117,6 +52,13 @@ const DigitalMarketing = () => {
     axios
       .get(`${BASE_API_URL}/Services?page=0&pageSize=12`)
       .then((response) => setData(response.data.data))
+      .catch((error) => console.log(error));
+  }, [BASE_API_URL]);
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_API_URL}/SubService?page=0&pageSize=12`)
+      .then((response) => setDataSubServices(response.data.data))
       .catch((error) => console.log(error));
   }, [BASE_API_URL]);
 
@@ -166,7 +108,7 @@ const DigitalMarketing = () => {
         icon3={icon3}
         icon4={icon4}
       />
-      <SubServices list={list} />
+      <SubServices list={dataSubServices} />
       <OurPreviousWork />
       <PricingMarketing />
       <StartWorking
@@ -185,7 +127,7 @@ const DigitalMarketing = () => {
         image1={image6}
         image2={image7}
       />
-      <FrequentlyAskedQuestions questions={questions} />
+      <FrequentlyAskedQuestions/>
       <PreviousClients color1={"#596773"} color2={"#FDFDFE"} image={image3} />
       <Footer image={logo} color1={"#EDE4E0"} color2={"#312E3A"} />
     </div>

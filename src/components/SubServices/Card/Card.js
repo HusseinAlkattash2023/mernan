@@ -2,7 +2,6 @@ import React, { useContext , useState , useEffect} from "react";
 
 import "./Card.scss";
 
-import { useTranslation } from "react-i18next";
 
 //** state management */
 import { StateContext } from "../../StateProvider";
@@ -14,11 +13,10 @@ import free_ar from "../../../assets/images/free_ar.png";
 
 import Button from "../../Button/Button";
 
-const Card = ({ image, title, text, height, state }) => {
+const Card = ({ image, headerAr , headerEn , descriptionEn , descriptionAr, height, state }) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
-  const { t } = useTranslation();
 
   //**state for know screen width */
   const [windowSize, setWindowSize] = useState(window.innerWidth);
@@ -67,10 +65,10 @@ const Card = ({ image, title, text, height, state }) => {
       </div>
       <div className="body">
         <div className="title">
-          <h3>{t(`${title}`)}</h3>
+          <h3>{changeSide === "ar" ? headerAr : headerEn}</h3>
           <img src={spiral} alt="" />
         </div>
-        <p>{t(`${text}`)}</p>
+        <p>{changeSide === "ar" ? descriptionAr : descriptionEn}</p>
       </div>
       <div className="footer_card">
         <Button height={"50px"} fontSize={20} name={state ? "request_free_consulting" : "know_more"} color1={"#2FA4A1"} color2={"#FDFDFE"} />

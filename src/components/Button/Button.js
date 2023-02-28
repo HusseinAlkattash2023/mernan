@@ -11,21 +11,13 @@ import { StateContext } from "../StateProvider";
 
 import { useTranslation } from "react-i18next";
 
-//**import useNavigate from react-router-dom */
-import {useNavigate} from 'react-router-dom';
 
-const Button = ({ name, color1, color2, fontSize, height, state , route}) => {
+const Button = ({ name, color1, color2, fontSize, height, state , route , type}) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
   const { t } = useTranslation();
 
-  const navigate = useNavigate();
-
-  //** use navigate to change route */
-  const ChangeRoute = ()=>{
-    return navigate(`/${route}`);
-  }
 
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
@@ -64,7 +56,7 @@ const Button = ({ name, color1, color2, fontSize, height, state , route}) => {
 
   return (
     <div className="button_component">
-      <button style={styles.style1} onClick={ChangeRoute}>
+      <button style={styles.style1} type={type}>
         <span style={styles.style2}>{t(`${name}`)}</span>
         <span style={styles.style2}>
           {!state && (changeSide === "ar" ? <BsArrowLeft /> : <BsArrowRight />)}
