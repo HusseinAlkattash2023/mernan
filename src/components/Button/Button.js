@@ -7,7 +7,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
 //** state management */
-import { StateContext } from "../StateProvider";
+import { StateContext } from "../context/StateProvider";
 
 import { useTranslation } from "react-i18next";
 
@@ -42,11 +42,18 @@ const Button = ({ name, color1, color2, fontSize, height, state , route , type})
       return value;
     }
   };
+  const HeightButton = (value) =>{
+    if(windowSize >= 1900){
+      return value + 11
+    }else{
+      return value;
+    }
+  }
 
   const styles = {
     style1: {
       background: `${color1}`,
-      height: `${height}`,
+      height: `${HeightButton(height)}px`,
     },
     style2: {
       color: `${color2}`,

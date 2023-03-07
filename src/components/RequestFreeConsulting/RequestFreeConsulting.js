@@ -5,8 +5,11 @@ import "./RequestFreeConsulting.scss";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
 
+import toast, { Toaster } from 'react-hot-toast';
+
+
 //** state management */
-import { StateContext } from "../StateProvider";
+import { StateContext } from "../context/StateProvider";
 
 import { useTranslation } from "react-i18next";
 
@@ -97,14 +100,17 @@ const RequestFreeConsulting = ({
       .catch((error) => console.log(error));
   }, [BASE_API_URL]);
 
-  const onSubmit = ()=>{
+  const onSubmit = (event)=>{ 
      axios.post(`${BASE_API_URL}/FreeConsultations` , formData)
      .then((res)=>{
-      console.log(res)
+       if(res.status === 200){
+        toast.success(`${t("request")}`)
+       } 
      })
      .catch((error)=>{
       console.log(error)
      })
+
   }
   
 
@@ -125,6 +131,7 @@ const RequestFreeConsulting = ({
       className={`${changeSide === "ar" ? "request_ar" : "request_en"} request`}
       dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}
     >
+      <div><Toaster/></div>
       <h2>{t("request_free_consulting")}</h2>
       <div className="body">
         <div className="section">
@@ -302,6 +309,7 @@ const RequestFreeConsulting = ({
                 onChange={(event) =>
                   setValues({ ...values, message : event.target.value })
                 }
+                type="text"
               ></textarea>
                 <p className="error">{errors.message?.message}</p>
              </div>

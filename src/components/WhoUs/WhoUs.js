@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import "./WhoUs.scss";
 
 //** state management */
-import { StateContext } from "../StateProvider";
+import { StateContext } from "../context/StateProvider";
 
 import { useTranslation } from "react-i18next";
 
@@ -85,7 +85,7 @@ const WhoUs = ({
           </div>
         </div>
         <div className="buttons">
-          <Button name={button} fontSize={22} route={"mernan"} />
+          <Button name={button} fontSize={22} route={"mernan"} height={60}/>
           <button className="portfolio is-active">
             <span>{t("portfolio")}</span>
             <span className="arrow__">

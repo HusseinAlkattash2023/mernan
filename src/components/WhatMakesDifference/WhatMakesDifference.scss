@@ -1,7 +1,7 @@
 
 
 .what_makes_difference{
-    padding: 50px 20px;
+    padding: 50px 20px 80px 20px;
     width:100%;
     background-color: var(--color6);
     position: relative;
@@ -109,7 +109,7 @@
             margin-top: 30px;
             padding: 0px 100px;
             .difference{
-                width: 280px;
+                width: 300px;
                 height: 310px;
     
                 &.active{
@@ -139,6 +139,16 @@
     }
 }
 
+@media only screen and (min-width:1700px){
+    .what_makes_difference{
+        .differences{
+            .difference{
+                width: 340px;
+            }
+        }
+    }
+}
+
 @media only screen and (min-width:1900px){
     .what_makes_difference{
         h2{
@@ -153,7 +163,7 @@
             padding: 0px 130px;
             margin-top: 50px;
             .difference{
-                width: 310px;
+                width: 350px;
                 height: 330px;
     
                 &.active{

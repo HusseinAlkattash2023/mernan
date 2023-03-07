@@ -1,13 +1,10 @@
 import React, { useContext } from "react";
 
 //**import components */
-import Card from "../Card/Card";
-
-//**import images */
-import image3 from "../../../assets/images/image3.svg";
+import Card from "../../Card/Card";
 
 //** state management */
-import { StateContext } from "../../StateProvider";
+import { StateContext } from "../../context/StateProvider";
 
 const MarketingConsulting = () => {
   //** this is state to change side rtl and ltr */
@@ -15,13 +12,7 @@ const MarketingConsulting = () => {
 
   return (
     <div dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}>
-      <Card
-        image={image3}
-        text={"unsure"}
-        title={"marketing_consulting"}
-        state={false}
-        name={"request_free_consulting"}
-      />
+      <Card/>
     </div>
   );
 };

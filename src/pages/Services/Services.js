@@ -41,7 +41,7 @@ const Services = () => {
     <div>
       {data.map(
         (item) =>
-          item.id === 2 && (
+          item.id === 1 && (
             <div key={item.id}>
               <WhoUs
                 image_en={image}

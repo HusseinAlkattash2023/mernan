@@ -7,15 +7,10 @@ import './OurValues.scss';
 //** import components  */
 import Card from './Card/Card';
 
-//** import images */
-import image1 from '../../assets/images/flexibilty.png';
-import image2 from '../../assets/images/giving.png';
-import image3 from '../../assets/images/Uniqueness.png';
-import image4 from '../../assets/images/Credibility.png';
 
 
 //** state management */
-import { StateContext } from "../StateProvider";
+import { StateContext } from "../context/StateProvider";
 
 import { useTranslation } from "react-i18next";
 

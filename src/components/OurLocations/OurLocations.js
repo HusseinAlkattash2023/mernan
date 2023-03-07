@@ -5,7 +5,7 @@ import "./OurLocations.scss";
 import image from "../../assets/images/location.png";
 
 //** state management */
-import { StateContext } from "../StateProvider";
+import { StateContext } from "../context/StateProvider";
 
 import { useTranslation } from "react-i18next";
 

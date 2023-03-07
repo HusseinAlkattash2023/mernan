@@ -1,138 +1,149 @@
+.card_sub_service {
+  width: 100%;
+  background: var(--color5);
+  box-shadow: 0px 31px 31px rgba(0, 0, 0, 0.09), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 
-.card_sub_service{
-    width:100%;
-    background:var(--color5);
-    box-shadow: 0px 31px 31px rgba(0, 0, 0, 0.09), 0px 0px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-
-    .head{
-        .image{
-            top:0px;
-            position: absolute;
-            left:0px;
-            border-radius: 10px 0px 0px 0px;
-            width: 50px;
-            height: 50px;
-        }
-        .image_ar{
-            top:0px;
-            position: absolute;
-            right:-1px;
-            border-radius: 10px 0px 0px 0px;
-            transform: rotateY(3.142rad);
-            width: 50px;
-            height: 50px;
-        }
-        .free{
-            top:20px;
-            position: absolute;
-            right:0px;
-        }
-        .free_ar{
-            top:20px;
-            position: absolute;
-            left:0px;
-        }
+  .head {
+    .div {
+      background-color: var(--color7);
+      top: 0px;
+      position: absolute;
+      left: 0px;
+      width: 100px;
+      height: 100px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px 0px 50px 0px;
+      .image {
+        width: 50px;
+        height: 50px;
+      }
     }
-    .body{
-        .title{
-            text-align: center;
-            margin: 20px auto 0px auto;
-            h3{
-                font-family: 'Almarai';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 18px;
-                line-height: 140%;
-                color: var(--color2);
-            }
-            img{
-                position: relative;
-                bottom: 15px;
-                width: 80%;
-                height: 8px;
-            }
-        }
-        p{
-            text-align: center;
-            font-family: 'Almarai';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 140%;
-            color:var(--color2);
-
-        }
+    .div_ar {
+      background-color: var(--color7);
+      top: 0px;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      right: -1px;
+      display: grid;
+      place-items: center;
+      border-radius: 0px 10px 0px 50px;
+      .image_ar {
+        transform: rotateY(3.142rad);
+        width: 50px;
+        height: 50px;
+      }
     }
-    .footer_card{
-            position: absolute;
-            bottom: 20px;
+    .free {
+      top: 20px;
+      position: absolute;
+      right: 0px;
     }
+    .free_ar {
+      top: 20px;
+      position: absolute;
+      left: 0px;
+    }
+  }
+  .body {
+    .title {
+      text-align: center;
+      margin: 20px auto 0px auto;
+      h3 {
+        font-family: "Almarai";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 140%;
+        color: var(--color2);
+      }
+      img {
+        position: relative;
+        bottom: 15px;
+        width: 80%;
+        height: 8px;
+      }
+    }
+    p {
+      text-align: center;
+      font-family: "Almarai";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: var(--color2);
+    }
+  }
+  .footer_card {
+    position: absolute;
+    bottom: 20px;
+  }
 }
 
-
-@media only screen and (min-width:1270px){
-    .card_sub_service{
-        .body{
-            .title{
-                h3{
-                    font-size: 30px;
-                }
-            }
-            p{
-                font-size: 20px;
-            }
+@media only screen and (min-width: 1270px) {
+  .card_sub_service {
+    .body {
+      .title {
+        h3 {
+          font-size: 30px;
         }
+      }
+      p {
+        font-size: 20px;
+      }
     }
+  }
 }
 
-@media only screen and (min-width:1270px){
-    .card_sub_service{
-        .body{
-            .title{
-                h3{
-                    font-size: 30px;
-                }
-            }
-            p{
-                font-size: 20px;
-            }
+@media only screen and (min-width: 1270px) {
+  .card_sub_service {
+    .body {
+      .title {
+        h3 {
+          font-size: 30px;
         }
+      }
+      p {
+        font-size: 20px;
+      }
     }
+  }
 }
 
-@media only screen and (min-width:1500px){
-    .card_sub_service{
-        .body{
-            .title{
-                h3{
-                    font-size: 36px;
-                }
-            }
-            p{
-                font-size: 23px;
-            }
+@media only screen and (min-width: 1500px) {
+  .card_sub_service {
+    .body {
+      .title {
+        h3 {
+          font-size: 36px;
         }
+      }
+      p {
+        font-size: 23px;
+      }
     }
+  }
 }
 
-@media only screen and (min-width:1700px){
-    .card_sub_service{
-        .body{
-            .title{
-                h3{
-                    font-size: 38px;
-                }
-            }
-            p{
-                font-size: 25px;
-            }
+@media only screen and (min-width: 1700px) {
+  .card_sub_service {
+    .body {
+      .title {
+        h3 {
+          font-size: 38px;
         }
+      }
+      p {
+        font-size: 25px;
+      }
     }
+  }
 }

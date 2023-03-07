@@ -1,4 +1,5 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./Card.scss";
 
@@ -10,12 +11,12 @@ import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
 //** state management */
-import { StateContext } from "../../StateProvider";
+import { StateContext } from "../../context/StateProvider";
 
 import { useTranslation } from "react-i18next";
 
 
-const Card = ({ image, nameAr, nameEn, color , ServiceAchivments}) => {
+const Card = ({ image, nameAr, nameEn, color , ServiceAchivments , route}) => {
 
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext)
@@ -63,7 +64,7 @@ const Card = ({ image, nameAr, nameEn, color , ServiceAchivments}) => {
                     </p>
                   </div>
                 )}
-        <Button />
+        <Button route={route}/>
       </div>
     </div>
   );
@@ -71,14 +72,20 @@ const Card = ({ image, nameAr, nameEn, color , ServiceAchivments}) => {
 
 export default Card;
 
-const Button = () => {
+const Button = ({route}) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
   const { t } = useTranslation();
 
+  const navigate = useNavigate();
+
+  const ChangeRoute = ()=>{
+    navigate(route);
+  }
+
   return (
-    <div className="button_service">
+    <div className="button_service" onClick={ChangeRoute}>
       <button>
         <span>{t(`view_service`)}</span>
         <span>

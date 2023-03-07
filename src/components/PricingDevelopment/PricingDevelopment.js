@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import "./PricingDevelopment.scss";
 
 //** state management */
-import { StateContext } from "../StateProvider";
+import { StateContext } from "../context/StateProvider";
 
 import { useTranslation } from "react-i18next";
 

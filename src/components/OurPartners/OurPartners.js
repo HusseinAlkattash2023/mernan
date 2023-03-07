@@ -1,28 +1,33 @@
-import React, { useContext } from "react";
+import React, { useContext , useEffect , useState} from "react";
 
 import "./OurPartners.scss";
 
 //** state management */
-import { StateContext } from "../StateProvider";
+import { StateContext } from "../context/StateProvider";
 
 import { useTranslation } from "react-i18next";
 
-//** import images */
-import image1 from '../../assets/images/partner1.png';
-import image2 from '../../assets/images/partner2.png';
-import image3 from '../../assets/images/partner3.png';
-import image4 from '../../assets/images/partner4.png'
-import image5 from '../../assets/images/partner5.png';
-import image6 from '../../assets/images/partner6.png';
-import image7 from '../../assets/images/partner7.png';
-import image8 from '../../assets/images/partner8.png';
-import image9 from '../../assets/images/partner9.png';
+ //**import useSelector for base api */
+import { useSelector } from "react-redux";
+
+import axios from "axios";
 
 const OurPartners = ({color1 , color2}) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
   const { t } = useTranslation();
+
+  const [data, setData] = useState([]);
+  const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
+
+   //**fetch data budget */
+   useEffect(() => {
+    axios
+      .get(`${BASE_API_URL}/OurPartners?page=0&pageSize=12`)
+      .then((response) => setData(response.data.data))
+      .catch((error) => console.log(error));
+  }, [BASE_API_URL]);
 
   const style = {
     style1:{
@@ -38,15 +43,13 @@ const OurPartners = ({color1 , color2}) => {
       <h2 style={style.style2}>{t("our_partners")}</h2>
       <div className="container_">
         <div className="row  row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5">
-        <img className="col" src={image1} alt=""  height="54px"/>
-        <img className="col" src={image2} alt=""  height="71px"/>
-        <img className="col" src={image3} alt=""  height="44px"/>
-        <img className="col" src={image4} alt=""  height="79px"/>
-        <img className="col" src={image5} alt=""  height="94px"/>
-        <img className="col" src={image6} alt=""  height="54px"/>
-        <img className="col" src={image7} alt=""  height="100px"/>
-        <img className="col" src={image8} alt=""  height="34px"/>
-        <img className="col" src={image9} alt=""  height="71px"/>
+           {
+            data && data.map((partner)=>(
+              <div key={partner.id}>
+                <img src={`${BASE_API_URL}/${partner.image}`} alt=""/>
+              </div>
+            ))
+           }
         </div>
       </div>
     </div>

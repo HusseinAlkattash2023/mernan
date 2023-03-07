@@ -9,7 +9,7 @@ import { BsArrowLeft } from "react-icons/bs";
 import { useTranslation } from "react-i18next";
 
 //** state management */
-import { StateContext } from "../../StateProvider";
+import { StateContext } from "../../context/StateProvider";
 
 
 const Button = ({name , state , fontSize}) => {

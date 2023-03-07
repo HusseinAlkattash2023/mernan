@@ -1,39 +1,35 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import "./BenefitsOffered.scss";
 
 //** state management */
-import { StateContext } from "../StateProvider";
+import { StateContext } from "../context/StateProvider";
 
 import { useTranslation } from "react-i18next";
 
 //**import components */
 import Card from "./Card/Card";
 
-const BenefitsOffered = ({
-  title1,
-  text1,
-  title2,
-  text2,
-  title3,
-  text3,
-  title4,
-  text4,
-  icon1,
-  icon2,
-  icon3,
-  icon4,
-  height1,
-  height2,
-  height3,
-  height4,
-  height5,
-  height6,
-}) => {
+//**import useSelector for base api */
+import { useSelector } from "react-redux";
+import axios from "axios";
+
+const BenefitsOffered = () => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
   const { t } = useTranslation();
+
+  const [data, setData] = useState([]);
+
+  const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_API_URL}/ServiceBenifites?page=0&pageSize=12`)
+      .then((response) => setData(response.data.data))
+      .catch((error) => console.log(error));
+  }, [BASE_API_URL]);
 
   return (
     <div
@@ -46,40 +42,17 @@ const BenefitsOffered = ({
           <p>{t("by_subscribing")}</p>
         </div>
         <div className="cards">
-          <div
-            className={`${changeSide === "ar" ? "section1_ar" : "section1"}`}
-          >
-            <Card
-              color1={"--color7"}
-              color2={"--color5"}
-              icon={icon1}
-              title={title1}
-              text={text1}
-            />
-            <Card
-              color1={"--color3"}
-              color2={"--color2"}
-              icon={icon4}
-              title={title2}
-              text={text2}
-            />
-          </div>
-          <div className="section2">
-            <Card
-              color1={"--color3"}
-              color2={"--color2"}
-              icon={icon2}
-              title={title3}
-              text={text3}
-            />
-            <Card
-              color1={"--color7"}
-              color2={"--color5"}
-              icon={icon3}
-              title={title4}
-              text={text4}
-            />
-          </div>
+          {data &&
+            data.map((benefite) => (
+              <div>
+                <Card
+                  headerEn={benefite.headerEn}
+                  headerAr={benefite.headerAr}
+                  descriptionEn={benefite.descriptionEn}
+                  descriptionAr={benefite.descriptionAr}
+                />
+              </div>
+            ))}
         </div>
       </div>
     </div>

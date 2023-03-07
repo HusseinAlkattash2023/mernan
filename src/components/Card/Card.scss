@@ -11,22 +11,28 @@
     padding: 20px;
 
     .image{
+        background-color: var(--color3);
         position: absolute;
         top:0px;
         left:0px;
-        img{
-            border-radius: 10px 0px 0px 0px;
-        }
+        width: 100px;
+        height: 100px;
+        display:grid;
+        place-items: center;
+        border-radius: 10px 0px 50px 0px;
     }
 
     .image-ar{
+        background-color: var(--color3);
         position: absolute;
         top:0px;
         right:0px;
+        width: 100px;
+        height: 100px;
+        display:grid;
+        place-items: center;
+        border-radius: 10px 0px 50px 0px;
         transform: rotateY(3.142rad);
-        img{
-            border-radius: 10px 0px 0px 0px;
-        }
     }
 
     .free{
@@ -57,7 +63,10 @@
         }
     }
     .text{
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px auto;
         width: 80%;
         margin-top: 10px;
         p{
@@ -67,6 +76,7 @@
             font-size: 20px;
             line-height: 140%;
             color:var(--color2);
+            text-align: center;
         }
     }
     .section2{
@@ -135,5 +145,11 @@
     .button{
         position: absolute;
         bottom: 30px;
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%);
+        button{
+            margin: 0px auto;
+        }
     }
 }

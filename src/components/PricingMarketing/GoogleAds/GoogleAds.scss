@@ -40,8 +40,7 @@
         }
         .features{
             position: relative;
-            height: 700px;
-            top:-20px;
+            top:58px;
             width:340px;
     
             .feature{
@@ -77,10 +76,8 @@
         }
         .features{
             position: relative;
-            height: 700px;
-            top:-4px;
+            top:65px;
             width:440px;
-    
             .feature{
                 text-align: left;
             }
@@ -103,7 +100,7 @@
         .features{
             position: relative;
             height: 700px;
-            top:36px;
+            top:60px;
             width:400px;
 
             .feature{
@@ -113,13 +110,29 @@
     }
 }
 
+@media only screen and (min-width: 1400px){
+    .google_ads{
+        .section{
+        .features{
+            position: relative;
+            height: 700px;
+            top:55px;
+            width:400px;
+
+            .feature{
+                height: 100px;
+            }
+        }
+    }
+}
+}
 
 @media only screen and (min-width: 1500px){
     .google_ads{
         .section{
             width:100%;
             .part1{
-                margin-top: 30px;
+                margin-top: 15px;
                 .rectangular{
                     width: 340px;
                 h4{
@@ -139,12 +152,10 @@
         }
         .features{
             position: relative;
-            height: 700px;
-            top:57px;
             width:450px;
-    
             .feature{
                 text-align: left;
+                height: 100px;
             }
         }
     }
@@ -155,13 +166,13 @@
         .section{
 
             .part1{
-                margin-top: 30px;
+                margin-top: 15px;
                 .rectangular{
                     width: 380px;
                     .icons{
                         margin-top: 20px;
                         div{
-                            height: 120px;
+                            height: 100px;
                         }
                     }
                         
@@ -182,13 +193,13 @@
         }
         .features{
             position: relative;
-            height: 700px;
-            top:80px;
-            width:480px;
-    
+            width:490px;
             .feature{
                 text-align: left;
-                height: 120px;
+                height: 100px;
+                p{
+                    font-size: 25px;
+                }
             }
         }
     }
@@ -199,13 +210,13 @@
         .section{
 
             .part1{
-                margin-top: 30px;
+                margin-top: 70px;
                 .rectangular{
                     width: 380px;
                     .icons{
                         margin-top: 20px;
                         div{
-                            height: 120px;
+                            height: 100px;
                         }
                     }
                         
@@ -222,17 +233,6 @@
                     width: 90%;
                 }
                 }
-            }
-        }
-        .features{
-            position: relative;
-            height: 700px;
-            top:61px;
-            width:480px;
-    
-            .feature{
-                text-align: left;
-                height: 120px;
             }
         }
     }

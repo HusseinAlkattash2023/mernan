@@ -5,7 +5,7 @@ import './Plans.scss';
 import image1 from "../../../assets/images/close.png";
 import image2 from "../../../assets/images/check-circle.png";
 
-import PricingComponent from '../../PricingMarketing/PricingComponent/PricingComponent'
+import PricingComponent from '../../PricingComponent/PricingComponent'
 
 
 

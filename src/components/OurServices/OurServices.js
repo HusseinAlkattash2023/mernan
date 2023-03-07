@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./OurServices.scss";
 
 //** state management */
-import { StateContext } from "../StateProvider";
+import { StateContext } from "../context/StateProvider";
 
 import { useTranslation } from "react-i18next";
 
@@ -50,6 +50,7 @@ const OurServices = () => {
                   nameEn={card.nameEn}
                   color={card.colorIcon}
                   ServiceAchivments={data[card.id - 1].ServiceAchivments}
+                  route={card.nameEn}
                 />
               </div>
             ))}

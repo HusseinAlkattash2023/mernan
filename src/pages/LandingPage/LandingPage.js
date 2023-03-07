@@ -65,7 +65,7 @@ const LandingPage = () => {
     <div>
       {data.map(
         (item) =>
-          item.id === 2 && (
+          item.id === 1 && (
             <div key={item.id}>
               <WhoUs
                 title={"we_transfer_your_work"}

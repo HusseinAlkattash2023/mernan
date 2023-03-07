@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./Portfolio.scss";
 
 //** state management */
-import { StateContext } from "../StateProvider";
+import { StateContext } from "../context/StateProvider";
 
 import { useTranslation } from "react-i18next";
 
@@ -92,43 +92,7 @@ const Portfolio = () => {
                     src={`${BASE_API_URL}/${item.image}`}
                     alt="slide_image"
                   />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    src={`${BASE_API_URL}/${item.image}`}
-                    alt="slide_image"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    src={`${BASE_API_URL}/${item.image}`}
-                    alt="slide_image"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    src={`${BASE_API_URL}/${item.image}`}
-                    alt="slide_image"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    src={`${BASE_API_URL}/${item.image}`}
-                    alt="slide_image"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    src={`${BASE_API_URL}/${item.image}`}
-                    alt="slide_image"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    src={`${BASE_API_URL}/${item.image}`}
-                    alt="slide_image"
-                  />
-                </SwiperSlide>
+                </SwiperSlide>            
               </div>
             ))}
         </Swiper>

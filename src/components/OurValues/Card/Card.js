@@ -3,7 +3,7 @@ import React , {useContext} from 'react'
 import './Card.scss';
 
 //** state management */
-import { StateContext } from "../../StateProvider";
+import { StateContext } from "../../context/StateProvider";
 
 
 import image_ from '../../../assets/images/spiral1.png';

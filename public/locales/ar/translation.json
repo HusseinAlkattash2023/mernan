@@ -274,5 +274,6 @@
   "companyName_is_required":"اسم الشركة مطلوب",
   "message_is_required":"الرسالة مطلوبة",
   "invalid_email":"تنسيق البريد الالكتروني خاطىء",
-  "mobile_number_is_required":"رقم الهاتف مطلوب"
+  "mobile_number_is_required":"رقم الهاتف مطلوب",
+  "request":"تم ارسال الطلب بنجاح"
 }

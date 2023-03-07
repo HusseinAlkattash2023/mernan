@@ -7,7 +7,7 @@ import store from "./store/index";
 
 import "./i18n";
 
-import StateProvider from "./components/StateProvider";
+import StateProvider from "./components/context/StateProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

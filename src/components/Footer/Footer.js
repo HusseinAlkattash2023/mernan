@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useEffect, useState } from "react";
 
 //** state management */
-import { StateContext } from "../StateProvider";
+import { StateContext } from "../context/StateProvider";
 
 //** import file scss*/
 import "./Footer.scss";
@@ -10,17 +10,7 @@ import "./Footer.scss";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 
-import {Link} from 'react-router-dom';
-
-//**import icons from react-icons */
-import { FaFacebookF } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaSnapchatGhost } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaBehance } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
+import {NavLink , Link} from 'react-router-dom';
 
 import Button from "../Button/Button";
 
@@ -80,7 +70,7 @@ const Footer = ({ color1, color2, image }) => {
           <img src={image} alt="" />
         </div>
         <div>
-          <Button name={"work_with_us"} fontSize={22} />
+          <Button name={"work_with_us"} fontSize={22} height={60}/>
         </div>
       </div>
       <div className="body">
@@ -88,34 +78,34 @@ const Footer = ({ color1, color2, image }) => {
           <h3 style={styles.style2}>{t("about_mernan")}</h3>
           <ul style={styles.style2}>
             <li>
-              <a style={styles.style2} href="@">
+              <NavLink style={styles.style2} to="">
                 {t("our_services")}
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a style={styles.style2} href="@">
+              <NavLink style={styles.style2} to="">
                 {t("what_makes_difference")}
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a style={styles.style2} href="@">
+              <NavLink style={styles.style2} to="">
                 {t("pricing")}
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a style={styles.style2} href="@">
+              <NavLink style={styles.style2} to="">
                 {t("blog")}
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a style={styles.style2} href="@">
+              <NavLink style={styles.style2} to="">
                 {t("frequently_asked_questions")}
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a style={styles.style2} href="@">
+              <NavLink style={styles.style2} to="">
                 {t("contact_us")}
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -123,14 +113,14 @@ const Footer = ({ color1, color2, image }) => {
           <h3 style={styles.style2}>{t("join_us")}</h3>
           <ul>
             <li>
-              <a style={styles.style2} href="#">
+              <NavLink style={styles.style2} to="">
                 {t("join_our_team")}
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a style={styles.style2} href="#">
+              <NavLink style={styles.style2} to="">
                 {t("our_partners")}
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -138,19 +128,19 @@ const Footer = ({ color1, color2, image }) => {
           <h3 style={styles.style2}>{t("more")}</h3>
           <ul>
             <li>
-              <a style={styles.style2} href="#">
+              <NavLink style={styles.style2} to="">
                 {t("terms_and_Conditions")}
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a style={styles.style2} href="#">
+              <NavLink style={styles.style2} to="">
                 {t("privacy_policy")}
-              </a>
+              </NavLink>
             </li>
             <li onClick={ChangeLanguage}>
-              <a style={styles.style2} href="#" ref={ref}>
+              <NavLink style={styles.style2} to="" ref={ref}>
                 {t("arabic_language")}
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

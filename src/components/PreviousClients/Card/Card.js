@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import image from "../../../assets/images/one-star.svg";
 
 //** state management */
-import { StateContext } from "../../StateProvider";
+import { StateContext } from "../../context/StateProvider";
 
 const Card = ({nameAr , nameEn , imageAvatar , descriptionAr , descriptionEn}) => {
   const { changeSide } = useContext(StateContext);

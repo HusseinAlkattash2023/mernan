@@ -9,7 +9,7 @@ import image3 from "../../assets/images/services_ar.png";
 import image4 from "../../assets/images/Highlight_07.png";
 
 //** state management */
-import { StateContext } from "../StateProvider";
+import { StateContext } from "../context/StateProvider";
 
 import { useTranslation } from "react-i18next";
 

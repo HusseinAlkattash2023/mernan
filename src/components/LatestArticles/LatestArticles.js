@@ -2,12 +2,14 @@ import React, { useContext, useState, useEffect } from "react";
 
 import "./LatestArticles.scss";
 
+import moment from "moment";
+
 //**import components */
 import Card from "./Card/Card";
 import Button from "../Button/Button";
 
 //** state management */
-import { StateContext } from "../StateProvider";
+import { StateContext } from "../context/StateProvider";
 
 import { useTranslation } from "react-i18next";
 
@@ -101,6 +103,7 @@ const LatestArticles = () => {
                 authorAr={card.authorAr}
                 authorEn={card.authorEn}
                 color={"#FFC84D"}
+                date={moment(`${card.createdAt}`).utc().format('YYYY-MM-DD')}
               />
             </div>
           ))}
@@ -118,6 +121,7 @@ const LatestArticles = () => {
                     authorAr={card.authorAr}
                     authorEn={card.authorEn}
                     color={"#FFC84D"}
+                    date={moment(`${card.createdAt}`).utc().format('YYYY-MM-DD')}
                   />
                 </div>
               )
@@ -136,6 +140,7 @@ const LatestArticles = () => {
                     authorAr={card.authorAr}
                     authorEn={card.authorEn}
                     color={"#FFC84D"}
+                    date={moment(`${card.createdAt}`).utc().format('YYYY-MM-DD')}
                   />
                 </div>
               )
@@ -154,6 +159,7 @@ const LatestArticles = () => {
                     authorAr={card.authorAr}
                     authorEn={card.authorEn}
                     color={"#FFC84D"}
+                    date={moment(`${card.createdAt}`).utc().format('YYYY-MM-DD')}
                   />
                 </div>
               )

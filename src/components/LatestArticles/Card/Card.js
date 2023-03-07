@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import "./Card.scss";
 
 //** state management */
-import { StateContext } from "../../StateProvider";
+import { StateContext } from "../../context/StateProvider";
 
 const Card = ({
   image,
@@ -13,7 +13,8 @@ const Card = ({
   simpleDescriptionAr,
   simpleDescriptionEn,
   authorAr,
-  authorEn
+  authorEn,
+  date
 }) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
@@ -35,7 +36,7 @@ const Card = ({
       </div>
       <div className="card_footer">
         <span>{changeSide === "ar" ? authorAr : authorEn}</span>
-        <span>22/11/2022</span>
+        <span>{date}</span>
       </div>
     </div>
   );

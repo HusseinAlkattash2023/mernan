@@ -4,7 +4,7 @@ import "./Card.scss";
 
 
 //** state management */
-import { StateContext } from "../../StateProvider";
+import { StateContext } from "../../context/StateProvider";
 
 //**import images */
 import spiral from "../../../assets/images/spiral1.png";
@@ -55,7 +55,7 @@ const Card = ({ image, headerAr , headerEn , descriptionEn , descriptionAr, heig
   return (
     <div className="card_sub_service" style={styles}>
       <div className="head">
-        <img className={`${changeSide === "ar" ? "image_ar" : "image"}`} src={image} alt="" />
+        <div className={`${changeSide === "ar" ? "div_ar" : "div"}`}><img className={`${changeSide === "ar" ? "image_ar" : "image"}`} src={image} alt="" /></div>
         {state &&
           (changeSide === "ar" ? (
             <img className="free_ar" src={free_ar} alt="" />
@@ -71,7 +71,7 @@ const Card = ({ image, headerAr , headerEn , descriptionEn , descriptionAr, heig
         <p>{changeSide === "ar" ? descriptionAr : descriptionEn}</p>
       </div>
       <div className="footer_card">
-        <Button height={"50px"} fontSize={20} name={state ? "request_free_consulting" : "know_more"} color1={"#2FA4A1"} color2={"#FDFDFE"} />
+        <Button height={50} fontSize={20} name={state ? "request_free_consulting" : "know_more"} color1={"#2FA4A1"} color2={"#FDFDFE"} />
       </div>
     </div>
   );
