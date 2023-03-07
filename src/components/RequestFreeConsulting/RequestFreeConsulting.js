@@ -15,9 +15,11 @@ import Button from "../Button/Button";
 //**import useSelector for base api */
 import { useSelector } from "react-redux";
 
-import axios from "axios";
-
+//**add validation using Yup js */
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from "yup";
+import axios from "axios";
 
 const RequestFreeConsulting = ({
   color1,
@@ -27,6 +29,9 @@ const RequestFreeConsulting = ({
   image1,
   image2,
 }) => {
+
+
+
   const [values, setValues] = useState({
     firstName: "",
     lastName: "",
@@ -38,7 +43,8 @@ const RequestFreeConsulting = ({
     number: "",
   });
 
-  // const [number , setNumber] = useState("")
+  const [number , setNumber] = useState("");
+  const [country , setCountry] = useState("");
 
   const { t } = useTranslation();
 
@@ -49,19 +55,33 @@ const RequestFreeConsulting = ({
     field: Yup.string().required(`${t("field_is_required")}`),
     budget: Yup.string().required(`${t("budget_is_required")}`),
     message: Yup.string().required(`${t("message_is_required")}`),
-    number: Yup.string().matches(/^\+?[0-9]{10,12}$/, 'Phone number is not valid').required('Phone number is required'),
     email: Yup.string().email(`${t("invalid_email")}`).required(`${t("email_is_required")}`),
   });
 
-  const [errors, setErrors] = useState({});
+  const { register, handleSubmit, formState:{ errors } } = useForm({
+    resolver: yupResolver(schema)
+  });
 
+  let formData = {
+    firstName:values.firstName,
+    lastName:values.lastName,
+    email:values.email,
+    companyName:values.companyName,
+    message:values.message,
+    serviceId:values.field,
+    budgetId:values.budget,
+    phone_number:number,
+    country:country
+  }
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
 
   const [data, setData] = useState([]);
+  const [dataServices, setDataServices] = useState([]);
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
+  //**fetch data budget */
   useEffect(() => {
     axios
       .get(`${BASE_API_URL}/Budgets?page=0&pageSize=12`)
@@ -69,20 +89,23 @@ const RequestFreeConsulting = ({
       .catch((error) => console.log(error));
   }, [BASE_API_URL]);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    console.log(values)
-    try {
-      await schema.validate(values, { abortEarly: false });
-      // submit the form
-    } catch (err) {
-      const newErrors = {};
-      err.inner.forEach((e) => {
-        newErrors[e.path] = e.message;
-      });
-      setErrors(newErrors);
-    }
-  };
+   //**fetch data services */
+   useEffect(() => {
+    axios
+      .get(`${BASE_API_URL}/Services?page=0&pageSize=12`)
+      .then((response) => setDataServices(response.data.data))
+      .catch((error) => console.log(error));
+  }, [BASE_API_URL]);
+
+  const onSubmit = ()=>{
+     axios.post(`${BASE_API_URL}/FreeConsultations` , formData)
+     .then((res)=>{
+      console.log(res)
+     })
+     .catch((error)=>{
+      console.log(error)
+     })
+  }
   
 
   const styles = {
@@ -105,7 +128,7 @@ const RequestFreeConsulting = ({
       <h2>{t("request_free_consulting")}</h2>
       <div className="body">
         <div className="section">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="div1 row">
               <div className="mb-3 col">
                 <label
@@ -115,6 +138,7 @@ const RequestFreeConsulting = ({
                   {t("first_name")}
                 </label>
                 <input
+                   {...register("firstName")}
                   style={styles.style2}
                   type="text"
                   className="form-control"
@@ -124,8 +148,8 @@ const RequestFreeConsulting = ({
                     setValues({ ...values, firstName: event.target.value })
                   }
                 />
-                {errors.firstName && <div style={{color:"red" , fontSize:"14px"}}>{errors.firstName}</div>}
-              </div>
+                <p className="error">{errors.firstName?.message}</p>
+               </div>
               <div className="mb-3 col">
                 <label
                   htmlFor="exampleFormControlInput1"
@@ -134,6 +158,7 @@ const RequestFreeConsulting = ({
                   {t("last_name")}
                 </label>
                 <input
+                {...register("lastName")}
                   style={styles.style2}
                   type="text"
                   className="form-control"
@@ -143,8 +168,8 @@ const RequestFreeConsulting = ({
                     setValues({ ...values, lastName : event.target.value })
                   }
                 />
-                {errors.lastName && <div style={{color:"red" , fontSize:"14px"}}>{errors.lastName}</div>}
-              </div>
+                <p className="error">{errors.lastName?.message}</p>
+               </div>
             </div>
             <div className="div1 mt-2 row">
               <div className="mb-3 col">
@@ -163,7 +188,13 @@ const RequestFreeConsulting = ({
                     }}
                     specialLabel={""}
                     country={"sa"}
+                    value={number}
+                    onChange={(value , country , e)=>{
+                      setCountry(country.name);
+                      setNumber(e.target.value)
+                    }}
                   />
+                  <p className="error"></p>
                 </div>
               </div>
               <div className="mb-3 col">
@@ -174,6 +205,7 @@ const RequestFreeConsulting = ({
                   {t("email")}
                 </label>
                 <input
+                {...register("email")}
                   style={styles.style2}
                   type="email"
                   className="form-control"
@@ -183,14 +215,15 @@ const RequestFreeConsulting = ({
                     setValues({ ...values, email : event.target.value })
                   }
                 />
-                {errors.email && <div style={{color:"red" , fontSize:"14px"}}>{errors.email}</div>}
-              </div>
+                <p className="error">{errors.email?.message}</p>
+               </div>
             </div>
             <div className="mt-2">
               <label htmlFor="inputState" className="form-label">
                 {t("field")}
               </label>
               <select
+                {...register("field")}
                 style={styles.style2}
                 id="inputState"
                 className="form-select"
@@ -200,16 +233,20 @@ const RequestFreeConsulting = ({
                   }
               >
                 <option hidden>{t("choose_field")}</option>
-                <option>{t("digital_marketing")}</option>
-                <option>...</option>
+                 {
+                  dataServices && dataServices.map((service)=>(
+                    <option value={service.id} key={service.id}>{changeSide === "ar" ? service.nameAr : service.nameEn}</option>
+                  ))
+                 }
               </select>
-              {errors.field && <div style={{color:"red" , fontSize:"14px"}}>{errors.field}</div>}
-            </div>
+              <p className="error">{errors.field?.message}</p>
+             </div>
             <div className="mt-4">
               <label htmlFor="inputAddress" className="form-label">
                 {t("company_name")}
               </label>
               <input
+              {...register("companyName")}
                 style={styles.style2}
                 type="text"
                 className="form-control"
@@ -219,14 +256,15 @@ const RequestFreeConsulting = ({
                     setValues({ ...values, companyName : event.target.value })
                   }
               />
-              {errors.companyName && <div style={{color:"red" , fontSize:"14px"}}>{errors.companyName}</div>}
-            </div>
+              <p className="error">{errors.companyName?.message}</p>
+             </div>
 
             <div className="mt-4">
               <label htmlFor="inputState" className="form-label">
                 {t("budget")}
               </label>
               <select
+              {...register("budget")}
                 style={styles.style2}
                 id="inputState"
                 className="form-select"
@@ -238,15 +276,15 @@ const RequestFreeConsulting = ({
                 <option hidden>{t("choose_budget")}</option>
                 {data &&
                   data.map((option) => (
-                    <option key={option.id}>
+                    <option value={option.id} key={option.id}>
                       {option.from}
                       {"-"}
                       {option.to}
                     </option>
                   ))}
               </select>
-              {errors.budget && <div style={{color:"red" , fontSize:"14px"}}>{errors.budget}</div>}
-            </div>
+              <p className="error">{errors.budget?.message}</p>
+             </div>
             <div className="mt-4">
               <label
                 htmlFor="exampleFormControlTextarea1"
@@ -255,6 +293,7 @@ const RequestFreeConsulting = ({
                 {t("message")}
               </label>
               <textarea
+              {...register("message")}
                 style={styles.style2}
                 className="form-control"
                 id="exampleFormControlTextarea1"
@@ -264,8 +303,8 @@ const RequestFreeConsulting = ({
                   setValues({ ...values, message : event.target.value })
                 }
               ></textarea>
-              {errors.message && <div style={{color:"red" , fontSize:"14px"}}>{errors.message}</div>}
-            </div>
+                <p className="error">{errors.message?.message}</p>
+             </div>
             <div className="mt-4" onClick={handleSubmit}>
               <Button name={"send_message"} type={"submit"}/>
               {/* <button type="submit">Submit</button> */}

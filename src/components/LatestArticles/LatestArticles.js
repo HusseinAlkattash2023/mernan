@@ -6,11 +6,6 @@ import "./LatestArticles.scss";
 import Card from "./Card/Card";
 import Button from "../Button/Button";
 
-//**import images */
-import image1 from "../../assets/images/marketing.svg";
-import image2 from "../../assets/images/web_development.svg";
-import image3 from "../../assets/images/design.svg";
-
 //** state management */
 import { StateContext } from "../StateProvider";
 
@@ -28,9 +23,13 @@ const LatestArticles = () => {
   const { t } = useTranslation();
 
   const [data, setData] = useState([]);
+  const [data1, setData1] = useState([]);
+  const [data2, setData2] = useState([]);
+  const [data3, setData3] = useState([]);
 
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
+  //**fetch all blogs */
   useEffect(() => {
     axios
       .get(`${BASE_API_URL}/Blogs?page=0&pageSize=12`)
@@ -38,6 +37,31 @@ const LatestArticles = () => {
       .catch((error) => console.log(error));
   }, [BASE_API_URL]);
 
+  //**fetch blogs of digital marketting */
+  useEffect(() => {
+    axios
+      .get(`${BASE_API_URL}/Blogs?page=0&pageSize=12&serviceId=1`)
+      .then((response) => setData1(response.data.data))
+      .catch((error) => console.log(error));
+  }, [BASE_API_URL]);
+
+
+   //**fetch blogs of web development */
+  useEffect(() => {
+    axios
+      .get(`${BASE_API_URL}/Blogs?page=0&pageSize=12&serviceId=2`)
+      .then((response) => setData2(response.data.data))
+      .catch((error) => console.log(error));
+  }, [BASE_API_URL]);
+
+
+   //**fetch blogs of desigen */
+  useEffect(() => {
+    axios
+      .get(`${BASE_API_URL}/Blogs?page=0&pageSize=12&serviceId=3`)
+      .then((response) => setData3(response.data.data))
+      .catch((error) => console.log(error));
+  }, [BASE_API_URL]);
   const [activeTag, setActiveTag] = useState(0);
 
   const list = ["all_categories", "marketing", "web_development", "design"];
@@ -67,7 +91,7 @@ const LatestArticles = () => {
         {activeTag === 0 &&
           data &&
           data.map((card) => (
-            <div className="cards_articles">
+            <div className="cards_articles" key={card.id}>
               <Card
                 image={`${BASE_API_URL}/${card.image}`}
                 headerEn={card.headerEn}
@@ -81,11 +105,10 @@ const LatestArticles = () => {
             </div>
           ))}
         {activeTag === 1 &&
-          data &&
-          data.map(
-            (card) =>
-              card.id === 1 && (
-                <div className="cards_articles">
+          data1 &&
+          data1.map(
+            (card) =>(
+                <div className="cards_articles" key={card.id}>
                   <Card
                     image={`${BASE_API_URL}/${card.image}`}
                     headerEn={card.headerEn}
@@ -100,11 +123,10 @@ const LatestArticles = () => {
               )
           )}
          {activeTag === 2 &&
-          data &&
-          data.map(
-            (card) =>
-              card.id === 2 && (
-                <div className="cards_articles">
+          data2 &&
+          data2.map(
+            (card) =>(
+                <div className="cards_articles" key={card.id}>
                   <Card
                     image={`${BASE_API_URL}/${card.image}`}
                     headerEn={card.headerEn}
@@ -119,11 +141,10 @@ const LatestArticles = () => {
               )
           )}
          {activeTag === 3 &&
-          data &&
-          data.map(
-            (card) =>
-              card.id === 3 && (
-                <div className="cards_articles">
+          data3 &&
+          data3.map(
+            (card) =>(
+                <div className="cards_articles" key={card.id}>
                   <Card
                     image={`${BASE_API_URL}/${card.image}`}
                     headerEn={card.headerEn}
