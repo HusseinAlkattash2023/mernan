@@ -1,0 +1,95 @@
+:root{
+    --color2:#312E3A;
+    --color3:#FFC84D;
+}
+
+    .button_component button{
+    height: 51px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 15px 17px;
+    gap: 10px;
+    background:var(--color3);
+    box-shadow: 0px 123px 49px rgba(0, 0, 0, 0.01), 0px 69px 41px rgba(0, 0, 0, 0.05), 0px 31px 31px rgba(0, 0, 0, 0.09), 0px 8px 17px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 0px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    cursor: pointer;
+
+    span{
+        font-size: 20px;
+        line-height: 140%;
+        font-weight: 700;
+        font-family: 'Almarai';
+        font-style: normal;
+        color:var(--color2);
+        flex: none;
+        flex-grow: 0;
+        display: grid;
+        place-items: center;
+    }
+}
+
+@media only screen and (min-width:1250px){
+    .button_component{
+        button{
+            height: 61px;
+            span{
+                font-size: 22px;
+                line-height: 140%;
+                font-weight: 700;
+                font-family: 'Almarai';
+                font-style: normal;
+                color:var(--color2);
+                flex: none;
+                flex-grow: 0;
+                display: grid;
+                place-items: center;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1400px){
+    .button_component{
+        button{
+            height: 71px;
+            span{
+                font-size: 30px;
+                line-height: 140%;
+                font-weight: 700;
+                font-family: 'Almarai';
+                font-style: normal;
+                color:var(--color2);
+                flex: none;
+                flex-grow: 0;
+                display: grid;
+                place-items: center;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1900px){
+    .button_component{
+        button{
+            height: 81px;
+            span{
+                font-size: 35px;
+                line-height: 140%;
+                font-weight: 700;
+                font-family: 'Almarai';
+                font-style: normal;
+                color:var(--color2);
+                flex: none;
+                flex-grow: 0;
+                display: grid;
+                place-items: center;
+            }
+        }
+    }
+}

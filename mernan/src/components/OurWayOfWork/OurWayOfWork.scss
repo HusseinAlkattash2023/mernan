@@ -1,0 +1,277 @@
+
+.way_of_work{
+    padding: 50px 20px;
+    width: 100%;
+    background-color: var(--color6);
+    position: relative;
+
+    h2{
+        font-family: 'Almarai';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 140%;
+        color: var(--color5);
+        position: absolute;
+        top:30px;
+        z-index: 10;
+        
+        &::after{
+            content: "";
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background-color: var(--color3);
+            display: block;
+            position: absolute;
+            top:0px;
+            z-index:-1;
+        }
+    }
+
+    .body{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 80px;
+        padding: 0px 100px;
+        .card_way{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color5);
+            width: 415px;
+            height: 526px;
+            box-shadow: 0px 31px 31px rgba(0, 0, 0, 0.09), 0px 0px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;   
+            padding: 20px; 
+            position: relative;
+            
+            h3{
+                position: absolute;
+                top:60px;
+                font-family: 'Almarai';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 31px;
+                line-height: 140%;
+                color: var(--color2);
+            }
+
+            .button__{
+                position: absolute;
+                bottom: 40px;
+            }
+            
+            .options{
+                div{
+                    display: flex;
+                    align-items: center;
+                    justify-content:space-between;
+                    margin-top: 10px;
+
+                    span{
+                        display: grid;
+                        place-items: center;
+                        width: 50px;
+                        height:50px;
+                        background-color: var(--color4);
+                        border-radius: 50%;
+                        font-family: 'Almarai';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 23px;
+                        line-height: 140%;
+                        color: var(--color5);                        
+                    }
+                    p{
+                        font-family: 'Almarai';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 23px;
+                        line-height: 140%;
+                        flex: none;
+                        order: 1;
+                        flex-grow: 0;  
+                        width: 80%;   
+                        margin-top: 10px;       
+                        color: var(--color2);            
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1199px){
+    .way_of_work{
+        h2{
+            font-size: 30px;
+            
+            &::after{
+                content: "";
+                width: 42px;
+                height: 42px;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width:1149px){
+    .way_of_work{
+        h2{
+            font-size: 30px;
+            
+            &::after{
+                content: "";
+                width: 42px;
+                height: 42px;
+            }
+        }
+        .body{
+            padding: 0px 50px;
+            .card_way{
+                width: 375px;
+                height: 490px;
+
+                 
+            h3{
+                font-size: 25px;
+            }
+
+            .button__{
+                position: absolute;
+                bottom: 40px;
+            }
+            
+            .options{
+                div{
+                    display: flex;
+                    align-items: center;
+                    justify-content:space-between;
+                    margin-top: 10px;
+
+                    span{
+                        display: grid;
+                        place-items: center;
+                        width: 40px;
+                        height:40px;
+                    }
+                    p{
+                        font-size: 18px;        
+                    }
+                }
+            }
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (min-width:1500px){
+    .way_of_work{
+        h2{
+            font-size: 49px;
+            
+            &::after{
+                content: "";
+                width: 62px;
+                height: 62px;
+            }
+        }
+        .body{
+            padding: 0px 100px;
+            .card_way{
+                width: 450px;
+                height: 560px;
+
+                 
+            h3{
+                font-size: 35px;
+            }
+
+            .button__{
+                position: absolute;
+                bottom: 40px;
+            }
+            
+            .options{
+                div{
+                    display: flex;
+                    align-items: center;
+                    justify-content:space-between;
+                    margin-top: 10px;
+
+                    span{
+                        display: grid;
+                        place-items: center;
+                        width: 50px;
+                        height:50px;
+                    }
+                    p{
+                        font-size: 25px;        
+                    }
+                }
+            }
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (min-width:1900px){
+    .way_of_work{
+        h2{
+            font-size: 59px;
+            
+            &::after{
+                content: "";
+                width: 72px;
+                height: 72px;
+            }
+        }
+        .body{
+            padding: 0px 150px;
+            .card_way{
+                width: 480px;
+                height: 600px;
+
+                 
+            h3{
+                font-size: 40px;
+            }
+
+            .button__{
+                position: absolute;
+                bottom: 40px;
+            }
+            
+            .options{
+                div{
+                    display: flex;
+                    align-items: center;
+                    justify-content:space-between;
+                    margin-top: 10px;
+
+                    span{
+                        display: grid;
+                        place-items: center;
+                        width: 60px;
+                        height:60px;
+                    }
+                    p{
+                        font-size: 28px;        
+                    }
+                }
+            }
+            }
+        }
+    }
+
+}
+
+

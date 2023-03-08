@@ -1,0 +1,131 @@
+
+.previous_clients{
+    padding:50px 20px;
+    width: 100%;
+    position: relative;
+
+    .clients{
+        .mySwiper{
+            .brands{
+                img{
+                     
+                }
+            }
+        }
+    }
+
+    h2{
+        font-family: 'Almarai';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 140%;
+        position: absolute;
+        top:30px;
+        z-index: 10;
+        color: var(--color2);
+        
+        &::after{
+            content: "";
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background-color: var(--color7);
+            display: block;
+            position: absolute;
+            top:0px;
+            z-index:-1;
+        }
+        &.head_ar{
+            position: absolute;
+            right:20px
+        }
+    }
+    .mySwiper{
+        margin-top: 60px;
+        .client{
+            width: 130px;
+            height: 100px;
+        }
+    }
+
+    .cards{
+        margin-top: 10px;
+        .swiper {
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@media only screen and (min-width:1200px){
+    .previous_clients{
+        h2{
+            font-size: 40px;
+            &::after{
+                content: "";
+                width: 52px;
+                height: 52px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1350px){
+    .previous_clients{
+        h2{
+            font-size: 40px;
+            &::after{
+                content: "";
+                width: 52px;
+                height: 52px;
+            }
+        }
+        .mySwiper{
+            margin-top: 80px;
+            img{
+                width: 150px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1500px){
+    .previous_clients{
+        h2{
+            font-size: 49px;
+            &::after{
+                content: "";
+                width: 62px;
+                height: 62px;
+            }
+        }
+        .mySwiper{
+            margin-top: 90px;
+            img{
+                width: 180px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1900px){
+    .previous_clients{
+        h2{
+            font-size: 59px;
+            &::after{
+                content: "";
+                width: 62px;
+                height: 62px;
+            }
+        }
+        .mySwiper{
+            margin-top: 100px;
+            img{
+                width: 220px;
+            }
+        }
+    }
+}

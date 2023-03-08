@@ -1,0 +1,172 @@
+
+
+
+.card_{
+    position: relative;
+    background:var(--color5);
+    box-shadow: 0px 31px 31px rgba(0, 0, 0, 0.09), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 226px;
+    height: 316px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin:10px;
+
+    .image1{
+        width: 30%;
+        height: 35%;
+        position: absolute;
+        right: 0px;
+        top:0px;
+        border-radius: 0px 10px 0px 0px;
+        z-index: 1;
+    }
+    .part2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 50px auto 20px auto;
+        width: 100%;
+        z-index: 11;
+
+        h3{
+            margin: 10px 0px;
+            font-family: 'Almarai';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 140%;
+            color: var(--color2);
+            text-align: center;
+        }
+        img{
+            width: 70%;
+            height:7px;
+        }
+    }
+    p{
+        font-family: 'Almarai';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 170%;
+        color: var(--color2);
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width:1200px){
+    .card_{
+        width: 266px;
+        height: 356px;
+        .part2{
+            h3{
+                font-size: 25px;
+            }
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+}
+
+@media only screen and (min-width:1300px){
+    .card_{
+        width: 300px;
+        height: 386px;
+        .part2{
+            margin: 20px auto 20px auto;
+            h3{
+                font-size: 25px;
+            }
+        }
+        p{
+            font-size: 20px;
+            width: 80%;
+            margin: 0px auto;
+        }
+    }
+}
+
+@media only screen and (min-width:1400px){
+    .card_{
+        width: 320px;
+        height: 436px;
+        .part2{
+            margin: 50px auto 20px auto;
+            h3{
+                font-size: 30px;
+            }
+        }
+        p{
+            font-size: 25px;
+            width: 80%;
+            margin: 0px auto;
+        }
+    }
+}
+
+@media only screen and (min-width:1500px){
+    .card_{
+        width: 340px;
+        height: 466px;
+        .part2{
+            margin: 60px auto 20px auto;
+            h3{
+                font-size: 35px;
+            }
+            img{
+                width: 70%;
+                height:9px;
+            }
+        }
+        p{
+            font-size: 25px;
+            width: 80%;
+            margin: 0px auto;
+        }
+    }
+}
+
+@media only screen and (min-width:1700px){
+    .card_{
+        width: 380px;
+        height: 496px;
+        .part2{
+            margin: 60px auto 20px auto;
+            h3{
+                font-size: 38px;
+            }
+            img{
+                width: 70%;
+                height:10px;
+            }
+        }
+        p{
+            font-size: 28px;
+            width: 80%;
+            margin: 0px auto;
+        }
+    }
+}
+
+@media only screen and (min-width:1900px){
+    .card_{
+        width: 420px;
+        height: 526px;
+        .part2{
+            h3{
+                font-size: 43px;
+            }
+        }
+        p{
+            font-size: 30px;
+            width: 80%;
+            margin: 0px auto;
+        }
+    }
+}

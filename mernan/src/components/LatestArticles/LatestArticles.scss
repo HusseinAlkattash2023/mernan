@@ -1,0 +1,118 @@
+
+.latest_articles{
+    width: 100%;
+    background-color: var(--color6);
+    padding: 50px 20px;
+    position: relative;
+
+    h2{
+        font-family: 'Almarai';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 140%;
+        color: var(--color5);
+        position: absolute;
+        top:30px;
+        z-index: 10;
+        
+        &::after{
+            content: "";
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background-color: var(--color3);
+            display: block;
+            position: absolute;
+            top:0px;
+            z-index:-1;
+        }
+    }
+    .tags{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top:70px;
+        width: 60%;
+
+        .tag{
+            cursor: pointer;
+            p{
+                font-family: 'Almarai';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 140%;   
+                color:var(--color5)
+            }
+            &.active{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items:center;
+                padding: 15px 17px 10px 17px;
+                background:var(--color3);
+                border-radius: 10px 0px; 
+                height: 61px;
+                
+                p{
+                    color:var(--color2);
+                }
+            }
+        }
+    }
+    .cards{
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        .cards_articles{
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            flex-wrap: wrap;
+        }
+    }
+    .blog{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        margin-top:50px;
+    }
+}
+
+@media only screen and (max-width:1199px){
+    .latest_articles{
+        h2{
+            font-size: 30px;
+            &::after{
+                content: "";
+                width: 42px;
+                height: 42px;
+            }
+        }
+    
+        .tags{
+            .tag{
+                p{
+                    font-size:20px;
+                }
+                &.active{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items:center;
+                    padding: 12px 15px 0px 15px;
+                    gap: 10px;
+                    background:var(--color3);
+                    border-radius: 10px 0px; 
+                    height:51px;
+                    
+                    p{
+                        color:var(--color2);
+                    }
+                }
+            }
+        }
+    }
+}

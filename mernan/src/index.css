@@ -1,0 +1,30 @@
+
+:root{
+  --color1:#EDE4E0;
+  --color2:#312E3A;
+  --color3:#FFC84D;
+  --color4:#39858E;
+  --color5:#FDFDFE;
+  --color6:#596773;
+  --color7:#2FA4A1;
+  --color8:#312E3A;
+  --color9:#E7A5C8;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Almarai', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:#EDE4E0
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}

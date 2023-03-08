@@ -1,0 +1,383 @@
+
+
+.card_service{
+    width: 100%;
+    height: 554px;
+    background-color:var(--color5);
+    box-shadow: 0px 31px 31px rgba(0, 0, 0, 0.09), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition:all 0.7s ease;
+    color:var(--color2); 
+
+    .title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom:10px;
+
+        h3{
+            font-family: 'Almarai';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 35px;
+            line-height: 140%;
+        }
+        img{
+            height: 10px;
+            width: 100%;
+        }
+    }
+
+    .service{
+        position: absolute;
+        left: 0px;
+        top:0px;
+        width: 123px;
+        height: 133px;
+        border-radius:10px 0px 70px 0px;
+        display: grid;
+        place-items: center;
+        img{
+            width: 50px;
+            height:50px;
+        }
+    }
+    .body{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content: center;
+        div{
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content:center;
+        margin-top:20px;
+        p{
+            margin:0px 0px 0px 20px; 
+            text-align:left;
+            line-height:140%;
+            font-size:23px;
+            font-weight:400;
+
+            &.service_ar{
+                margin:0px 20px 0px 0px;
+                text-align:right;
+            }
+        }
+        }
+        .button_service{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width:100%;
+        position:absolute;
+        bottom:25px;
+        left:50%;
+        transform: translate(-50%);
+            button{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content:center;
+            padding: 15px 17px;
+            gap: 10px;
+            width: 220px;
+            height: 61px;
+            box-shadow: 0px 31px 31px rgba(0, 0, 0, 0.09), 0px 0px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 10px 0px;
+            background:var(--color2);
+            border:none;
+            span{
+                font-family: 'Almarai';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 140%;
+                flex: none;
+                order: 0;
+                flex-grow: 0;   
+                color:var(--color5);             
+            }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1400px){
+    .card_service{
+        .title{
+            h3{
+                font-size: 30px;
+            }
+            img{
+                height: 10px;
+                width: 100%;
+            }
+        }
+        .body{
+            div{
+                p{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1250px){
+    .card_service{
+        height: 504px;
+        .title{
+            h3{
+                font-size: 25px;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        .body{
+            div{
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1150px){
+    .card_service{
+        .title{
+            h3{
+                font-size: 25px;
+            }
+            img{
+                height: 10px;
+                width: 100%;
+            }
+        }
+        .body{
+            div{
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1200px){
+    .card_service{
+        .body{
+        .button_service{
+            button{
+            padding: 15px 17px;
+            gap: 10px;
+            width: 200px;
+            height: 51px;
+            span{
+                font-size: 18px;
+            }
+            }
+        }
+    }
+}
+}
+
+ 
+
+
+@media only screen and (min-width:1500px){
+    .card_service{
+        height: 600px;
+    
+    .title{
+
+        h3{
+            font-family: 'Almarai';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 140%;
+        }
+    }
+    .body{
+        div{
+            p{
+                font-size:25px;
+            }
+            img{
+                width: 25px;
+            }
+        }
+        .button_service{
+            button{
+            padding: 15px 17px;
+            gap: 10px;
+            width: 230px;
+            height: 66px;
+            span{
+                font-size: 25px;
+            }
+            }
+        }
+    }
+}
+}
+
+@media only screen and (min-width:1750px){
+    .card_service{
+        height: 620px;
+    
+    .title{
+
+        h3{
+            font-family: 'Almarai';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 140%;
+        }
+    }
+    .body{
+        div{
+            p{
+                font-size:28px;
+            }
+            img{
+                width: 30px;
+            }
+        }
+        .button_service{
+            button{
+            padding: 18px 20px;
+            gap: 10px;
+            height: 71px;
+            span{
+                font-size: 28px;
+            }
+            }
+        }
+    }
+}
+}
+
+@media only screen and (min-width:1900px){
+    .card_service{
+        height: 660px;
+    
+    .title{
+
+        h3{
+            font-family: 'Almarai';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 45px;
+            line-height: 140%;
+        }
+    }
+    .body{
+        div{
+            p{
+                font-size:32px;
+            }
+        }
+        .button_service{
+            button{
+            padding: 18px 20px;
+            gap: 10px;
+            height: 79px;
+            span{
+                font-size: 30px;
+            }
+            }
+        }
+    }
+}
+}
+
+
+// @media only screen and (min-width:1700px){
+//     .card_service{
+//         width: 472px;
+//         height: 604px;
+    
+//     .title{
+
+//         h3{
+//             font-family: 'Almarai';
+//             font-style: normal;
+//             font-weight: 700;
+//             font-size: 40px;
+//             line-height: 140%;
+//         }
+//     }
+//     .body{
+//         div{
+//             p{
+//                 font-size:25px;
+//             }
+//         }
+//         .button_service{
+//             button{
+//             display: flex;
+//             flex-direction: row;
+//             align-items: center;
+//             justify-content:center;
+//             padding: 18px 20px;
+//             gap: 10px;
+//             width: 250px;
+//             height: 71px;
+//             span{
+//                 font-family: 'Almarai';
+//                 font-style: normal;
+//                 font-weight: 700;
+//                 font-size: 25px;
+//                 line-height: 140%;
+//                 flex: none;
+//                 order: 0;
+//                 flex-grow: 0;   
+//                 color:var(--color5);             
+//             }
+//             }
+//         }
+//     }
+// }
+// }
+
+// @media only screen and (min-width:1900px){
+//     .card_service{
+//         width: 502px;
+//         height: 644px;
+    
+//     .title{
+
+//         h3{
+//             font-family: 'Almarai';
+//             font-style: normal;
+//             font-weight: 700;
+//             font-size: 40px;
+//             line-height: 140%;
+//         }
+//     }
+//     .body{
+//         div{
+//             p{
+//                 font-size:25px;
+//             }
+//         }
+//     }
+// }
+// }

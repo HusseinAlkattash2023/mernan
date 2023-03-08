@@ -1,0 +1,450 @@
+
+
+.home{
+    padding: 70px 40px;
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 90vh !important;
+    .part1{
+        width: 50%;
+        .title{
+            margin-top: 20px;
+            h2{
+                font-family: 'Almarai';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 45px;
+                line-height: 140%;
+                color: var(--color8);
+                width: 90%;
+            }
+            img{
+                position: relative;
+                left:20%;
+                bottom: 10px;
+                width: 50%;
+
+                &.part_img{
+                position: relative;
+                right: 0px;
+                bottom: 10px;
+                }
+            }
+        }
+        p{
+            font-family: 'Almarai';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 170%;
+            color: var(--color8);
+            margin: 0px 0px 10px 0px;            
+        }
+        .buttons{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 63%;
+            margin: 30px 0px;
+        }
+        .buttons_ar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 76%;
+            margin: 30px 0px;
+        }
+    }
+    .part2{
+        position: absolute;
+        right:0px;
+        width: 45%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .part2_ar{
+        position: absolute;
+        left:0px;
+        width: 45%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
+@media only screen and (min-width:1100px){
+    .home{
+        .part1{
+            .title{
+                h2{
+                    width:80%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1200px){
+    .home{
+        .part1{
+            .title{
+                h2{
+                    width:75%;
+                }
+            }
+            .buttons{
+                width: 55%;
+            }
+            .buttons_ar{
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1270px){
+    .home{
+        position: relative;
+        padding: 80px 40px;
+
+        .part1{
+            .title{
+                h2{
+                    font-size: 51px;
+                }
+            }
+            p{
+                font-size: 23px;
+            }
+        }
+        }
+}
+
+@media only screen and (min-width:1400px){
+    .home{
+        .part1{
+            .title{
+                h2{
+                    width:70%;
+                }
+            }
+            .buttons{
+                width: 50%;
+            }
+            .buttons_ar{
+                width: 62%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1500px){
+    .home{
+        position: relative;
+        padding: 80px 40px;
+
+        .part1{
+            .title{
+                h2{
+                    font-size: 55px;
+                }
+            }
+            p{
+                font-size: 25px;
+            }
+
+            .buttons{
+                width: 48%;
+            }
+            .buttons_ar{
+                width: 57%;
+            }
+        }
+        }
+}
+
+@media only screen and (min-width:1630px){
+    .home{
+        position: relative;
+        padding: 100px 40px 80px 40px;
+
+        .part1{
+            .title{
+                h2{
+                    font-size: 60px;
+                }
+            }
+            p{
+                font-size: 28px;
+            }
+
+            .buttons{
+                width: 44%;
+            }
+            .buttons_ar{
+                width: 52%;
+            }
+        }
+        }
+}
+
+@media only screen and (min-width:1750px){
+    .home{
+        position: relative;
+        padding: 100px 40px 80px 40px;
+
+        .part1{
+            .title{
+                h2{
+                    font-size: 65px;
+                }
+            }
+            p{
+                font-size: 28px;
+            }
+
+            .buttons{
+                width: 46%;
+            }
+            .buttons_ar{
+                width: 58%;
+            }
+        }
+        }
+}
+
+@media only screen and (min-width:1900px){
+    .home{
+        position: relative;
+        padding: 100px 40px 80px 40px;
+
+        .part1{
+            .title{
+                h2{
+                    font-size: 71px;
+                }
+            }
+            p{
+                font-size: 30px;
+            }
+
+            .buttons{
+                width: 44%;
+            }
+            .buttons_ar{
+                width: 56%;
+            }
+        }
+        }
+}
+// @media only screen and (max-width:1370px){
+//     .home{
+//         .part1{
+//             .title{
+//                 margin: 30px 0px 10px 0px;
+//                 h2{
+//                     font-size: 61px;
+//                     width: 100%;
+//                 }
+//                 img{
+//                     position: relative;
+//                     left: 0px;
+//                     bottom: 10px;
+
+//                     &.part_img{
+//                         position: relative;
+//                         right:-30px;
+//                         bottom: 10px;
+//                         }
+//                 }
+//             }
+//             .buttons{
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: space-between;
+//                 width: 56%;
+//                 margin: 30px 0px;
+//             }
+//             .buttons_ar{
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: space-between;
+//                 width: 68%;
+//                 margin: 30px 0px;
+//             }
+//         }
+//     }
+// }
+
+
+// @media only screen and (min-width:1500px){
+//     .home{
+//         .part1{
+//             width: 55%;
+//             .title{
+//                 margin: 30px 0px 10px 0px;
+//                 h2{
+//                     font-size: 78px;
+//                 }
+//                 img{
+//                     position: relative;
+//                     left: 100px;
+//                     bottom: 10px;
+
+//                     &.part_img{
+//                         position: relative;
+//                         right:0px;
+//                         bottom: 10px;
+//                         }
+//                 }
+//             }
+//             p{
+//                 font-size: 28px;         
+//             }
+
+//             .buttons{
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: space-between;
+//                 width: 55%;
+//                 margin: 30px 0px;
+//             }
+//             .buttons_ar{
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: space-between;
+//                 width: 68%;
+//                 margin: 30px 0px;
+//             }
+//         }
+//     }
+// }
+
+// @media only screen and (min-width:1600px){
+//     .home{
+//         .part1{
+//             width: 50%;
+//             .buttons{
+//                 width: 50%;
+//             }
+//             .buttons_ar{
+//                 width: 65%;
+//             }
+//         }
+//         .part2{
+//             position: absolute;
+//             right:0px;
+//             width: 48%;
+//             img{
+//                 width: 100%;
+//                 height: 100%;
+//             }
+//         }
+//         .part2_ar{
+//             position: absolute;
+//             left:0px;
+//             width: 47%;
+//             img{
+//                 width: 100%;
+//                 height: 100%;
+//             }
+//         }
+//     }
+// }
+
+// @media only screen and (min-width:1750px){
+//     .home{
+//         .part1{
+//             width: 50%;
+
+//             .title{
+//                 h2{
+//                     font-size: 81px;
+//                 }
+//             }
+
+//             .buttons{
+//                 width: 45%;
+//             }
+//             .buttons_ar{
+//                 width: 60%;
+//             }
+//             p{
+//                 font-size: 35px;         
+//             }
+//         }
+//         .part2_ar{
+//             position: absolute;
+//             left:0px;
+//             width: 45%;
+//             img{
+//                 width: 100%;
+//                 height: 100%;
+//             }
+//         }
+//     }
+// }
+
+// @media only screen and (min-width:1800px){
+//     .home{
+//         .part2{
+//             position: absolute;
+//             right:0px;
+//             width: 45%;
+//             img{
+//                 width: 100%;
+//                 height: 100%;
+//             }
+//         }
+//         .part2_ar{
+//             position: absolute;
+//             left:0px;
+//             width: 42%;
+//             img{
+//                 width: 100%;
+//                 height: 100%;
+//             }
+//         }
+//     }
+// }
+
+// @media only screen and (min-width:1900px){
+//     .home{
+//         .part1{
+//             width: 50%;
+
+//             .title{
+//                 h2{
+//                     font-size: 85px;
+//                 }
+//             }
+
+//             .buttons{
+//                 width: 52%;
+//             }
+//             .buttons_ar{
+//                 width: 65%;
+//             }
+//             p{
+//                 font-size: 35px;         
+//             }
+//         }
+//         .part2_ar{
+//             position: absolute;
+//             left:0px;
+//             width: 45%;
+//             img{
+//                 width: 100%;
+//                 height: 100%;
+//             }
+//         }
+//     }
+// }

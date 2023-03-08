@@ -1,0 +1,195 @@
+
+
+.what_makes_difference{
+    padding: 50px 20px 80px 20px;
+    width:100%;
+    background-color: var(--color6);
+    position: relative;
+
+    h2{
+        font-family: 'Almarai';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 140%;
+        color: var(--color5);
+        position: absolute;
+        top:30px;
+        z-index: 10;
+        
+        &::after{
+            content: "";
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background-color: var(--color3);
+            display: block;
+            position: absolute;
+            top:0px;
+            z-index:-1;
+        }
+    }
+
+    .differences{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 80px;
+        margin-top: 30px;
+
+        .difference{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 240px;
+            height: 290px;
+
+            &.active{
+                margin-top: 150px;
+            }
+
+            .icon{
+                width: 50px;
+                height: 50px;
+            }
+            div{
+                text-align: center;
+                line-height: 0px;
+                margin: 10px auto;
+                h3{
+                    font-family: 'Almarai';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 30px;
+                    line-height: 140%; 
+                    color: var(--color5);             
+                }
+                img{
+                    width: 80%;
+                }
+            }
+            p{
+                text-align: center;
+                font-family: 'Almarai';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 19px;
+                line-height: 140%;    
+                color: var(--color5);
+                width: 85%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1199px){
+    .what_makes_difference{
+        h2{
+            font-size: 30px;
+            &::after{
+                content: "";
+                width: 42px;
+                height: 42px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1500px){
+    .what_makes_difference{
+        h2{
+            font-size: 49px;
+            &::after{
+                content: "";
+                width: 62px;
+                height: 62px;
+            }
+        }
+        .differences{
+            margin-top: 30px;
+            padding: 0px 100px;
+            .difference{
+                width: 300px;
+                height: 310px;
+    
+                &.active{
+                    margin-top: 120px;
+                }
+    
+                .icon{
+                    width: 60px;
+                    height: 60px;
+                }
+                div{
+                    text-align: center;
+                    line-height: 0px;
+                    margin: 10px auto;
+                    h3{
+                        font-size: 40px;            
+                    }
+                    img{
+                        width: 80%;
+                    }
+                }
+                p{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1700px){
+    .what_makes_difference{
+        .differences{
+            .difference{
+                width: 340px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1900px){
+    .what_makes_difference{
+        h2{
+            font-size: 59px;
+            &::after{
+                content: "";
+                width: 72px;
+                height: 72px;
+            }
+        }
+        .differences{
+            padding: 0px 130px;
+            margin-top: 50px;
+            .difference{
+                width: 350px;
+                height: 330px;
+    
+                &.active{
+                    margin-top: 120px;
+                }
+    
+                .icon{
+                    width: 70px;
+                    height: 70px;
+                }
+                div{
+                    text-align: center;
+                    line-height: 0px;
+                    margin: 10px auto;
+                    h3{
+                        font-size: 48px;            
+                    }
+                    img{
+                        width: 80%;
+                    }
+                }
+                p{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+

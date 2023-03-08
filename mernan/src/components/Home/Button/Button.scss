@@ -1,0 +1,180 @@
+
+
+.button_{
+    button{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 17px;
+        gap: 10px;
+        border: 3px solid var(--color8);
+        color: var(--color8);
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        background: none;
+        height: 71px;
+        border-radius: 10px 0px;
+        cursor: pointer;
+
+        span{
+        font-family: 'Almarai';
+        font-style: normal;
+        font-weight: 700;
+        font-size:22px;
+        line-height: 140%;
+        flex: none;
+        flex-grow: 0;
+        display: grid;
+        place-items: center;
+        }
+        .arrow_{
+            display: none;
+        }
+        &:hover{
+            .arrow_{
+                display: flex;
+            }
+            position: relative;
+            left:30px;
+        }
+    }
+}
+
+.button_ar{
+    button{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 17px;
+        gap: 10px;
+        border: 3px solid var(--color8);
+        color: var(--color8);
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        background: none;
+        height: 71px;
+        border-radius: 10px 0px;
+        cursor: pointer;
+
+        span{
+        font-family: 'Almarai';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 140%;
+        flex: none;
+        flex-grow: 0;
+        display: grid;
+        place-items: center;
+        }
+        .arrow_{
+            display: none;
+        }
+        &:hover{
+            .arrow_{
+                display: flex;
+            }
+            position: relative;
+            right:30px;
+        }
+    }
+}
+
+
+@media only screen and (max-width:1399px){
+    .button_{
+        button{
+            height: 61px;
+            span{
+                font-size: 22px;
+            }
+        }
+    }
+    .button_ar{
+        button{
+            height: 61px;
+            span{
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1249px){
+    .button_{
+        button{
+            height: 51px;
+            span{
+                font-size: 22px;
+            }
+        }
+    }
+
+    .button_ar{
+        button{
+            height: 51px;
+            span{
+                font-size: 22px;
+            }
+        }
+    }
+}
+@media only screen and (max-width:1100px){
+    .button_{
+        button{
+            height: 51px;
+            span{
+                font-size: 18px;
+            }
+        }
+    }
+
+    .button_ar{
+        button{
+            height: 51px;
+            span{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1750px){
+    .button_{
+        button{
+            span{
+                font-size: 28px;
+            }
+        }
+    }
+    .button_ar{
+        button{
+            span{
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1900px){
+    .button_{
+        button{
+            height: 81px;
+            span{
+                font-size: 28px;
+            }
+        }
+    }
+    .button_ar{
+        button{
+            height: 81px;
+            span{
+                font-size: 28px;
+            }
+        }
+    }
+}
