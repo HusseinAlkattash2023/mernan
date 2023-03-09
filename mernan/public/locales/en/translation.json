@@ -278,5 +278,6 @@
   "message_is_required":"message is required",
   "invalid_email":"Invalid email",
   "mobile_number_is_required":"mobile number is required",
-  "request":"The request has been sent successfully"
+  "request":"The request has been sent successfully",
+  "know_pricing":"Pricing"
 }

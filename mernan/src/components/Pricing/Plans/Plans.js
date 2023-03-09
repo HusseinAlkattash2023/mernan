@@ -1,237 +1,94 @@
-import React from 'react';
+import React , {useEffect , useState , useContext} from 'react';
 
 import './Plans.scss';
 
-import image1 from "../../../assets/images/close.png";
-import image2 from "../../../assets/images/check-circle.png";
+// import components
+import Rectangular from '../../Rectangular/Rectangular';
+import Button from '../../Button/Button';
 
-import PricingComponent from '../../PricingComponent/PricingComponent'
+//** state management */
+import { StateContext } from "../../context/StateProvider";
+
+//**import useSelector for base api */
+import { useSelector } from "react-redux";
+
+import axios from "axios";
+
+
+import { useTranslation } from "react-i18next";
 
 
 
 const Plans = () => {
 
-  const cards = [
-    {
-      id:1,
-      height: "1476px",
-      color:"--color3",
-      title:"start_plan",
-      text:"suitable_for_individuals",
-      price:"3750",
-      list:[
-        {
-        id:1,
-        image:image2
-        },
-        {
-          id:2,
-          text:"platforms",
-          number:3
-        },
-        {
-          id:3,
-          image:image2
-        },
-        {
-          id:4,
-          image:image2
-        },
-        {
-          id:5,
-          text:"days",
-          number:10
-        },
-        {
-          id:6,
-          text:"monthly_reports"
-        },
-        {
-          id:7,
-          image:image1
-        }, 
-        {
-          id:8,
-          image:image1
-        }, 
-        {
-          id:9,
-          image:image1
-        },
-        {
-          id:10,
-          image:image1
-        },
-        {
-          id:11,
-          image:image1
-        },
-      ]
-    },
-    {
-      id:2,
-      height: "1476px",
-      color:"--color9",
-      title:"professional_plan",
-      text:"suitable_for_groups",
-      price:"11250",
-      state:true,
-      list:[
-        {
-        id:1,
-        image:image2
-        },
-        {
-          id:2,
-          text:"platforms",
-          number:5
-        },
-        {
-          id:3,
-          image:image2
-        },
-        {
-          id:4,
-          image:image2
-        },
-        {
-          id:5,
-          text:"days",
-          number:30
-        },
-        {
-          id:6,
-          text:"monthly_reports"
-        },
-        {
-          id:7,
-          image:image1
-        }, 
-        {
-          id:8,
-          image:image1
-        }, 
-        {
-          id:9,
-          image:image1
-        },
-        {
-          id:10,
-          image:image1
-        },
-        {
-          id:11,
-          image:image1
-        },
-      ]
-    },
-    {
-      id:3,
-      height: "1476px",
-      color:"--color7",
-      title:"start_plan",
-      text:"suitable_for_individuals",
-      price:"18750",
-      list:[
-        {
-        id:1,
-        image:image2
-        },
-        {
-          id:2,
-          text:"all_platforms",
-        },
-        {
-          id:3,
-          image:image2
-        },
-        {
-          id:4,
-          image:image2
-        },
-        {
-          id:5,
-          text:"days",
-          number:30
-        },
-        {
-          id:6,
-          text:"weekly_reports"
-        },
-        {
-          id:7,
-          image:image2
-        }, 
-        {
-          id:8,
-          image:image2
-        }, 
-        {
-          id:9,
-          image:image2
-        },
-        {
-          id:10,
-          image:image2
-        },
-        {
-          id:11,
-          image:image2
-        },
-      ]
-    },
-  ]
+    //** this is state to change side rtl and ltr */
+    const { changeSide } = useContext(StateContext);
 
-  const features = [
-    {
-      id:1,
-      title:"create_an",
-    },
-    {
-      id:2,
-      title:"platform_management",
-    },
-    {
-      id:3,
-      title:"content_writing",
-    },
-    {
-      id:4,
-      title:"design_and_publish",
-    },
-    {
-      id:5,
-      title:"create_and_manage",
-    },
-    {
-      id:6,
-      title:"report",
-    },
-    {
-      id:7,
-      title:"search_engine_optimization",
-    },
-    {
-      id:8,
-      title:"email_sms",
-    },
-    {
-      id:9,
-      title:"Competitive_research",
-    },
-    {
-      id:10,
-      title:"create_and_share",
-    },
-    {
-      id:11,
-      title:"prescribed_counseling",
-    },
-  ]
+    const { t } = useTranslation();
+
+  const [dataPlans , setDataPlans] = useState([]);
+  const [benefits , setBenefits] = useState([]);
+
+  const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_API_URL}/SubService/withoutSubServiceTable`)
+      .then((response) => {
+        setDataPlans(response.data.plans);
+        setBenefits(response.data.benefits);
+      })
+      .catch((error) => console.log(error));
+  }, [BASE_API_URL]);
+
+ 
 
   return (
     <div className="plans">
-      <PricingComponent cards={cards} features={features} color={"--color2"} state={true}/>
+       <div
+      className="pricing_component"
+      dir={`${changeSide === "ar" ? "rtl" : "ltr"}`}
+    >
+      <div className={`${changeSide === "ar" && "section-ar"} section`}>
+        <div className="part1">
+          {dataPlans &&
+            dataPlans.map((plan) => (
+              <div key={plan.id}>
+                <Rectangular
+                  color={plan.backgroundColor}
+                  headerEn={plan.headerEn}
+                  headerAr={plan.headerAr}
+                  descriptionAr={plan.descriptionAr}
+                  descriptionEn={plan.descriptionEn}
+                  price={plan.text}
+                  id={plan.id}
+                  data={benefits}
+                />
+              </div>
+            ))}
+        </div>
+        <div className="features">
+            <h3>{t("features")}</h3>
+          <div>
+            {benefits.map((benefit, i) => (
+              <div
+              className="feature"
+                key={benefit.id}
+              >
+                <p  >{changeSide === "ar" ? benefit.headerAr : benefit.headerEn}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="footer" >
+        <h3>{t("not_sure")}</h3>
+        <p>{t("you_can_book")}</p>
+        <div>
+          <Button name={"ask_for_free"} fontSize={24} />
+        </div>
+      </div>
+    </div>
     </div>
   )
 }

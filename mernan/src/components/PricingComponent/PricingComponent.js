@@ -60,7 +60,7 @@ const PricingComponent = ({color, num}) => {
                   descriptionEn={plan.descriptionEn}
                   price={plan.text}
                   id={plan.id}
-                  num={num}
+                  data={benefits}
                 />
               </div>
             ))}

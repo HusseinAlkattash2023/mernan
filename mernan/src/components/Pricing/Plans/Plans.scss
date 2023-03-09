@@ -1,13 +1,15 @@
 .plans{
     width: 100%;
     position: relative;
-    margin-top: 50px;
     .pricing_component{
         .section{
             display: flex;
             align-items: center;
             justify-content: flex-end;
+            position: relative;
             .part1{
+                position: absolute;
+                top:0px;
                 .rectangular{
                     width: 220px;
                     h4{
@@ -26,31 +28,9 @@
                 position:relative;
                 left: 20px;
             }
-            table{
-                thead{
-                    tr{
-                        th{
-                            width:100%;
-                            h3{
-                                font-size: 30px;
-                            }
-                        }
-                    }
-                }
-                tbody{
-                    tr{
-                        th{
-                            font-size: 20px;
-                            width: 230px;
-                        }
-                        td{
-                            width: 500px;
-                            text-align: center;
-                            padding: 20px 0px 0px 0px;
-                            font-size: 17px;
-                        }
-                    }
-                }
+            .features{
+                height: 100%;
+                margin-top: 150px;
             }
         }
         .section-ar{
@@ -59,12 +39,6 @@
                 right: 20px;
             }
         }
-        // .section-ar{
-        //     .part1{
-        //         position:relative;
-        //         right: 10%;
-        //     }
-        // }
     }
 }
 
@@ -77,6 +51,9 @@
                     .rectangular{
                         width: 240px;
                     }
+                }
+                .features{
+                     margin-top: 150px;
                 }
             }
         }
@@ -118,6 +95,9 @@
                     }
                     }
                 }
+                .features{
+                    margin-top: 120px;
+               }
             }
         }
     }
@@ -144,15 +124,31 @@
                     }
                     }
                 }
+                .features{
+                    margin-top: 90px;
+               }
             }
         }
     }
 }
-
+@media only screen and (min-width: 1400px){
+    .plans{
+        .pricing_component{
+            .section{
+                .features{
+                    margin-top: 80px;
+               }
+            }
+        }
+    }
+}
 @media only screen and (min-width: 1500px){
     .plans{
         .pricing_component{
             .section{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
                 .part1{
                     .rectangular{
                         width: 330px;
@@ -170,6 +166,9 @@
                     }
                     }
                 }
+                .features{
+                    margin-top: 60px;
+               }
             }
         }
     }
@@ -197,6 +196,9 @@
                     }
                     }
                 }
+                .features{
+                    margin-top: 20px;
+               }
             }
         }
     }
@@ -228,260 +230,4 @@
         }
     }
 }
-// @media only screen and (min-width: 1100px){
-//     .plans{
-//         .pricing_component{
-//             .section{
-//                 .part1{
-//                     .rectangular{
-//                         width: 250px;
-//                     }
-//                 }
-//                 table{
-//                     tbody{
-//                         tr{
-//                             th{
-//                                 font-size: 20px;
-//                                 width: 270px;
-//                             }
-//                             td{
-//                                 width: 500px;
-//                                 text-align: center;
-//                                 padding: 20px 0px 0px 0px;
-//                                 font-size: 17px;
-//                                 &.first_data{
-//                                     padding:20px 0px 0px 0px;
-//                                 }
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// @media only screen and (min-width: 1150px){
-//     .plans{
-//         .pricing_component{
-//             .section{
-//                 .part1{
-//                     .rectangular{
-//                         width: 250px;
-//                     }
-//                 }
-//                 table{
-//                     tbody{
-//                         tr{
-//                             th{
-//                                 font-size: 20px;
-//                                 width: 290px;
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// @media only screen and (min-width: 1200px){
-//     .plans{
-//         .pricing_component{
-//             .section{
-//                 .part1{
-//                     .rectangular{
-//                         width: 270px;
-//                     }
-//                 }
-//                 table{
-//                     tbody{
-//                         tr{
-//                             th{
-//                                 font-size: 20px;
-//                                 width: 290px;
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// @media only screen and (min-width: 1250px){
-//     .plans{
-//         .pricing_component{
-//             .section{
-//                 .part1{
-//                     .rectangular{
-//                         width: 290px;
-//                     }
-//                 }
-//                 table{
-//                     tbody{
-//                         tr{
-//                             th{
-//                                 font-size: 20px;
-//                                 width: 290px;
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// @media only screen and (min-width: 1300px){
-//     .plans{
-//         .pricing_component{
-//             .section{
-//                 .part1{
-//                     .rectangular{
-//                         width: 290px;
-//                     }
-//                 }
-//                 table{
-//                     tbody{
-//                         tr{
-//                             th{
-//                                 font-size: 20px;
-//                                 width: 330px;
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-// @media only screen and (min-width: 1350px){
-//     .plans{
-//         .pricing_component{
-//             .section{
-//                 .part1{
-//                     .rectangular{
-//                         width: 300px;
-//                         h4{
-//                             font-size: 33px;
-//                         }
-//                         span{
-//                             font-size: 23px;
-//                         }
-//                         p{
-//                             font-size: 40px;
-//                         }
-//                         img{
-//                             width: 100%;
-//                         }
-//                     }
-//                 }
-//                 table{
-//                     thead{
-//                         tr{
-//                             th{
-//                                 h3{
-//                                     font-size: 35px;
-//                                 }
-//                             }
-//                         }
-//                     }
-//                     tbody{
-//                         tr{
-//                             th{
-//                                 font-size: 25px;
-//                                 width: 350px;
-//                             }
-//                             td{
-//                                 font-size: 20px;
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// @media only screen and (min-width: 1350px){
-//     .plans{
-//         .pricing_component{
-//             .section{
-//                 .part1{
-//                     .rectangular{
-//                         width: 300px;
-//                     }
-//                 }
-//                 table{
-//                     tbody{
-//                         tr{
-//                             th{
-//                                 font-size: 25px;
-//                                 width: 360px;
-//                             }
-//                             td{
-//                                 font-size: 20px;
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// @media only screen and (min-width: 1380px){
-//     .plans{
-//         .pricing_component{
-//             .section{
-//                 .part1{
-//                     .rectangular{
-//                         width: 310px;
-//                     }
-//                 }
-//                 table{
-//                     tbody{
-//                         tr{
-//                             th{
-//                                 font-size: 25px;
-//                                 width: 350px;
-//                             }
-//                             td{
-//                                 font-size: 20px;
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-
-// @media only screen and (min-width: 1420px){
-//     .plans{
-//         .pricing_component{
-//             .section{
-//                 .part1{
-//                     .rectangular{
-//                         width: 330px;
-//                     }
-//                 }
-//                 table{
-//                     tbody{
-//                         tr{
-//                             th{
-//                                 font-size: 25px;
-//                                 width: 350px;
-//                             }
-//                             td{
-//                                 font-size: 20px;
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
+ 

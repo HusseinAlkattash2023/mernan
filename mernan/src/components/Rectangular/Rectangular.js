@@ -1,4 +1,4 @@
-import React, { useContext , useState , useEffect} from "react";
+import React, { useContext } from "react";
 
 import "./Rectangular.scss";
 
@@ -15,11 +15,6 @@ import icon2 from "../../assets/images/close.png"
 import Button1 from "../Button/Button";
 import Button2 from "../Home/Button/Button";
 
-//**import useSelector for base api */
-import { useSelector } from "react-redux";
-
-import axios from "axios";
-
 const Rectangular = ({
   headerEn,
   headerAr,
@@ -28,23 +23,12 @@ const Rectangular = ({
   price,
   color,
   id,
-  num
+  data
 }) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
-  const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get(`${BASE_API_URL}/SubService/${num}`)
-      .then((response) => {
-        setData(response.data.benefits);
-      })
-      .catch((error) => console.log(error));
-  }, [BASE_API_URL , num]);
 
   const styles = {
     background: `${color}`,

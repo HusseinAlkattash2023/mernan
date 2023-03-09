@@ -46,8 +46,10 @@ const Pricing = () => {
   return (
     <div className="pricing_page">
       <Home
-        title={"specific_service"}
-        text={"We_offer_to_graphic"}
+        titleEn={"Need a specific service?"}
+        titleAr={"تحتاج خدمة معينة؟"}
+        descriptionEn={"We offer you many options in various fields of digital marketing to graphic design with various advantages commensurate with your needs and goals that you aspire to achieve."}
+        descriptionAr={"نقدم لك خيارات عديدة في مجالات متنوعة من التسويق الرقمي إلى التصميم الجرافيك بمزايا متنوعة تتناسب مع احتياجك وهدفك الذي تطمح لتحقيقه."}
         image1={image2}
         image2={image1}
         color1={"#BCDFDE"}
@@ -64,7 +66,7 @@ const Pricing = () => {
         color_btn1={"#FFC84D"}
         color_btn2={"#312E3A"}
         color_={"--color5"}
-        name={"pricing"}
+        name={"know_pricing"}
       />
       <PricingComponent/>
       <StartWorking
