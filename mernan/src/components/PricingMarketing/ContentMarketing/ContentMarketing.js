@@ -3,8 +3,6 @@ import React, { useContext } from "react";
 //**import components */
 import Card from "../../Card/Card";
 
-//**import images */
-import image2 from "../../../assets/images/image2.svg";
 
 //** state management */
 import { StateContext } from "../../context/StateProvider";

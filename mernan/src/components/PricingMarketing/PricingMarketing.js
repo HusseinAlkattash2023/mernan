@@ -20,6 +20,8 @@ import SearchEngine from "./SearchEngine/SearchEngine";
 import { useSelector } from "react-redux";
 
 import axios from "axios";
+import PricingComponent from "../PricingComponent/PricingComponent";
+import Card from "../Card/Card";
 
 const PricingMarketing = ({list}) => {
   //** this is state to change side rtl and ltr */
@@ -32,6 +34,7 @@ const PricingMarketing = ({list}) => {
   const BASE_API_URL = useSelector((state) => state.BASE_API_URL);
 
   const [data, setData] = useState([]);
+  const [plans , setDataPlans] = useState([]);
 
   useEffect(() => {
     axios
@@ -41,6 +44,16 @@ const PricingMarketing = ({list}) => {
       })
       .catch((error) => console.log(error));
   }, [BASE_API_URL]);
+
+  const fetchData = (id)=> {
+    axios
+      .get(`${BASE_API_URL}/SubService/${id}`)
+      .then((response) => {
+        setDataPlans(response.data.plans);
+      })
+      .catch((error) => console.log(error));
+      return plans;
+  }
 
 
 
@@ -75,22 +88,34 @@ const PricingMarketing = ({list}) => {
     >
       <h2>{t("pricing")}</h2>
       <div className="row">
-        {data.map((item, i) => (
+        {data.map((item , i) => (
           <div
             onClick={() => handleTagClick(i)}
-            key={item}
+            key={i}
             className={`${i === 1 ? "col-5" : "col-3"} ${
               activeTag === i && "active"
-            }  ${i === 0 || i === 4 ? "border1" : ""}
-            ${i === 3 || i === 6 ? "border2" : ""} price`}
+            } price`}
           >
             <p>{changeSide === "ar" ? item.headerAr : item.headerEn}</p>
           </div>
         ))}
       </div>
-      <div className="prices">{ServicePrices(activeTag)}</div>
+      <div className="prices">{ 
+      ServicePrices(activeTag)
+      }</div>
     </div>
   );
 };
 
 export default PricingMarketing;
+
+
+/*
+  data.map((item)=>(
+          fetchData(item.id).map((plan)=>(
+            activeTag === item.id && (
+              plan.isPlan ? <PricingComponent num = {item.id}/> : <Card num = {item.id}/>
+            )
+          ))
+        ))
+*/

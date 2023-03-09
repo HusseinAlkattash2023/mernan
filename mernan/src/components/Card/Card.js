@@ -19,7 +19,7 @@ import axios from "axios";
 
 import Button from "../Button/Button";
 
-const Card = ({color, num }) => {
+const Card = ({num}) => {
   //** this is state to change side rtl and ltr */
   const { changeSide } = useContext(StateContext);
 
@@ -88,7 +88,7 @@ const Card = ({color, num }) => {
               </div>
             )}
             <div className="button">
-              <Button name={card.isFree ? t("request_price_offer") : t("request_free_consulting")} fontSize={20} color1={color} />
+              <Button name={card.isFree ? t("request_price_offer") : t("request_free_consulting")} fontSize={20}/>
             </div>
           </div>
         ))}
